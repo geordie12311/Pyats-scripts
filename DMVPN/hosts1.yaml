@@ -1,0 +1,48 @@
+---
+Hub-1:
+    hostname: "11.11.11.2"
+    groups:
+        - IOS_group
+    data:  
+        dmvpn: yes
+        ASN: "65001"
+   
+Spoke-1:
+    hostname: "11.11.11.3"
+    groups:
+        - IOS_group
+    data:  
+        dmvpn: yes
+        ASN: "65001" 
+
+Spoke-2:
+    hostname: "11.11.11.4"
+    groups:
+        - IOS_group
+    data:  
+        dmvpn: yes
+        ASN: "65001" 
+
+Spoke-3:
+    hostname: "11.11.11.5"
+    groups:
+        - IOS_group
+    data: 
+        dmvpn: yes 
+        ASN: "65001" 
+
+Spoke-4:
+    hostname: "11.11.11.6"
+    groups:
+        - IOS_group
+    data: 
+        dmvpn: yes 
+        ASN: "65001" 
+
+Spoke-5:
+    hostname: "11.11.11.7"
+    groups:
+        - IOS_group
+    data: 
+        dmvpn: yes 
+        ASN: "65001" 
