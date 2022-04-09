@@ -1,0 +1,10 @@
+---
+
+HUB2:
+    hostname: 12.12.12.11
+    groups:
+        - IOS_group
+    data: 
+        domain: gh-lab.com
+        dmvpn: Hub
+        ASN: 65001 

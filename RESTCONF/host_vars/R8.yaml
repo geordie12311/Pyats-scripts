@@ -1,0 +1,22 @@
+---
+snmp:
+    snmp_community: "gh-lab"
+
+ospf:
+    ospf_rid: 9.9.9.9
+    ospf_process: "1"
+    ospf_networks:
+        - ip: "0.0.0.0"
+          wildcard: "255.255.255.255"
+          area: "0"
+
+bgp: 
+    asn: "65001"
+    rid: 9.9.9.9
+    update_source: "loopback0"
+    route_reflector: False
+    neighbors:
+       - 3.3.3.3
+       - 4.4.4.4
+
+loopback0: "9.9.9.9"

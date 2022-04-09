@@ -1,0 +1,296 @@
+!
+
+!
+version 17.3
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service call-home
+platform qfp utilization monitor load 80
+platform punt-keepalive disable-kernel-core
+platform console serial
+!
+hostname CSR1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+ip domain name gh-lab
+!
+!
+!
+login on-success log
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+! 
+! 
+! 
+! 
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint SLA-TrustPoint
+ enrollment pkcs12
+ revocation-check crl
+!
+crypto pki trustpoint TP-self-signed-720533686
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-720533686
+ revocation-check none
+ rsakeypair TP-self-signed-720533686
+!
+!
+crypto pki certificate chain SLA-TrustPoint
+ certificate ca 01
+  30820321 30820209 A0030201 02020101 300D0609 2A864886 F70D0101 0B050030 
+  32310E30 0C060355 040A1305 43697363 6F312030 1E060355 04031317 43697363 
+  6F204C69 63656E73 696E6720 526F6F74 20434130 1E170D31 33303533 30313934 
+  3834375A 170D3338 30353330 31393438 34375A30 32310E30 0C060355 040A1305 
+  43697363 6F312030 1E060355 04031317 43697363 6F204C69 63656E73 696E6720 
+  526F6F74 20434130 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 
+  82010A02 82010100 A6BCBD96 131E05F7 145EA72C 2CD686E6 17222EA1 F1EFF64D 
+  CBB4C798 212AA147 C655D8D7 9471380D 8711441E 1AAF071A 9CAE6388 8A38E520 
+  1C394D78 462EF239 C659F715 B98C0A59 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE 
+  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96 6FA68957 A2617DE7 104FDC5F EA2956AC 
+  7390A3EB 2B5436AD C847A2C5 DAB553EB 69A9A535 58E9F3E3 C0BD23CF 58BD7188 
+  68E69491 20F320E7 948E71D7 AE3BCC84 F10684C7 4BC8E00F 539BA42B 42C68BB7 
+  C7479096 B4CB2D62 EA2F505D C7B062A4 6811D95B E8250FC4 5D5D5FB8 8F27D191 
+  C55F0D76 61F9A4CD 3D992327 A8BB03BD 4E6D7069 7CBADF8B DF5F4368 95135E44 
+  DFC7C6CF 04DD7FD1 02030100 01A34230 40300E06 03551D0F 0101FF04 04030201 
+  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D 0E041604 1449DC85 
+  4B3D31E5 1B3E6A17 606AF333 3D3B4C73 E8300D06 092A8648 86F70D01 010B0500 
+  03820101 00507F24 D3932A66 86025D9F E838AE5C 6D4DF6B0 49631C78 240DA905 
+  604EDCDE FF4FED2B 77FC460E CD636FDB DD44681E 3A5673AB 9093D3B1 6C9E3D8B 
+  D98987BF E40CBD9E 1AECA0C2 2189BB5C 8FA85686 CD98B646 5575B146 8DFC66A8 
+  467A3DF4 4D565700 6ADF0F0D CF835015 3C04FF7C 21E878AC 11BA9CD2 55A9232C 
+  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB E973DE7F 5BDDEB86 C71E3B49 1765308B 
+  5FB0DA06 B92AFE7F 494E8A9E 07B85737 F3A58BE1 1A48A229 C37C1E69 39F08678 
+  80DDCD16 D6BACECA EEBC7CF9 8428787B 35202CDC 60E4616A B623CDBD 230E3AFB 
+  418616A9 4093E049 4D10AB75 27E86F73 932E35B5 8862FDAE 0275156F 719BB2F0 
+  D697DF7F 28
+  	quit
+crypto pki certificate chain TP-self-signed-720533686
+ certificate self-signed 01
+  3082032E 30820216 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  30312E30 2C060355 04031325 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 37323035 33333638 36301E17 0D323230 33303631 30303930 
+  355A170D 33323033 30353130 30393035 5A303031 2E302C06 03550403 1325494F 
+  532D5365 6C662D53 69676E65 642D4365 72746966 69636174 652D3732 30353333 
+  36383630 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 82010A02 
+  82010100 D1848D4B 608BB3D0 3EB12455 78C8A51F 82EE8CB9 2424B53F 07467C49 
+  0192703A A1FF1B64 91C40742 565A334D 2AC90C83 D5FF9023 587900BF EE46AC7D 
+  F2265232 C93B4E7A D7259706 142160EC A0A13528 C5A44F53 9DD34BCA 8F18FEA8 
+  C7D0DD6E FAF44845 116A8FC3 D9376E88 28F9BA34 B736BCBA E81D7DFA 9E076EE8 
+  D05BAB08 19E7B99F D2C83E93 96E25EDF D861F8D5 21AF859A 1CF9EA82 FF02BB25 
+  1B254BFC A39A81DE BCAEEA59 9931B3E1 2010C0F0 EDF44731 B795CD67 8186E3DB 
+  6717CAEA 1BD48F3A D324AA24 4C50ADA4 AF560F16 E74DC215 DB512D16 BA62708E 
+  79F1735A 8811B73D FAFBD819 8C09ACDE 5E4838F3 31986D37 237AC5E9 CF4186FF 
+  8A49F1FD 02030100 01A35330 51300F06 03551D13 0101FF04 05300301 01FF301F 
+  0603551D 23041830 168014DD 0ED71F8D 5CB16080 A33B462D 022FD839 E58D8C30 
+  1D060355 1D0E0416 0414DD0E D71F8D5C B16080A3 3B462D02 2FD839E5 8D8C300D 
+  06092A86 4886F70D 01010505 00038201 01007099 B96D0BD0 BEC4EE21 F50BB5F0 
+  0AA5828C E31160F1 B6E205FB E3D68422 D32DE466 55359441 1E00E84D 354036D6 
+  E37DCA15 2156AB5A 8902AEE4 E353BACF 357FCF20 8A98946D 5DB92DC0 593D296A 
+  3813D822 CCF21512 730C171C 530ACFDA 1F35998E 442346B4 BDCBA3EB 0A13710D 
+  8630549F B8A235C7 4DD17FB0 7F78EF5C EC4E27B6 1B44BF07 550BFCD3 92745E69 
+  299D3211 AA19CD88 B65BA085 7FA74EF8 6C2260DA 07DC37EA 0CE3887B DECFA611 
+  61DF520D 93474D5B 5DD78F36 C5C9F2E0 E718D9E6 2E9167BB 00040CC5 D556584D 
+  00884000 CA25DB07 D4AC7C0C D4FB0054 002CFF6D 204E4824 D82C439C 60463430 
+  EA39B384 03A40501 9CAED9FE 00054D79 5944
+  	quit
+!
+license udi pid CSR1000V sn 90C8F2QZEZH
+diagnostic bootup level minimal
+archive
+ path bootflash:archive
+ write-memory
+memory free low-watermark processor 71556
+file prompt quiet
+!
+!
+spanning-tree extend system-id
+!
+username geordie privilege 15 secret 9 $9$jQbsq9MUjQ1VVU$3kX0TMNMfW8HCUZKqCaWwXQa9j20GekVAOnknoFIGjI
+!
+redundancy
+!
+!
+!
+!
+!
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+! 
+! 
+!
+!
+interface Loopback0
+ ip address 12.12.12.12 255.255.255.255
+!
+interface Loopback99
+ ip address 99.99.99.99 255.255.255.255
+!
+interface GigabitEthernet1
+ ip address 10.10.10.112 255.255.255.0
+ negotiation auto
+ no mop enabled
+ no mop sysid
+ no shut
+!
+interface GigabitEthernet2
+ ip address 27.27.27.2 255.255.255.0
+ negotiation auto
+ no mop enabled
+ no mop sysid
+ no shut
+!
+interface GigabitEthernet3
+ ip address 120.10.10.1 255.255.255.0
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet4
+ ip address 56.56.56.2 255.255.255.0
+ negotiation auto
+ no mop enabled
+ no mop sysid
+ no shut
+!
+{% if host.facts.OSPF is defined %}
+router ospf {{ host.facts.OSPF.process_id }}
+ router-id {{ host.facts.OSPF.rid }}
+{% if host.facts.OSPF.redistributing is defined %}
+{% for policy in host.facts.OSPF.redistributing %}
+ redistribute {{ policy }}
+{% endfor %}
+{% endif %}
+{% if host.facts.OSPF.networks is defined %}
+{% for network in host.facts.OSPF.networks %}
+ network {{ network }}
+{% endfor %}
+{% endif %}
+{% endif %}
+!
+router bgp 65001
+ bgp router-id 12.12.12.12
+ bgp log-neighbor-changes
+ network 10.10.10.0 mask 255.255.255.0
+ neighbor 10.10.10.101 remote-as 65001
+ neighbor 10.10.10.101 update-source Loopback0
+ neighbor 10.10.10.102 remote-as 65001
+ neighbor 10.10.10.102 update-source Loopback0
+ neighbor 10.10.10.103 remote-as 65001
+ neighbor 10.10.10.103 update-source Loopback0
+ neighbor 10.10.10.104 remote-as 65001
+ neighbor 10.10.10.104 update-source Loopback0
+ neighbor 10.10.10.105 remote-as 65001
+ neighbor 10.10.10.105 update-source Loopback0
+ neighbor 10.10.10.106 remote-as 65001
+ neighbor 10.10.10.106 update-source Loopback0
+ neighbor 10.10.10.107 remote-as 65001
+ neighbor 10.10.10.107 update-source Loopback0
+ neighbor 10.10.10.108 remote-as 65001
+ neighbor 10.10.10.108 update-source Loopback0
+ neighbor 10.10.10.109 remote-as 65001
+ neighbor 10.10.10.109 update-source Loopback0
+ neighbor 10.10.10.113 remote-as 65001
+ neighbor 10.10.10.113 update-source Loopback0
+ neighbor 10.10.10.115 remote-as 65001
+ neighbor 10.10.10.115 update-source Loopback0
+!
+ip forward-protocol nd
+ip http server
+ip http authentication local
+ip http secure-server
+!
+ip scp server enable
+!
+!
+!
+!
+snmp-server community gh-lab RO
+snmp-server community ghlab RW
+snmp-server host 10.10.10.120 version 2c gh-lab 
+snmp-server host 140.140.140.2 version 2c gh-lab 
+snmp-server host 10.10.10.120 version 2c ghlab 
+snmp-server host 140.140.140.2 version 2c ghlab 
+snmp-server host 140.140.1.2 ro 
+snmp-server host 10.10.10.120 rw 
+snmp-server host 140.140.1.2 rw 
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+line con 0
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+call-home
+ ! If contact email address in call-home is configured as sch-smart-licensing@cisco.com
+ ! the email address configured in Cisco Smart License Portal will be used as contact email address to send SCH notifications.
+ contact-email-addr sch-smart-licensing@cisco.com
+ profile "CiscoTAC-1"
+  active
+  destination transport-method http
+!
+!
+!
+!
+!
+netconf-yang
+netconf-yang feature candidate-datastore
+restconf
+end

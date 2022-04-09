@@ -1,0 +1,1292 @@
+2022-04-03 11:28:31,679 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 11:28:31,683 - nornir.core.task -    ERROR -      start() - Host 'HUB1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:28:31,683 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:28:31,684 - nornir.core.task -    ERROR -      start() - Host 'S2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:28:31,686 - nornir.core.task -    ERROR -      start() - Host 'S5': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:28:31,685 - nornir.core.task -    ERROR -      start() - Host 'S1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:28:31,685 - nornir.core.task -    ERROR -      start() - Host 'S4': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:28:31,685 - nornir.core.task -    ERROR -      start() - Host 'S3': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:28:31,687 - nornir.core.task -    ERROR -      start() - Host 'S6': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:28:46,062 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 11:28:46,067 - nornir.core.task -    ERROR -      start() - Host 'HUB1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:28:46,068 - nornir.core.task -    ERROR -      start() - Host 'S1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:28:46,068 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:28:46,068 - nornir.core.task -    ERROR -      start() - Host 'S3': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:28:46,069 - nornir.core.task -    ERROR -      start() - Host 'S4': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:28:46,069 - nornir.core.task -    ERROR -      start() - Host 'S2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:28:46,070 - nornir.core.task -    ERROR -      start() - Host 'S5': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:28:46,070 - nornir.core.task -    ERROR -      start() - Host 'S6': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:30:07,735 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 11:30:07,738 - nornir.core.task -    ERROR -      start() - Host 'HUB1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:30:07,739 - nornir.core.task -    ERROR -      start() - Host 'S1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:30:07,739 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:30:07,741 - nornir.core.task -    ERROR -      start() - Host 'S3': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:30:07,748 - nornir.core.task -    ERROR -      start() - Host 'S6': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:30:07,744 - nornir.core.task -    ERROR -      start() - Host 'S2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:30:07,749 - nornir.core.task -    ERROR -      start() - Host 'S5': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:30:07,742 - nornir.core.task -    ERROR -      start() - Host 'S4': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 20, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:31:28,376 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 11:31:28,378 - nornir.core.task -    ERROR -      start() - Host 'HUB1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 18, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:31:28,380 - nornir.core.task -    ERROR -      start() - Host 'S2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 18, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:31:28,380 - nornir.core.task -    ERROR -      start() - Host 'S1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 18, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:31:28,380 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 18, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:31:28,380 - nornir.core.task -    ERROR -      start() - Host 'S3': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 18, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:31:28,381 - nornir.core.task -    ERROR -      start() - Host 'S5': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 18, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:31:28,381 - nornir.core.task -    ERROR -      start() - Host 'S4': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 18, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:31:28,382 - nornir.core.task -    ERROR -      start() - Host 'S6': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 18, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:33:02,799 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 1 hosts
+2022-04-03 11:33:02,801 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 18, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:33:07,927 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 1 hosts
+2022-04-03 11:33:07,929 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 18, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:33:47,648 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 1 hosts
+2022-04-03 11:33:47,650 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 15, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:34:46,819 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 1 hosts
+2022-04-03 11:34:46,821 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nor_test.py", line 15, in restconf_test
+    response = requests.get(url=url, headers=headers, auth=(f"{task.host.username}", f"{task.host.password}"), verfiy=False)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'verfiy'
+
+2022-04-03 11:38:17,620 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 1 hosts
+2022-04-03 11:39:56,995 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 1 hosts
+2022-04-03 11:41:24,282 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 1 hosts
+2022-04-03 11:41:50,506 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 11:43:55,108 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 11:53:05,007 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 11:54:14,214 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 11:56:22,000 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 11:58:07,568 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 12:00:08,240 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 12:00:55,353 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 12:03:10,402 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 12:04:34,514 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 12:04:35,069 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 27, in restconf_test
+    task.host["facts"] = response.json()
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+2022-04-03 12:04:35,265 - nornir.core.task -    ERROR -      start() - Host 'HUB1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 27, in restconf_test
+    task.host["facts"] = response.json()
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+2022-04-03 12:06:06,602 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 12:06:07,121 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 27, in restconf_test
+    task.host["facts"] = response.json()
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+2022-04-03 12:06:07,169 - nornir.core.task -    ERROR -      start() - Host 'HUB1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 27, in restconf_test
+    task.host["facts"] = response.json()
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+2022-04-03 12:07:34,347 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 12:07:35,087 - nornir.core.task -    ERROR -      start() - Host 'HUB1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 27, in restconf_test
+    task.host["facts"] = response.json()
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+2022-04-03 12:07:35,129 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 27, in restconf_test
+    task.host["facts"] = response.json()
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+2022-04-03 12:12:26,628 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 12:12:27,211 - nornir.core.task -    ERROR -      start() - Host 'HUB1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 27, in restconf_test
+    task.host["facts"] = response.json()
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+2022-04-03 12:12:27,380 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 27, in restconf_test
+    task.host["facts"] = response.json()
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+2022-04-03 12:12:55,261 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 12:12:55,808 - nornir.core.task -    ERROR -      start() - Host 'HUB1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 27, in restconf_test
+    task.host["facts"] = response.json()
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+2022-04-03 12:12:55,859 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 27, in restconf_test
+    task.host["facts"] = response.json()
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+2022-04-03 12:13:25,700 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 12:13:25,939 - nornir.core.task -    ERROR -      start() - Host 'S3': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+TypeError: list indices must be integers or slices, not str
+
+2022-04-03 12:13:25,940 - nornir.core.task -    ERROR -      start() - Host 'S4': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+TypeError: list indices must be integers or slices, not str
+
+2022-04-03 12:13:25,977 - nornir.core.task -    ERROR -      start() - Host 'S5': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+TypeError: list indices must be integers or slices, not str
+
+2022-04-03 12:13:25,989 - nornir.core.task -    ERROR -      start() - Host 'S6': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+TypeError: list indices must be integers or slices, not str
+
+2022-04-03 12:13:26,222 - nornir.core.task -    ERROR -      start() - Host 'HUB1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 27, in restconf_test
+    task.host["facts"] = response.json()
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+2022-04-03 12:13:26,305 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 27, in restconf_test
+    task.host["facts"] = response.json()
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+2022-04-03 12:13:26,393 - nornir.core.task -    ERROR -      start() - Host 'S1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+TypeError: list indices must be integers or slices, not str
+
+2022-04-03 12:13:26,413 - nornir.core.task -    ERROR -      start() - Host 'S2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+TypeError: list indices must be integers or slices, not str
+
+2022-04-03 12:14:24,900 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 12:14:25,094 - nornir.core.task -    ERROR -      start() - Host 'S3': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:14:25,148 - nornir.core.task -    ERROR -      start() - Host 'S6': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:14:25,166 - nornir.core.task -    ERROR -      start() - Host 'S5': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:14:25,170 - nornir.core.task -    ERROR -      start() - Host 'S4': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:14:25,503 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:14:25,570 - nornir.core.task -    ERROR -      start() - Host 'HUB1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:14:25,668 - nornir.core.task -    ERROR -      start() - Host 'S2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:14:25,868 - nornir.core.task -    ERROR -      start() - Host 'S1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:14:50,709 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 12:14:50,875 - nornir.core.task -    ERROR -      start() - Host 'S3': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:14:50,883 - nornir.core.task -    ERROR -      start() - Host 'S5': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:14:50,902 - nornir.core.task -    ERROR -      start() - Host 'S4': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:14:50,911 - nornir.core.task -    ERROR -      start() - Host 'S6': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:14:51,051 - nornir.core.task -    ERROR -      start() - Host 'S2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:14:51,057 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:14:51,062 - nornir.core.task -    ERROR -      start() - Host 'S1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:14:51,075 - nornir.core.task -    ERROR -      start() - Host 'HUB1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:15:38,517 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 12:15:39,015 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 27, in restconf_test
+    task.host["facts"] = response.json()
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+2022-04-03 12:15:39,141 - nornir.core.task -    ERROR -      start() - Host 'HUB1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 27, in restconf_test
+    task.host["facts"] = response.json()
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+2022-04-03 12:15:55,813 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 12:15:55,992 - nornir.core.task -    ERROR -      start() - Host 'S3': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:15:56,005 - nornir.core.task -    ERROR -      start() - Host 'S5': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:15:56,029 - nornir.core.task -    ERROR -      start() - Host 'S4': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:15:56,040 - nornir.core.task -    ERROR -      start() - Host 'S6': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:15:56,194 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:15:56,239 - nornir.core.task -    ERROR -      start() - Host 'S1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:15:56,243 - nornir.core.task -    ERROR -      start() - Host 'S2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:15:56,260 - nornir.core.task -    ERROR -      start() - Host 'HUB1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:16:21,181 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 12:16:21,346 - nornir.core.task -    ERROR -      start() - Host 'S3': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:16:21,354 - nornir.core.task -    ERROR -      start() - Host 'S5': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:16:21,380 - nornir.core.task -    ERROR -      start() - Host 'S4': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:16:21,392 - nornir.core.task -    ERROR -      start() - Host 'S6': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:16:21,512 - nornir.core.task -    ERROR -      start() - Host 'S1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:16:21,516 - nornir.core.task -    ERROR -      start() - Host 'S2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:16:21,534 - nornir.core.task -    ERROR -      start() - Host 'HUB1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:16:21,543 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 28, in restconf_test
+    asn = task.host["facts"]["Cisco-IOS-XE-bgp:neighbor"]["remote-as"]
+KeyError: 'Cisco-IOS-XE-bgp:neighbor'
+
+2022-04-03 12:16:39,822 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 12:16:40,419 - nornir.core.task -    ERROR -      start() - Host 'HUB1': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 27, in restconf_test
+    task.host["facts"] = response.json()
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+2022-04-03 12:16:40,461 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'restconf_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "rest_bgp.py", line 27, in restconf_test
+    task.host["facts"] = response.json()
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+2022-04-03 12:22:26,904 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 12:24:43,896 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 8 hosts
+2022-04-03 12:32:13,419 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 1 hosts
+2022-04-03 12:32:53,718 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 1 hosts
+2022-04-03 12:33:06,779 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 1 hosts
+2022-04-03 12:33:31,595 -  nornir.core -     INFO -        run() - Running task 'restconf_test' with args {} on 1 hosts
+2022-04-03 12:54:49,114 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 1 hosts
+2022-04-03 12:54:49,115 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'load_yaml' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir_utils/plugins/tasks/data/load_yaml.py", line 24, in load_yaml
+    with open(file, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: ' ./host_vars/HUB2.yaml'
+
+2022-04-03 12:54:49,116 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "acl_test.py", line 20, in load_data
+    data = task.run(task=load_yaml, file=f" ./host_vars/{task.host}.yaml")
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: load_yaml (failed)
+
+
+2022-04-03 12:54:49,116 -  nornir.core -     INFO -        run() - Running task 'configure_data' with args {'chained_url': 'data/openconfig-acl:acl', 'headers': {'Accept': 'application/yang-data+json', 'Content-Type': 'application/yang-data+json'}} on 1 hosts
+2022-04-03 13:04:34,820 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 1 hosts
+2022-04-03 13:04:34,822 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'load_yaml' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir_utils/plugins/tasks/data/load_yaml.py", line 24, in load_yaml
+    with open(file, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: ' ./host_vars/HUB2.yaml'
+
+2022-04-03 13:04:34,822 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "acl_test.py", line 20, in load_data
+    data = task.run(task=load_yaml, file=f" ./host_vars/{task.host}.yaml")
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: load_yaml (failed)
+
+
+2022-04-03 13:04:34,822 -  nornir.core -     INFO -        run() - Running task 'configure_data' with args {'chained_url': 'data/openconfig-acl:acl', 'headers': {'Accept': 'application/yang-data+json', 'Content-Type': 'application/yang-data+json'}} on 1 hosts
+2022-04-03 13:07:35,357 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 1 hosts
+2022-04-03 13:07:35,358 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'load_yaml' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir_utils/plugins/tasks/data/load_yaml.py", line 24, in load_yaml
+    with open(file, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: ' ./host_vars/HUB2.yaml'
+
+2022-04-03 13:07:35,359 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "acl_test.py", line 20, in load_data
+    data = task.run(task=load_yaml, file=f" ./host_vars/{task.host}.yaml")
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: load_yaml (failed)
+
+
+2022-04-03 13:07:35,359 -  nornir.core -     INFO -        run() - Running task 'configure_data' with args {'chained_url': 'data/openconfig-acl:acl', 'headers': {'Accept': 'application/yang-data+json', 'Content-Type': 'application/yang-data+json'}} on 1 hosts
+2022-04-03 13:09:09,495 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 1 hosts
+2022-04-03 13:09:09,496 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'load_yaml' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir_utils/plugins/tasks/data/load_yaml.py", line 24, in load_yaml
+    with open(file, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: ' /home/geordie/Nornir-automation/RESTCONF/host_varsHUB2.yaml'
+
+2022-04-03 13:09:09,497 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "acl_test.py", line 20, in load_data
+    data = task.run(task=load_yaml, file=f" /home/geordie/Nornir-automation/RESTCONF/host_vars{task.host}.yaml")
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: load_yaml (failed)
+
+
+2022-04-03 13:09:09,498 -  nornir.core -     INFO -        run() - Running task 'configure_data' with args {'chained_url': 'data/openconfig-acl:acl', 'headers': {'Accept': 'application/yang-data+json', 'Content-Type': 'application/yang-data+json'}} on 1 hosts
+2022-04-03 13:09:29,053 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 1 hosts
+2022-04-03 13:09:29,055 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'load_yaml' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir_utils/plugins/tasks/data/load_yaml.py", line 24, in load_yaml
+    with open(file, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: ' /home/geordie/Nornir-automation/RESTCONF/host_vars/HUB2.yaml'
+
+2022-04-03 13:09:29,055 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "acl_test.py", line 20, in load_data
+    data = task.run(task=load_yaml, file=f" /home/geordie/Nornir-automation/RESTCONF/host_vars/{task.host}.yaml")
+  File "/home/geordie/Nornir-automation/RESTCONF/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: load_yaml (failed)
+
+
+2022-04-03 13:09:29,056 -  nornir.core -     INFO -        run() - Running task 'configure_data' with args {'chained_url': 'data/openconfig-acl:acl', 'headers': {'Accept': 'application/yang-data+json', 'Content-Type': 'application/yang-data+json'}} on 1 hosts
+2022-04-03 13:10:19,478 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 1 hosts
+2022-04-03 13:10:19,480 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'load_yaml' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_utils/plugins/tasks/data/load_yaml.py", line 24, in load_yaml
+    with open(file, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: ' /home/geordie/Nornir-automation/RESTCONF/host_vars/HUB2.yaml'
+
+2022-04-03 13:10:19,480 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "acl_test.py", line 20, in load_data
+    data = task.run(task=load_yaml, file=f" /home/geordie/Nornir-automation/RESTCONF/host_vars/{task.host}.yaml")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: load_yaml (failed)
+
+
+2022-04-03 13:10:19,481 -  nornir.core -     INFO -        run() - Running task 'configure_data' with args {'chained_url': 'data/openconfig-acl:acl', 'headers': {'Accept': 'application/yang-data+json', 'Content-Type': 'application/yang-data+json'}} on 1 hosts
+2022-04-03 13:10:50,511 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 1 hosts
+2022-04-03 13:10:50,524 -  nornir.core -     INFO -        run() - Running task 'configure_data' with args {'chained_url': 'data/openconfig-acl:acl', 'headers': {'Accept': 'application/yang-data+json', 'Content-Type': 'application/yang-data+json'}} on 1 hosts
+2022-04-03 13:12:43,718 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 1 hosts
+2022-04-03 13:12:43,728 -  nornir.core -     INFO -        run() - Running task 'configure_data' with args {'chained_url': 'data/openconfig-acl:acl', 'headers': {'Accept': 'application/yang-data+json', 'Content-Type': 'application/yang-data+json'}} on 1 hosts
+2022-04-03 13:14:23,887 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 1 hosts
+2022-04-03 13:14:23,901 -  nornir.core -     INFO -        run() - Running task 'configure_data' with args {'chained_url': 'data/openconfig-acl:acl', 'headers': {'Accept': 'application/yang-data+json', 'Content-Type': 'application/yang-data+json'}} on 1 hosts
+2022-04-03 13:14:37,440 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 1 hosts
+2022-04-03 13:14:37,468 -  nornir.core -     INFO -        run() - Running task 'configure_data' with args {'chained_url': 'data/openconfig-acl:acl', 'headers': {'Accept': 'application/yang-data+json', 'Content-Type': 'application/yang-data+json'}} on 1 hosts
+2022-04-03 13:14:47,232 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 1 hosts
+2022-04-03 13:14:47,246 -  nornir.core -     INFO -        run() - Running task 'configure_data' with args {'chained_url': 'data/openconfig-acl:acl', 'headers': {'Accept': 'application/yang-data+json', 'Content-Type': 'application/yang-data+json'}} on 1 hosts
+2022-04-03 13:16:28,951 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 1 hosts
+2022-04-03 13:16:28,969 -  nornir.core -     INFO -        run() - Running task 'configure_data' with args {'chained_url': 'data/openconfig-acl:acl', 'headers': {'Accept': 'application/yang-data+json', 'Content-Type': 'application/yang-data+json'}} on 1 hosts
+2022-04-03 13:16:28,971 - nornir.core.task -    ERROR -      start() - Host 'HUB2': task 'configure_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "acl_test.py", line 30, in configure_data
+    json=task.host["facts"]["configure_acl"])
+KeyError: 'configure_acl'
+
+2022-04-03 13:16:50,968 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 1 hosts
+2022-04-03 13:16:50,977 -  nornir.core -     INFO -        run() - Running task 'configure_data' with args {'chained_url': 'data/openconfig-acl:acl', 'headers': {'Accept': 'application/yang-data+json', 'Content-Type': 'application/yang-data+json'}} on 1 hosts
+2022-04-03 13:18:12,657 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 1 hosts
+2022-04-03 13:18:12,671 -  nornir.core -     INFO -        run() - Running task 'configure_data' with args {'chained_url': 'data/openconfig-acl:acl', 'headers': {'Accept': 'application/yang-data+json', 'Content-Type': 'application/yang-data+json'}} on 1 hosts

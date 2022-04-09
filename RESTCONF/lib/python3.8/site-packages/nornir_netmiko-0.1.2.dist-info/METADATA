@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: nornir-netmiko
+Version: 0.1.2
+Summary: Netmiko's plugins for Nornir
+Home-page: https://github.com/ktbyers/nornir_netmiko
+License: Apache-2.0
+Author: Kirk Byers
+Author-email: ktbyers@twb-tech.com
+Requires-Python: >=3.6.2,<4.0.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: netmiko (>=3.4.0,<4.0.0)
+Project-URL: Repository, https://github.com/ktbyers/nornir_netmiko
+Description-Content-Type: text/markdown
+
+# nornir_netmiko
+Netmiko Plugins for Nornir
+

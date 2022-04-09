@@ -1,0 +1,223 @@
+!
+version 15.7
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no logging console
+!
+aaa new-model
+!
+!
+aaa authentication login default local
+aaa authorization exec default local 
+!
+!
+!
+!
+!
+aaa session-id common
+!
+!
+!
+mmi polling-interval 60
+no mmi auto-configure
+no mmi pvc
+mmi snmp-timeout 180
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip domain name gh-lab.com
+ip cef
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+file prompt quiet
+username jradmin privilege 15 view restricted secret 5 $1$YCuo$uOFBPQ9LEIiS4TvL39t.30
+username geordie privilege 15 secret 5 $1$59Cj$JXF8NcDnLZ/N/ZGvoZCr50
+username elaine privilege 15 secret 5 $1$mgQ0$Mi3wjfzMIILuzUQKGCcV31
+!
+redundancy
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 2.2.2.2 255.255.255.255
+!
+interface GigabitEthernet0/0
+ description OOB management interface
+ ip address 10.10.10.102 255.255.255.0
+ duplex auto
+ speed auto
+ media-type rj45
+ no shut
+!
+interface GigabitEthernet0/1
+ ip address 21.21.21.9 255.255.255.252
+ duplex auto
+ speed auto
+ media-type rj45
+ no shut
+!
+interface GigabitEthernet0/2
+ ip address 22.22.22.2 255.255.255.0
+ duplex auto
+ speed auto
+ media-type rj45
+ no shut
+!
+interface GigabitEthernet0/3
+ ip address 15.15.15.1 255.255.255.0
+ duplex auto
+ speed auto
+ media-type rj45
+ no shut
+!
+{% if host.facts.OSPF is defined %}
+router ospf {{ host.facts.OSPF.process_id }}
+ router-id {{ host.facts.OSPF.rid }}
+{% if host.facts.OSPF.redistributing is defined %}
+{% for policy in host.facts.OSPF.redistributing %}
+ redistribute {{ policy }}
+{% endfor %}
+{% endif %}
+{% if host.facts.OSPF.networks is defined %}
+{% for network in host.facts.OSPF.networks %}
+ network {{ network }}
+{% endfor %}
+{% endif %}
+{% endif %}
+!
+router bgp 65001
+ bgp router-id 2.2.2.2
+ bgp log-neighbor-changes
+ network 10.10.10.0 mask 255.255.255.0
+ neighbor 10.10.10.101 remote-as 65001
+ neighbor 10.10.10.101 update-source Loopback0
+ neighbor 10.10.10.103 remote-as 65001
+ neighbor 10.10.10.103 update-source Loopback0
+ neighbor 10.10.10.104 remote-as 65001
+ neighbor 10.10.10.104 update-source Loopback0
+ neighbor 10.10.10.105 remote-as 65001
+ neighbor 10.10.10.105 update-source Loopback0
+ neighbor 10.10.10.106 remote-as 65001
+ neighbor 10.10.10.106 update-source Loopback0
+ neighbor 10.10.10.107 remote-as 65001
+ neighbor 10.10.10.107 update-source Loopback0
+ neighbor 10.10.10.108 remote-as 65001
+ neighbor 10.10.10.108 update-source Loopback0
+ neighbor 10.10.10.109 remote-as 65001
+ neighbor 10.10.10.109 update-source Loopback0
+ neighbor 10.10.10.112 remote-as 65001
+ neighbor 10.10.10.112 update-source Loopback0
+ neighbor 10.10.10.113 remote-as 65001
+ neighbor 10.10.10.113 update-source Loopback0
+ neighbor 10.10.10.115 remote-as 65001
+ neighbor 10.10.10.115 update-source Loopback0
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+ip scp server enable
+!
+ipv6 ioam timestamp
+!
+snmp-server community gh-lab RO
+snmp-server community ghlab RW
+snmp-server chassis-id 
+snmp-server host 10.10.10.120 version 2c gh-lab 
+snmp-server host 140.140.140.2 version 2c gh-lab 
+snmp-server host 10.10.10.120 version 2c ghlab 
+snmp-server host 140.140.140.2 version 2c ghlab 
+snmp-server host 140.140.1.2 ro 
+snmp-server host 10.10.10.120 rw 
+snmp-server host 10.10.10.150 rw 
+snmp-server host 140.140.1.2 rw 
+!
+!
+!
+!
+control-plane
+!
+banner exec ^C
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+banner incoming ^C
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+banner login ^C
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+parser view restricted
+ secret 5 $1$7BuB$lRGVb2geDzTeLPOdfBRGo1
+ commands exec include terminal width
+ commands exec include terminal length
+ commands exec include terminal
+ commands exec include all show ip
+ commands exec include all show
+ commands exec include logout
+!
+!
+line con 0
+ exec-timeout 0 0
+line aux 0
+line vty 0 4
+ transport preferred ssh
+ transport input all
+!
+no scheduler allocate
+ntp server 8.8.8.8
+ntp server 4.4.4.4
+ntp server 10.10.10.150
+!
+end
