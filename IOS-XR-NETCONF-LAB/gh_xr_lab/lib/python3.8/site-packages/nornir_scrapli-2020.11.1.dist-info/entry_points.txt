@@ -1,0 +1,5 @@
+
+    [nornir.plugins.connections]
+    scrapli=nornir_scrapli.connection:ScrapliCore
+    scrapli_netconf=nornir_scrapli.connection:ScrapliNetconf
+    

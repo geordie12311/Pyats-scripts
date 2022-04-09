@@ -1,0 +1,15 @@
+module gh-lab {
+    namespace "http://gh-lab.com/ns/yang/lab";
+    prefix ghlab;
+    revision 2022-03-29 {
+        description "Random YANG model to test";
+    }
+        container lab {
+        list interfaces {
+            key name;
+            leaf name {
+                type string;
+            }
+        }
+    }
+}

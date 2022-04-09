@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: scrapli-asyncssh
+Version: 2020.12.23
+Summary: asyncssh transport plugin for the scrapli SSH|Telnet screen scraping library
+Home-page: https://github.com/scrapli/scrapli_asyncssh
+Author: Carl Montanari
+Author-email: carl.r.montanari@gmail.com
+License: MIT
+Project-URL: Changelog, https://github.com/scrapli/scrapli_asyncssh/blob/master/CHANGELOG.md
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: asyncssh (<3.0.0,>=2.2.1)
+Requires-Dist: scrapli (>=2020.10.10)
+
+scrapli_asyncssh
+================
+
+This is the asyncssh plugin for [scrapli](https://github.com/carlmontanari/scrapli).
+
+If you would like to use scrapli, but prefer to use asyncssh as a transport so you can do super fast and awesome
+ asyncio stuff, then this is the library for you!
+
+Please see the main [scrapli repo](https://github.com/carlmontanari/scrapli) for much more information.
+
+

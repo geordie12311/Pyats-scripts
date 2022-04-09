@@ -1,0 +1,50 @@
+native:
+  _xmlns: 'http://cisco.com/ns/yang/Cisco-IOS-XE-native'
+  router:
+    _operation: replace
+    bgp:
+      id: '65001'
+      bgp:
+        log-neighbor-changes: 'true'
+        router-id:
+          ip-id: 6.6.6.6
+      neighbor:
+        - id: 12.12.12.1
+          remote-as: '65001'
+        - id: 12.12.12.2
+          remote-as: '65001'
+        - id: 12.12.12.3
+          remote-as: '65001'
+        - id: 12.12.12.4
+          remote-as: '65001'
+        - id: 212.12.12.5
+          remote-as: '65001'
+      _xmlns: 'http://cisco.com/ns/yang/Cisco-IOS-XE-bgp'
+    router-ospf:
+      ospf:
+        process-id:
+          id: '1'
+          network:
+            ip: 99.99.99.0
+            wildcard: 0.0.0.255
+            area: '1'
+          redistribute:
+            connected: ''
+          router-id: 6.6.6.6
+      _xmlns: 'http://cisco.com/ns/yang/Cisco-IOS-XE-ospf'
+    ospf:
+      id: '1'
+      auto-cost:
+        reference-bandwidth: '100'
+      timers:
+        throttle:
+          spf:
+            delay: '50'
+            min-delay: '200'
+            max-delay: '5000'
+      router-id: 6.6.6.6
+      compatible:
+        rfc1583: ''
+      redistribute:
+        connected: ''
+      _xmlns: 'http://cisco.com/ns/yang/Cisco-IOS-XE-ospf'

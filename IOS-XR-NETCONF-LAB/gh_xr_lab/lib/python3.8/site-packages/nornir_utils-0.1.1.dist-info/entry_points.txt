@@ -1,0 +1,3 @@
+[nornir.plugins.inventory]
+YAMLInventory=nornir_utils.plugins.inventory.yaml_inventory:YAMLInventory
+

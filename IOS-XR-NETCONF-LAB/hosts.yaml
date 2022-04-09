@@ -1,0 +1,32 @@
+---
+CSR07:
+    hostname: "CSR07"
+#    username: "geordie"
+#    password: "teabag22"
+    port: 830
+    groups:
+    - cisco_group
+
+CSR09:
+    hostname: "CSR09"
+#    username: "geordie"
+#    password: "teabag22"
+    port: 830
+    groups:
+      - cisco_group
+
+CSR08:
+    hostname: "CSR08"
+#    username: "geordie"
+#    password: "teabag22"
+    port: 830
+    groups:
+      - cisco_group
+
+CSR10:
+    hostname: "CSR10"
+#    username: "geordie"
+#    password: "teabag22"
+    port: 830
+    groups:
+      - cisco_group

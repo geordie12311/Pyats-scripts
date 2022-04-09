@@ -1,0 +1,9 @@
+---
+
+R11:
+    hostname: "R11"
+    username: "geordie"
+    password: "teabag22"
+    port: 830
+    groups:
+        - cisco_group

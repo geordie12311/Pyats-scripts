@@ -1,0 +1,14 @@
+<ghlab:lab xmlns:ghlab="http://gh-lab.com/ns/yang/lab">
+<ghlab:interfaces>
+    <ghlab:name>GigabitEthernet1</ghlab:name>
+</ghlab:interfaces>
+<ghlab:interfaces>
+    <ghlab:name>GigabitEthernet2</ghlab:name>
+</ghlab:interfaces>
+<ghlab:interfaces>
+    <ghlab:name>GigabitEthernet3</ghlab:name>
+</ghlab:interfaces>
+<ghlab:interfaces>
+    <ghlab:name>GigabitEthernet4</ghlab:name>
+</ghlab:interfaces>
+</ghlab:lab>

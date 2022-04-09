@@ -1,0 +1,31 @@
+<config>
+    <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+      <router operation="replace">
+        <bgp xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-bgp">
+          <id>65001</id>
+          <bgp>
+            <log-neighbor-changes>true</log-neighbor-changes>
+            <router-id>
+              <ip-id>5.5.5.5</ip-id>
+            </router-id>
+         </bgp>
+         <neighbor>
+           <id>12.12.12.1</id>
+           <remote-as>65001</remote-as>
+         </neighbor>
+         <neighbor>
+           <id>12.12.12.2</id>
+           <remote-as>65001</remote-as>
+         </neighbor>
+         <neighbor>
+           <id>12.12.12.3</id>
+           <remote-as>65001</remote-as>
+         </neighbor>
+         <neighbor>
+           <id>12.12.12.4</id>
+           <remote-as>65001</remote-as>
+         </neighbor>
+       </bgp>
+     </router>
+   </native>
+</config>
