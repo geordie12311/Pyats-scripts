@@ -1,0 +1,41 @@
++++ R4 with via 'cli': executing command 'show vrf detail' +++
+show vrf detail
+R4#
++++ R4 with via 'cli': executing command 'show ip static route' +++
+show ip static route
+Codes: M - Manual static, A - AAA download, N - IP NAT, D - DHCP,
+       G - GPRS, V - Crypto VPN, C - CASA, P - Channel interface processor,
+       B - BootP, S - Service selection gateway
+       DN - Default Network, T - Tracking object
+       L - TL1, E - OER, I - iEdge
+       D1 - Dot1x Vlan Network, K - MWAM Route
+       PP - PPP default route, MR - MRIPv6, SS - SSLVPN
+       H - IPe Host, ID - IPe Domain Broadcast
+       U - User GPRS, TE - MPLS Traffic-eng, LI - LIIN
+       IR - ICMP Redirect
+Codes in []: A - active, N - non-active, B - BFD-tracked, D - Not Tracked, P - permanent
+
+
+R4#
++++ R4 with via 'cli': executing command 'show ipv6 static detail' +++
+show ipv6 static detail
+IPv6 Static routes Table - default
+Codes: * - installed in RIB, u/m - Unicast/Multicast only
+       U - Per-user Static route
+       N - ND Static route
+       M - MIP Static route
+       P - DHCP-PD Static route
+       R - RHI Static route
+R4#
++====================================================================================================================================================+
+| Commands for learning feature 'StaticRouting'                                                                                                      |
++====================================================================================================================================================+
+| - Parsed commands                                                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_static_routing.ShowIpv6StaticDetail'>, arguments: {'vrf':''}                                           |
+|====================================================================================================================================================|
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_vrf.ShowVrfDetail'>                                                                                    |
+|   cmd: <class 'genie.libs.parser.iosxe.show_static_routing.ShowIpStaticRoute'>, arguments: {'vrf':''}                                              |
+|====================================================================================================================================================|

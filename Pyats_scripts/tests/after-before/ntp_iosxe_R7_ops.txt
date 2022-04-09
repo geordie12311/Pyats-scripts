@@ -1,0 +1,94 @@
+{
+  "_exclude": [
+    "root_delay",
+    "delay",
+    "root_dispersion",
+    "receive_time"
+  ],
+  "attributes": null,
+  "commands": null,
+  "connections": null,
+  "context_manager": {},
+  "info": {
+    "clock_state": {
+      "system_status": {
+        "clock_precision": "2**14",
+        "clock_state": "unsynchronized",
+        "reference_time": "00000000.00000000 (00:00:00.000 UTC Mon Jan 1 1900)",
+        "root_dispersion": 126.22
+      }
+    },
+    "vrf": {
+      "default": {
+        "associations": {
+          "address": {
+            "10.10.10.150": {
+              "local_mode": {
+                "client": {
+                  "isconfigured": {
+                    "true": {
+                      "address": "10.10.10.150",
+                      "delay": 0.0,
+                      "isconfigured": true,
+                      "local_mode": "client",
+                      "offset": 0.0,
+                      "poll": 1024,
+                      "reach": 0,
+                      "receive_time": "-",
+                      "refid": ".INIT.",
+                      "stratum": 16,
+                      "vrf": "default"
+                    }
+                  }
+                }
+              }
+            },
+            "8.8.8.8": {
+              "local_mode": {
+                "client": {
+                  "isconfigured": {
+                    "true": {
+                      "address": "8.8.8.8",
+                      "delay": 0.0,
+                      "isconfigured": true,
+                      "local_mode": "client",
+                      "offset": 0.0,
+                      "poll": 1024,
+                      "reach": 0,
+                      "receive_time": "-",
+                      "refid": ".INIT.",
+                      "stratum": 16,
+                      "vrf": "default"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "unicast_configuration": {
+          "address": {
+            "10.10.10.150": {
+              "type": {
+                "server": {
+                  "address": "10.10.10.150",
+                  "type": "server",
+                  "vrf": "default"
+                }
+              }
+            },
+            "8.8.8.8": {
+              "type": {
+                "server": {
+                  "address": "8.8.8.8",
+                  "type": "server",
+                  "vrf": "default"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

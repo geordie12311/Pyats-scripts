@@ -1,0 +1,22 @@
+[pyats.easypy.plugins]
+topoup = pyats.contrib.plugins.topoup_plugin.topoup:topology_up_plugin
+webex = pyats.contrib.plugins.webex_plugin.webex:webex_plugin
+
+[pyats.topology.loader]
+__pycache__ = pyats.contrib.creators.__pycache__:__Pycache__
+ansible = pyats.contrib.creators.ansible:Ansible
+ansible.c = pyats.contrib.creators.ansible.c:Ansible.C
+creator.c = pyats.contrib.creators.creator.c:Creator.C
+documentation = pyats.contrib.creators.documentation:Documentation
+file = pyats.contrib.creators.file:File
+file.c = pyats.contrib.creators.file.c:File.C
+interactive = pyats.contrib.creators.interactive:Interactive
+interactive.c = pyats.contrib.creators.interactive.c:Interactive.C
+netbox = pyats.contrib.creators.netbox:Netbox
+netbox.c = pyats.contrib.creators.netbox.c:Netbox.C
+template = pyats.contrib.creators.template:Template
+template.c = pyats.contrib.creators.template.c:Template.C
+topology = pyats.contrib.creators.topology:Topology
+topology.c = pyats.contrib.creators.topology.c:Topology.C
+yamltemplate = pyats.contrib.creators.yamltemplate:Yamltemplate
+yamltemplate.c = pyats.contrib.creators.yamltemplate.c:Yamltemplate.C

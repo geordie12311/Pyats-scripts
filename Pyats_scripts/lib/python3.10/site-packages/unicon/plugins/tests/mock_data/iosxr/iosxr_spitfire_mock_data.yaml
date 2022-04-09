@@ -1,0 +1,366 @@
+spitfire_login:
+  prompt: "Username: "
+  commands:
+    "cisco":
+      new_state: spitfire_pw
+
+spitfire_pw:
+  prompt: "Password: "
+  commands:
+    "cisco123":
+      response: |
+        SYSTEM CONFIGURATION COMPLETED
+      new_state: spitfire_enable
+
+spitfire_enable:
+  prompt: RP/0/RP0/CPU0:%N#
+  commands:
+    "ctrl":
+      new_state: spitfire_bmc
+    "terminal length 0": ""
+    "terminal width 0": ""
+    "term length 0": ""
+    "term width 0": ""
+    "show version": file|mock_data/iosxr/spitfire/show_version.txt
+    "bash cat /etc/build-info.txt": file|mock_data/iosxr/spitfire/build-info.txt
+    "bash cat /etc/bake-info.txt": file|mock_data/iosxr/spitfire/build-info.txt
+    "show platform": file|mock_data/iosxr/spitfire/show_platform.txt
+    "show configuration lock":
+      response:
+        - |2
+          Thu Sep 19 14:50:51.247 UTC
+          Not exactly sure what the cli output is like as we only see it sometimes right after reimage and immediate login
+          For now putting some random data and will update once we capture the right cli output.
+        - |2
+          Thu Sep 19 14:50:51.247 UTC
+    "show ztp log | i 'SUCCESSFULLY'":
+      response:
+        - |2
+          Thu Sep 19 14:50:51.247 UTC
+        - |2
+          Thu Sep 19 14:50:51.247 UTC
+          2019-09-23 01:42:28,757 [INFO] {12933 : MainThread} Exiting SUCCESSFULLY   
+    "configure terminal":
+      new_state: spitfire_config
+    "bash":
+      new_state: spitfire_xr_bash
+    "run":
+      new_state: spitfire_xr_run
+    "show redundancy":
+      response:
+        - |2
+          Wed Jul 10 11:06:30.331 UTC
+          Redundancy information for node 0/RP0/CPU0:
+          ==========================================
+          Node 0/RP0/CPU0 is in ACTIVE role
+          Partner node (0/RP1/CPU0) is in STANDBY role
+          Standby node in 0/RP1/CPU0 is ready
+          Standby node in 0/RP1/CPU0 is not NSR-ready
+
+          Details
+          --------
+          Current active rmf state: 4 (I_READY)
+          All standby not-ready bits clear - standby should be ready
+
+          Current active rmf state for NSR: Not ready
+            <jid>       <node>       <name> Reason for standby not NSR-ready
+             1148   0/RP0/CPU0          pim Standby partner proc not connected to Active
+                  Not ready set Wed Jul 10 11:04:15 2019: 2 minutes ago
+             1149   0/RP0/CPU0         pim6 Standby partner proc not connected to Active
+                  Not ready set Wed Jul 10 11:04:15 2019: 2 minutes ago
+
+          Reload and boot info
+          ----------------------
+          RP reloaded Wed Jul 10 11:02:53 2019: 3 minutes ago
+          Active node booted Wed Jul 10 11:02:53 2019: 3 minutes ago
+          Standby node boot Wed Jul 10 11:02:57 2019: 3 minutes ago
+          Standby node last went not ready Wed Jul 10 11:04:40 2019: 1 minute ago
+          Standby node last went ready Wed Jul 10 11:06:28 2019:  2 seconds ago
+          Standby node last went not NSR-ready Wed Jul 10 11:04:13 2019: 2 minutes ago
+          There have been 0 switch-overs since reload
+
+          Active node reload  
+          Standby node reload " "
+          
+        - |2
+          Wed Jul 10 11:10:24.284 UTC
+          Redundancy information for node 0/RP0/CPU0:
+          ==========================================
+          Node 0/RP0/CPU0 is in ACTIVE role
+          Partner node (0/RP1/CPU0) is in STANDBY role
+          Standby node in 0/RP1/CPU0 is ready
+          Standby node in 0/RP1/CPU0 is NSR-ready
+
+          Reload and boot info
+          ----------------------
+          RP reloaded Wed Jul 10 11:02:53 2019: 7 minutes ago
+          Active node booted Wed Jul 10 11:02:53 2019: 7 minutes ago
+          Standby node boot Wed Jul 10 11:02:57 2019: 7 minutes ago
+          Standby node last went not ready Wed Jul 10 11:04:40 2019: 5 minutes ago
+          Standby node last went ready Wed Jul 10 11:06:28 2019: 3 minutes ago
+          Standby node last went not NSR-ready Wed Jul 10 11:04:13 2019: 6 minutes ago
+          Standby node last went NSR-ready Wed Jul 10 11:08:10 2019: 2 minutes ago
+          There have been 0 switch-overs since reload
+
+          Active node reload  
+          Standby node reload " "
+
+    "redundancy switchover":
+      new_state:  spitfire_confirm_switchover
+    "attach location 0/RP0/CPU0":
+      new_state:  spitfire_attach_console
+      response: 
+        - |2
+          RP/0/RP0/CPU0:ios#attach location 0/RP0/CPU0
+          Sun Mar  1 18:49:07.320 UTC
+
+          export PS1='#'
+          [node0_RP0_CPU0:~]$export PS1='#'
+
+    "attach location 0/0/CPU0":
+      new_state:  spitfire_attach_console
+      response: 
+        - |2
+          RP/0/RP0/CPU0:ios#attach location 0/0/CPU0
+          Sun Mar  1 18:49:07.320 UTC
+
+          export PS1='#'
+          [node0_0_CPU0:~]$export PS1='#'
+
+
+spitfire_confirm_switchover:
+  preface: "Wed Jul 10 11:15:37.842 UTC"
+  prompt: "Proceed with switchover 0/RP0/CPU0 -> 0/RP1/CPU0? [confirm]"
+  commands:
+    "":
+      response: file|mock_data/iosxr/spitfire/redundancy_switchover.txt
+      timing:
+        - "0:,0,0.02"
+      new_state:
+        spitfire_console_standby
+
+spitfire_bmc:
+  prompt: "root@spitfire-arm:~#"
+  commands:
+    "ctrl":
+      new_state: spitfire_enable
+
+spitfire_xr_bash:
+  prompt: "[ios:/misc/scratch]$"
+  commands:
+    "exit":
+      new_state: spitfire_enable
+    "xrenv":
+      new_state: spitfire_xr_env
+    "ls": |
+      akrhegde_15888571384782863_mppinband_rtr1.log  akrhegde_15888589016873305_mppinband_rtr1.log  asic-err-logs-backup  clihistory
+
+spitfire_xr_run:
+  prompt: "[node0_RP0_CPU0:~]$"
+  commands:
+    "exit":
+      new_state: spitfire_enable
+    "xrenv":
+      new_state: spitfire_xr_env
+
+spitfire_xr_env:
+  prompt: "XR[ios:~]$"
+  commands:
+    "exit":
+      new_state: spitfire_xr_bash
+
+spitfire_config:
+  prompt: "RP/0/RP0/CPU0:%N(config)#"
+  commands: &config_cmds
+    "end":
+      new_state: spitfire_enable
+    "hostname Router": ""
+    "no logging console": ""
+    "logging console disable": ""
+    "line console": ""
+    "exec-timeout 0": ""
+    "absolute-timeout 0": ""
+    "exec-timeout 0 0": ""
+    "absolute-timeout 0": ""
+    "session-timeout 0": ""
+    "line default": ""
+    "commit": ""
+    "test failed":
+      new_state:
+        spitfire_failed_config
+
+
+spitfire_failed_config:
+  prompt: "RP/0/RP0/CPU0:%N(config)#"
+  commands:
+    "end":
+      response: "Uncommitted changes found, commit them before exiting(yes/no/cancel)? [cancel]:"
+      new_state: spitfire_failed_config_uncommitted
+
+spitfire_failed_config_uncommitted:
+  prompt: ""
+  commands:
+    "yes":
+      response: "% Failed to commit one or more configuration items during a pseudo-atomic operation. All changes made have been reverted. Please issue 'show configuration failed [inheritance]' from this session to view the errors"
+      new_state: spitfire_failed_config_show
+
+spitfire_failed_config_show:
+  prompt: "RP/0/RP0/CPU0:%N(config)#"
+  commands:
+    "show configuration failed": |2
+      Fri Aug  3 15:34:40.336 UTC
+      !! SEMANTIC ERRORS: This configuration was rejected by
+      !! the system due to semantic errors. The individual
+      !! errors with each failed configuration command can be
+      !! found below.
+
+
+      test failed
+      !!% Invalid config
+       !
+      !
+      end
+
+    "abort":
+      new_state: spitfire_enable
+
+
+spitfire_console_standby:
+  preface: "\r\nThis (D)RP Node is not ready or active for login /configuration\r\n"
+  prompt: ""
+  commands:
+    "": |2
+       This (D)RP Node is not ready or active for login /configuration
+
+spitfire_switchover_standby:
+  prompt: ""
+  commands:
+    "":
+      new_state: spitfire_login
+
+spitfire_enable_config_lock:
+  prompt: RP/0/RP0/CPU0:%N#
+  commands:
+    "ctrl":
+      new_state: spitfire_bmc
+    "terminal length 0": ""
+    "terminal width 0": ""
+    "term length 0": ""
+    "term width 0": ""
+    "show version": file|mock_data/iosxr/spitfire/show_version.txt
+    "bash cat /etc/build-info.txt": file|mock_data/iosxr/spitfire/build-info.txt
+    "bash cat /etc/bake-info.txt": file|mock_data/iosxr/spitfire/build-info.txt
+    "show platform": file|mock_data/iosxr/spitfire/show_platform.txt
+    "show configuration lock":
+      response:
+        - |2
+          Thu Sep 19 14:50:51.247 UTC
+          Not exactly sure what the cli output is like as we only see it sometimes right after reimage and immediate login
+          For now putting some random data and will update once we capture the right cli output.
+
+spitfire_enable_ztp_lock:
+  prompt: RP/0/RP0/CPU0:%N#
+  commands:
+    "ctrl":
+      new_state: spitfire_bmc
+    "terminal length 0": ""
+    "terminal width 0": ""
+    "term length 0": ""
+    "term width 0": ""
+    "show version": file|mock_data/iosxr/spitfire/show_version.txt
+    "bash cat /etc/build-info.txt": file|mock_data/iosxr/spitfire/build-info.txt
+    "bash cat /etc/bake-info.txt": file|mock_data/iosxr/spitfire/build-info.txt
+    "show platform": file|mock_data/iosxr/spitfire/show_platform.txt
+    "show configuration lock":
+      response:
+        - |2
+          Thu Sep 19 14:50:51.247 UTC
+          Not exactly sure what the cli output is like as we only see it sometimes right after reimage and immediate login
+          For now putting some random data and will update once we capture the right cli output.
+        - |2
+          Thu Sep 19 14:50:51.247 UTC
+    "show ztp log | i 'SUCCESSFULLY'":
+      response:
+        - |2
+          Thu Sep 19 14:50:51.247 UTC
+
+spitfire_attach_console:
+  prompt: "#"
+  commands:
+    "exit":
+      response:
+        - |2
+          logout
+      new_state: spitfire_enable
+    "ls": |
+        dummy_file dummy_file2
+
+
+spitfire_connect_syslog:
+  prompt: "RP/0/RP0/CPU0:Jul 11 23:15:38.837 UTC: envmon[213]: %PKT_INFRA-FM-3-FAULT_MAJOR : ALARM_MAJOR :Out of tolerance :DECLARE :0: System has insufficient operational fans. Increasing fan speed to maximum "
+  preface: |
+    RP/0/RP0/CPU0:Jul 11 23:14:01.916 UTC: envmon[213]: %PKT_INFRA-FM-3-FAULT_MAJOR : ALARM_MAJOR :Power Group redundancy lost :DECLARE :0:  
+
+    !!!!!!!!!!!!!!!!!!!! NO root-system username is configured. Need to configure root-system username. !!!!!!!!!!!!!!!!!!!!Configuration lock is held by another agent.  Please wait. [.OK]
+
+
+            --- Administrative User Dialog ---
+
+
+      Enter root-system username: RP/0/RP0/CPU0:Jul 11 23:14:10.730 UTC: envmon[213]: %PKT_INFRA-FM-4-FAULT_MINOR : ALARM_MINOR :Invalid sensor read error :DECLARE :0/RP0/CPU0: MB_PORT_Sensor has raised an alarm for Invalid Sensor read error 
+    RP/0/RP0/CPU0:Jul 11 23:14:10.730 UTC: envmon[213]: %PKT_INFRA-FM-4-FAULT_MINOR : ALARM_MINOR :Invalid sensor read error :DECLARE :0/RP0/CPU0: DIMM_TEMP2 has raised an alarm for Invalid Sensor read error 
+    RP/0/RP0/CPU0:Jul 11 23:14:57.423 UTC: envmon[213]: %PKT_INFRA-FM-4-FAULT_MINOR : ALARM_MINOR :Out o
+
+    2021-07-13 19:16:50,404: %UNICON-INFO: connection to R1
+    f tolerance :DECLARE :0/FT0: 0/FT0 fan 0 is out of tolerance 
+    RP/0/RP0/CPU0:Jul 11 23:14:57.423 UTC: envmon[213]: %PKT_INFRA-FM-4-FAULT_MINOR : ALARM_MINOR :Sensor in failed state :DECLARE :0/FT0: 0/FT0 fan 0 failed 
+    RP/0/RP0/CPU0:Jul 11 23:14:57.423 UTC: envmon[213]: %PKT_INFRA-FM-4-FAULT_MINOR : ALARM_MINOR :Sensor in failed state :DECLARE :0/FT0: Locked Fan motor 
+    RP/0/RP0/CPU0:Jul 11 23:14:57.423 UTC: envmon[213]: %PKT_INFRA-FM-3-FAULT_MAJOR : ALARM_MAJOR :Sensor in failed state :DECLARE :0: System has insufficient operational fans. Increasing fan speed to maximum 
+    RP/0/RP0/CPU0:Jul 11 23:14:57.426 UTC: envmon[213]: %PKT_INFRA-FM-4-FAULT_MINOR : ALARM_MINOR :Out of tolerance :DECLARE :0/FT0: 0/FT0 fan 1 is out of tolerance 
+    RP/0/RP0/CPU0:Jul 11 23:14:57.426 UTC: envmon[213]: %PKT_INFRA-FM-4-FAULT_MINOR : ALARM_MINOR :Sensor in failed state :DECLARE :0/FT0: 0/FT0 fan 1 failed 
+    RP/0/RP0/CPU0:Jul 11 23:15:16.490 UTC: envmon[213]: %PKT_INFRA-FM-2-FAULT_CRITICAL : ALARM_CRITICAL :high voltage alarm :DECLARE :0/RP0/CPU0: MB_VDDC 
+    RP/0/RP0/CPU0:Jul 11 23:15:18.261 UTC: envmon[213]: %PKT_INFRA-FM-4-FAULT_MINOR : ALARM_MINOR :Sensor in failed state :CLEAR :0/FT0: 0/FT0 fan 1 failed 
+    RP/0/RP0/CPU0:Jul 11 23:15:18.262 UTC: envmon[213]: %PKT_INFRA-FM-4-FAULT_MINOR : ALARM_MINOR :Out of tolerance :DECLARE :0/FT0: Out of threshold fan 
+    RP/0/RP0/CPU0:Jul 11 23:15:28.284 UTC: envmon[213]: %PKT_INFRA-FM-4-FAULT_MINOR : ALARM_MINOR :Sensor in failed state :DECLARE :0/FT0: 0/FT0 fan 1 failed 
+    RP/0/RP0/CPU0:Jul 11 23:15:28.284 UTC: envmon[213]: %PKT_INFRA-FM-4-FAULT_MINOR : ALARM_MINOR :Out of tolerance :CLEAR :0/FT0:  
+    RP/0/RP0/CPU0:Jul 11 23:15:38.533 UTC: envmon[213]: %PKT_INFRA-FM-4-FAULT_MINOR : ALARM_MINOR :Sensor in failed state :CLEAR :0/FT0: 0/FT0 fan 0 failed 
+    RP/0/RP0/CPU0:Jul 11 23:15:38.534 UTC: envmon[213]: %PKT_INFRA-FM-4-FAULT_MINOR : ALARM_MINOR :Out of tolerance :DECLARE :0/FT0: Out of threshold fan 
+    RP/0/RP0/CPU0:Jul 11 23:15:38.837 UTC: envmon[213]: %PKT_INFRA-FM-4-FAULT_MINOR : ALARM_MINOR :Sensor in failed state :CLEAR :0/FT0: 0/FT0 fan 1 failed 
+    RP/0/RP0/CPU0:Jul 11 23:15:38.837 UTC: envmon[213]: %PKT_INFRA-FM-4-FAULT_MINOR : ALARM_MINOR :Sensor in failed state :CLEAR :0/FT0:  
+    RP/0/RP0/CPU0:Jul 11 23:15:38.837 UTC: envmon[213]: %PKT_INFRA-FM-3-FAULT_MAJOR : ALARM_MAJOR :Sensor in failed state :CLEAR :0:  
+    
+
+  commands:
+    "":
+      new_state: spitefire_root_username
+
+
+spitefire_root_username:
+  prompt: "  Enter root-system username: "
+  commands:
+    "admin":
+      # straight to enable, can be updated in future to handle passwed entry
+      new_state: spitfire_enable
+
+
+spitfire_showtech_syslog:
+  prompt: RP/0/RP0/CPU0:%N#
+  commands:
+    "show tech":
+      response: |
+        Mon Sep  6 07:35:38.478 UTC
+        ++ Show tech start time: 2021-Sep-06.073538.UTC ++
+        Mon Sep  6 07:35:38 UTC 2021 Waiting for gathering to complete
+        ......
+        RP/0/RP1/CPU0:Sep  6 07:35:59.806 UTC: rmf_svr[271]: %HA-REDCON-1-STANDBY_READY : standby card is ready
+        
+        RP/0/RP1/CPU0:Sep  6 07:35:59.806 UTC: rmf_svr[271]: %HA-REDCON-1-STANDBY_READY : standby card is ready
+        
+
+      timing:
+        - 0:2,0,0.01
+        - 3:3,0.5,0
+        - 3:4,0.5,0.1,0.1
+        - 4:5,0.5,0.1
+        - 5:8,5,3
+        - 8:,3

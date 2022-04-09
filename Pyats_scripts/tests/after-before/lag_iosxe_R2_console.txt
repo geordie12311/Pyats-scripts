@@ -1,0 +1,64 @@
++++ R2 with via 'cli': executing command 'show lacp sys-id' +++
+show lacp sys-id
+show lacp sys-id
+       ^
+% Invalid input detected at '^' marker.
+
+R2#
++++ R2 with via 'cli': executing command 'show etherchannel summary' +++
+show etherchannel summary
+show etherchannel summary
+          ^
+% Invalid input detected at '^' marker.
+
+R2#
++++ R2 with via 'cli': executing command 'show lacp neighbor' +++
+show lacp neighbor
+show lacp neighbor
+       ^
+% Invalid input detected at '^' marker.
+
+R2#
++++ R2 with via 'cli': executing command 'show pagp neighbor' +++
+show pagp neighbor
+show pagp neighbor
+       ^
+% Invalid input detected at '^' marker.
+
+R2#
++++ R2 with via 'cli': executing command 'show pagp internal' +++
+show pagp internal
+show pagp internal
+       ^
+% Invalid input detected at '^' marker.
+
+R2#
++++ R2 with via 'cli': executing command 'show lacp counters' +++
+show lacp counters
+show lacp counters
+       ^
+% Invalid input detected at '^' marker.
+
+R2#
++++ R2 with via 'cli': executing command 'show pagp counters' +++
+show pagp counters
+show pagp counters
+       ^
+% Invalid input detected at '^' marker.
+
+R2#
+Could not learn <class 'genie.libs.parser.iosxe.show_lag.ShowPagpCounters'>
+Invalid command has been executed
++====================================================================================================================================================+
+| Commands for learning feature 'Lag'                                                                                                                |
++====================================================================================================================================================+
+| - Commands not accepted on the device                                                                                                              |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_lag.ShowLacpSysId'>                                                                                    |
+|   cmd: <class 'genie.libs.parser.iosxe.show_lag.ShowEtherchannelSummary'>                                                                          |
+|   cmd: <class 'genie.libs.parser.iosxe.show_lag.ShowLacpNeighbor'>                                                                                 |
+|   cmd: <class 'genie.libs.parser.iosxe.show_lag.ShowPagpNeighbor'>                                                                                 |
+|   cmd: <class 'genie.libs.parser.iosxe.show_lag.ShowPagpInternal'>                                                                                 |
+|   cmd: <class 'genie.libs.parser.iosxe.show_lag.ShowLacpCounters'>                                                                                 |
+|   cmd: <class 'genie.libs.parser.iosxe.show_lag.ShowPagpCounters'>                                                                                 |
+|====================================================================================================================================================|

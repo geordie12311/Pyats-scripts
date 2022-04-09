@@ -1,0 +1,123 @@
+{
+  "* Cisco in writing.                                                      *": {},
+  "* IOSv is strictly limited to use for evaluation, demonstration and IOS  *": {},
+  "* Technical Advisory Center. Any use or disclosure, in whole or in part, *": {},
+  "* education. IOSv is provided as-is and is not supported by Cisco's      *": {},
+  "* of the IOSv Software or Documentation to any third party for any       *": {},
+  "* purposes is expressly prohibited except as otherwise authorized by     *": {},
+  "**************************************************************************": {},
+  "**************************************************************************^C": {},
+  "Building configuration...": {},
+  "Current configuration : 4767 bytes": {},
+  "aaa authentication login default local": {},
+  "aaa authorization exec default local": {},
+  "aaa new-model": {},
+  "aaa session-id common": {},
+  "archive": {
+    "path flash:archive": {},
+    "write-memory": {}
+  },
+  "banner exec ^C": {},
+  "banner incoming ^C": {},
+  "banner login ^C": {},
+  "banner motd ^C THIS IS A TEST BANNER FOR SELBY DEVCIES ONLY, UNAUTHORISED USERS WILL BE SHOT!!! ^C": {},
+  "boot-end-marker": {},
+  "boot-start-marker": {},
+  "control-plane": {},
+  "end": {},
+  "file prompt quiet": {},
+  "hostname R1": {},
+  "interface GigabitEthernet0/0": {
+    "description OOB management interface": {},
+    "duplex auto": {},
+    "ip address 10.10.10.101 255.255.255.0": {},
+    "media-type rj45": {},
+    "speed auto": {}
+  },
+  "interface GigabitEthernet0/1": {
+    "duplex auto": {},
+    "ip address 20.20.20.1 255.255.255.0": {},
+    "media-type rj45": {},
+    "speed auto": {}
+  },
+  "interface GigabitEthernet0/2": {
+    "duplex auto": {},
+    "ip address 19.19.19.1 255.255.255.0": {},
+    "media-type rj45": {},
+    "speed auto": {}
+  },
+  "interface GigabitEthernet0/3": {
+    "duplex auto": {},
+    "ip address 185.10.10.1 255.255.255.0": {},
+    "media-type rj45": {},
+    "speed auto": {}
+  },
+  "interface Loopback0": {
+    "ip address 1.1.1.1 255.255.255.255": {}
+  },
+  "ip cef": {},
+  "ip domain name gh-lab.com": {},
+  "ip forward-protocol nd": {},
+  "ip scp server enable": {},
+  "ipv6 ioam timestamp": {},
+  "line aux 0": {},
+  "line con 0": {},
+  "line vty 0 4": {
+    "transport input ssh": {},
+    "transport preferred ssh": {}
+  },
+  "mmi polling-interval 60": {},
+  "mmi snmp-timeout 180": {},
+  "multilink bundle-name authenticated": {},
+  "no ip http secure-server": {},
+  "no ip http server": {},
+  "no ipv6 cef": {},
+  "no mmi auto-configure": {},
+  "no mmi pvc": {},
+  "no scheduler allocate": {},
+  "no service password-encryption": {},
+  "ntp server 10.10.10.150": {},
+  "ntp server 8.8.8.8": {},
+  "parser view restricted": {
+    "commands exec include all show": {},
+    "commands exec include all show ip": {},
+    "commands exec include logout": {},
+    "commands exec include show running-config": {},
+    "commands exec include show version": {},
+    "commands exec include terminal": {},
+    "commands exec include terminal length": {},
+    "commands exec include terminal width": {},
+    "secret 5 $1$.DKR$8.SNCQWGGhWkXpZOMWwpq.": {}
+  },
+  "redundancy": {},
+  "router bgp 65001": {
+    "bgp log-neighbor-changes": {},
+    "neighbor 10.10.10.115 remote-as 6519": {},
+    "network 0.0.0.0": {},
+    "redistribute connected metric 10": {}
+  },
+  "router ospf 1": {
+    "network 185.10.10.0 0.0.0.255 area 0": {},
+    "network 19.19.19.0 0.0.0.255 area 0": {},
+    "network 20.20.20.0 0.0.0.255 area 0": {},
+    "redistribute connected subnets": {},
+    "router-id 1.1.1.1": {}
+  },
+  "service timestamps debug datetime msec": {},
+  "service timestamps log datetime msec": {},
+  "snmp-server chassis-id": {},
+  "snmp-server community gh-lab RO": {},
+  "snmp-server community ghlab RW": {},
+  "snmp-server host 10.10.10.120 rw": {},
+  "snmp-server host 10.10.10.120 version 2c gh-lab": {},
+  "snmp-server host 10.10.10.120 version 2c ghlab": {},
+  "snmp-server host 10.10.10.150 rw": {},
+  "snmp-server host 140.140.1.2 ro": {},
+  "snmp-server host 140.140.1.2 rw": {},
+  "snmp-server host 140.140.140.2 version 2c gh-lab": {},
+  "snmp-server host 140.140.140.2 version 2c ghlab": {},
+  "username elaine privilege 15 secret 5 $1$OryU$0zu6sZAMykZS2plNGAOxJ0": {},
+  "username geordie privilege 15 secret 5 $1$e9fM$vNEjlgqxcAh2or4ZtWpK40": {},
+  "username jradmin privilege 15 view restricted secret 5 $1$f26D$92qYRagaftTnOJ.kVU4Cz0": {},
+  "version 15.7": {}
+}

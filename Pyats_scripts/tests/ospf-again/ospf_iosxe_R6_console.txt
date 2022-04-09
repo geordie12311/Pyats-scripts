@@ -1,0 +1,760 @@
++++ R6 with via 'cli': executing command 'show ip ospf' +++
+show ip ospf
+ Routing Process "ospf 1" with ID 6.6.6.6
+ Start time: 00:00:37.285, Time elapsed: 02:45:38.206
+ Supports only single TOS(TOS0) routes
+ Supports opaque LSA
+ Supports Link-local Signaling (LLS)
+ Supports area transit capability
+ Supports NSSA (compatible with RFC 3101)
+ Supports Database Exchange Summary List Optimization (RFC 5243)
+ Event-log enabled, Maximum number of events: 1000, Mode: cyclic
+ Router is not originating router-LSAs with maximum metric
+ Initial SPF schedule delay 5000 msecs
+ Minimum hold time between two consecutive SPFs 10000 msecs
+ Maximum wait time between two consecutive SPFs 10000 msecs
+ Incremental-SPF disabled
+ Minimum LSA interval 5 secs
+ Minimum LSA arrival 1000 msecs
+ LSA group pacing timer 240 secs
+ Interface flood pacing timer 33 msecs
+ Retransmission pacing timer 66 msecs
+ EXCHANGE/LOADING adjacency limit: initial 300, process maximum 300
+ Number of external LSA 0. Checksum Sum 0x000000
+ Number of opaque AS LSA 0. Checksum Sum 0x000000
+ Number of DCbitless external and opaque AS LSA 0
+ Number of DoNotAge external and opaque AS LSA 0
+ Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+ Number of areas transit capable is 0
+ External flood list length 0
+ IETF NSF helper support enabled
+ Cisco NSF helper support enabled
+ Reference bandwidth unit is 100 mbps
+    Area BACKBONE(0)
+        Number of interfaces in this area is 2
+	Area has no authentication
+	SPF algorithm last executed 00:09:20.113 ago
+	SPF algorithm executed 16 times
+	Area ranges are
+	Number of LSA 22. Checksum Sum 0x0D566D
+	Number of opaque link LSA 0. Checksum Sum 0x000000
+	Number of DCbitless LSA 0
+	Number of indication LSA 0
+	Number of DoNotAge LSA 0
+	Flood list length 0
+
+R6#
++++ R6 with via 'cli': executing command 'show ip protocols' +++
+show ip protocols
+*** IP Routing is NSF aware ***
+
+Routing Protocol is "application"
+  Sending updates every 0 seconds
+  Invalid after 0 seconds, hold down 0, flushed after 0
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Maximum path: 32
+  Routing for Networks:
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+  Distance: (default is 4)
+
+Routing Protocol is "ospf 1"
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Router ID 6.6.6.6
+  Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+  Maximum path: 4
+  Routing for Networks:
+    23.23.23.0 0.0.0.255 area 0
+    26.26.26.0 0.0.0.255 area 0
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+    9.9.9.9              110      00:09:33
+    5.5.5.5              110      02:44:00
+    4.4.4.4              110      02:44:00
+    3.3.3.3              110      02:44:40
+    1.1.1.1              110      02:44:40
+    2.2.2.2              110      02:44:40
+    7.7.7.7              110      00:09:33
+  Distance: (default is 110)
+
+Routing Protocol is "bgp 65001"
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  IGP synchronization is disabled
+  Automatic route summarization is disabled
+  Redistributing: connected
+  Neighbor(s):
+    Address          FiltIn FiltOut DistIn DistOut Weight RouteMap
+    10.10.10.101                                         
+    10.10.10.102                                         
+    10.10.10.103                                         
+    10.10.10.104                                         
+    10.10.10.105                                         
+    10.10.10.107                                         
+    10.10.10.108                                         
+    10.10.10.110                                         
+    10.10.10.112                                         
+    10.10.10.113                                         
+    10.10.10.115                                         
+  Maximum path: 1
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+    10.10.10.107         200      00:15:23
+    10.10.10.104         200      02:43:32
+    10.10.10.105         200      00:15:23
+    10.10.10.108         200      00:15:23
+    10.10.10.102         200      02:43:51
+    10.10.10.101         200      02:44:14
+    10.10.10.112         200      02:41:42
+    10.10.10.113         200      02:41:43
+  Distance: external 20 internal 200 local 200
+
+R6#
++++ R6 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 6.6.6.6
+ network 23.23.23.0 0.0.0.255 area 0
+ network 26.26.26.0 0.0.0.255 area 0
+R6#
++++ R6 with via 'cli': executing command 'show ip ospf mpls ldp interface' +++
+show ip ospf mpls ldp interface
+GigabitEthernet0/2
+  Process ID 1, Area 0
+  LDP is not configured through LDP autoconfig
+  LDP-IGP Synchronization : Not required
+  Holddown timer is disabled
+  Interface is up 
+GigabitEthernet0/1
+  Process ID 1, Area 0
+  LDP is not configured through LDP autoconfig
+  LDP-IGP Synchronization : Not required
+  Holddown timer is disabled
+  Interface is up 
+R6#
++++ R6 with via 'cli': executing command 'show ip ospf mpls traffic-eng link' +++
+show ip ospf mpls traffic-eng link
+
+            OSPF Router with ID (6.6.6.6) (Process ID 1)
+
+  Area 0 MPLS TE not initialized
+R6#
++++ R6 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 6.6.6.6
+ network 23.23.23.0 0.0.0.255 area 0
+ network 26.26.26.0 0.0.0.255 area 0
+R6#
++++ R6 with via 'cli': executing command 'show ip ospf database router' +++
+show ip ospf database router
+
+            OSPF Router with ID (6.6.6.6) (Process ID 1)
+
+		Router Link States (Area 0)
+
+  LS age: 1893
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 1.1.1.1
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 80000008
+  Checksum: 0xE043
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 20.20.20.2
+     (Link Data) Router Interface address: 20.20.20.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 19.19.19.1
+     (Link Data) Router Interface address: 19.19.19.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1844
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 2.2.2.2
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 8000000B
+  Checksum: 0xAB44
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 22.22.22.1
+     (Link Data) Router Interface address: 22.22.22.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 21.21.21.10
+     (Link Data) Router Interface address: 21.21.21.9
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1848
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 3.3.3.3
+  Advertising Router: 3.3.3.3
+  LS Seq Number: 80000009
+  Checksum: 0xAFB2
+  Length: 60
+  Number of Links: 3
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 23.23.23.2
+     (Link Data) Router Interface address: 23.23.23.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 22.22.22.1
+     (Link Data) Router Interface address: 22.22.22.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 20.20.20.2
+     (Link Data) Router Interface address: 20.20.20.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 3
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 4.4.4.4
+  Advertising Router: 4.4.4.4
+  LS Seq Number: 8000000B
+  Checksum: 0xD973
+  Length: 60
+  Number of Links: 3
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 24.24.24.2
+     (Link Data) Router Interface address: 24.24.24.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 21.21.21.10
+     (Link Data) Router Interface address: 21.21.21.10
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 19.19.19.1
+     (Link Data) Router Interface address: 19.19.19.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1908
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 5.5.5.5
+  Advertising Router: 5.5.5.5
+  LS Seq Number: 80000009
+  Checksum: 0xA123
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 25.25.25.2
+     (Link Data) Router Interface address: 25.25.25.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 24.24.24.2
+     (Link Data) Router Interface address: 24.24.24.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 574
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 6.6.6.6
+  Advertising Router: 6.6.6.6
+  LS Seq Number: 80000010
+  Checksum: 0xFEB6
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 26.26.26.2
+     (Link Data) Router Interface address: 26.26.26.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 23.23.23.2
+     (Link Data) Router Interface address: 23.23.23.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 578
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 7.7.7.7
+  Advertising Router: 7.7.7.7
+  LS Seq Number: 80000010
+  Checksum: 0xA501
+  Length: 60
+  Number of Links: 3
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 56.56.56.1
+     (Link Data) Router Interface address: 56.56.56.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 50.50.50.2
+     (Link Data) Router Interface address: 50.50.50.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 26.26.26.2
+     (Link Data) Router Interface address: 26.26.26.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1913
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 9.9.9.9
+  Advertising Router: 9.9.9.9
+  LS Seq Number: 8000000A
+  Checksum: 0xF73D
+  Length: 60
+  Number of Links: 3
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 55.55.55.1
+     (Link Data) Router Interface address: 55.55.55.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 27.27.27.1
+     (Link Data) Router Interface address: 27.27.27.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 25.25.25.2
+     (Link Data) Router Interface address: 25.25.25.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1708
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 12.12.12.12
+  Advertising Router: 12.12.12.12
+  LS Seq Number: 8000000A
+  Checksum: 0x506F
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 56.56.56.1
+     (Link Data) Router Interface address: 56.56.56.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 27.27.27.1
+     (Link Data) Router Interface address: 27.27.27.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1798
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 13.13.13.13
+  Advertising Router: 13.13.13.13
+  LS Seq Number: 8000000A
+  Checksum: 0xAB87
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 55.55.55.1
+     (Link Data) Router Interface address: 55.55.55.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 50.50.50.2
+     (Link Data) Router Interface address: 50.50.50.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+R6#
++++ R6 with via 'cli': executing command 'show ip ospf database network' +++
+show ip ospf database network
+
+            OSPF Router with ID (6.6.6.6) (Process ID 1)
+
+		Net Link States (Area 0)
+
+  LS age: 1895
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 19.19.19.1 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 80000005
+  Checksum: 0xAB38
+  Length: 32
+  Network Mask: /24
+	Attached Router: 1.1.1.1
+	Attached Router: 4.4.4.4
+
+  LS age: 1849
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 20.20.20.2 (address of Designated Router)
+  Advertising Router: 3.3.3.3
+  LS Seq Number: 80000005
+  Checksum: 0xEEEC
+  Length: 32
+  Network Mask: /24
+	Attached Router: 3.3.3.3
+	Attached Router: 1.1.1.1
+
+  LS age: 4
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 21.21.21.10 (address of Designated Router)
+  Advertising Router: 4.4.4.4
+  LS Seq Number: 80000006
+  Checksum: 0x9C2A
+  Length: 32
+  Network Mask: /30
+	Attached Router: 4.4.4.4
+	Attached Router: 2.2.2.2
+
+  LS age: 1849
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 22.22.22.1 (address of Designated Router)
+  Advertising Router: 3.3.3.3
+  LS Seq Number: 80000005
+  Checksum: 0xE2EF
+  Length: 32
+  Network Mask: /24
+	Attached Router: 3.3.3.3
+	Attached Router: 2.2.2.2
+
+  LS age: 95
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 23.23.23.2 (address of Designated Router)
+  Advertising Router: 6.6.6.6
+  LS Seq Number: 80000006
+  Checksum: 0xF0C0
+  Length: 32
+  Network Mask: /24
+	Attached Router: 6.6.6.6
+	Attached Router: 3.3.3.3
+
+  LS age: 1910
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 24.24.24.2 (address of Designated Router)
+  Advertising Router: 5.5.5.5
+  LS Seq Number: 80000005
+  Checksum: 0xEACB
+  Length: 32
+  Network Mask: /30
+	Attached Router: 5.5.5.5
+	Attached Router: 4.4.4.4
+
+  LS age: 1915
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 25.25.25.2 (address of Designated Router)
+  Advertising Router: 9.9.9.9
+  LS Seq Number: 80000005
+  Checksum: 0x986
+  Length: 32
+  Network Mask: /30
+	Attached Router: 9.9.9.9
+	Attached Router: 5.5.5.5
+
+  LS age: 585
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 26.26.26.2 (address of Designated Router)
+  Advertising Router: 7.7.7.7
+  LS Seq Number: 80000001
+  Checksum: 0x1785
+  Length: 32
+  Network Mask: /30
+	Attached Router: 7.7.7.7
+	Attached Router: 6.6.6.6
+
+  LS age: 1915
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 27.27.27.1 (address of Designated Router)
+  Advertising Router: 9.9.9.9
+  LS Seq Number: 80000005
+  Checksum: 0x3C2F
+  Length: 32
+  Network Mask: /24
+	Attached Router: 9.9.9.9
+	Attached Router: 12.12.12.12
+
+  LS age: 1893
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 50.50.50.2 (address of Designated Router)
+  Advertising Router: 7.7.7.7
+  LS Seq Number: 80000005
+  Checksum: 0x1D14
+  Length: 32
+  Network Mask: /24
+	Attached Router: 7.7.7.7
+	Attached Router: 13.13.13.13
+
+  LS age: 1915
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 55.55.55.1 (address of Designated Router)
+  Advertising Router: 9.9.9.9
+  LS Seq Number: 80000005
+  Checksum: 0x7A98
+  Length: 32
+  Network Mask: /24
+	Attached Router: 9.9.9.9
+	Attached Router: 13.13.13.13
+
+  LS age: 1893
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 56.56.56.1 (address of Designated Router)
+  Advertising Router: 7.7.7.7
+  LS Seq Number: 80000005
+  Checksum: 0x1C08
+  Length: 32
+  Network Mask: /24
+	Attached Router: 7.7.7.7
+	Attached Router: 12.12.12.12
+
+R6#
++++ R6 with via 'cli': executing command 'show ip ospf database external' +++
+show ip ospf database external
+
+            OSPF Router with ID (6.6.6.6) (Process ID 1)
+R6#
++++ R6 with via 'cli': executing command 'show ip ospf database summary' +++
+show ip ospf database summary
+
+            OSPF Router with ID (6.6.6.6) (Process ID 1)
+R6#
++++ R6 with via 'cli': executing command 'show ip ospf database opaque-area' +++
+show ip ospf database opaque-area
+
+            OSPF Router with ID (6.6.6.6) (Process ID 1)
+R6#
++++ R6 with via 'cli': executing command 'show ip ospf virtual-links' +++
+show ip ospf virtual-links
+R6#
++++ R6 with via 'cli': executing command 'show ip ospf interface' +++
+show ip ospf interface
+GigabitEthernet0/2 is up, line protocol is up 
+  Internet Address 26.26.26.1/30, Area 0, Attached via Network Statement
+  Process ID 1, Router ID 6.6.6.6, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Transmit Delay is 1 sec, State BDR, Priority 1
+  Designated Router (ID) 7.7.7.7, Interface address 26.26.26.2
+  Backup Designated router (ID) 6.6.6.6, Interface address 26.26.26.1
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:07
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/2/2, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 2, maximum is 3
+  Last flood scan time is 1 msec, maximum is 2 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 7.7.7.7  (Designated Router)
+  Suppress hello for 0 neighbor(s)
+GigabitEthernet0/1 is up, line protocol is up 
+  Internet Address 23.23.23.2/24, Area 0, Attached via Network Statement
+  Process ID 1, Router ID 6.6.6.6, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 6.6.6.6, Interface address 23.23.23.2
+  Backup Designated router (ID) 3.3.3.3, Interface address 23.23.23.1
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:05
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/1/1, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 0, maximum is 4
+  Last flood scan time is 0 msec, maximum is 1 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 3.3.3.3  (Backup Designated Router)
+  Suppress hello for 0 neighbor(s)
+R6#
++++ R6 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 6.6.6.6
+ network 23.23.23.0 0.0.0.255 area 0
+ network 26.26.26.0 0.0.0.255 area 0
+R6#
++++ R6 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 6.6.6.6
+ network 23.23.23.0 0.0.0.255 area 0
+ network 26.26.26.0 0.0.0.255 area 0
+R6#
++++ R6 with via 'cli': executing command 'show ip ospf neighbor detail' +++
+show ip ospf neighbor detail
+ Neighbor 7.7.7.7, interface address 26.26.26.2
+    In the area 0 via interface GigabitEthernet0/2
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 26.26.26.2 BDR is 26.26.26.1
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:36
+    Neighbor is up for 00:09:59
+    Index 1/1/1, retransmission queue length 0, number of retransmission 0
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 0, maximum is 0
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+ Neighbor 3.3.3.3, interface address 23.23.23.1
+    In the area 0 via interface GigabitEthernet0/1
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 23.23.23.2 BDR is 23.23.23.1
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:35
+    Neighbor is up for 02:45:44
+    Index 1/2/2, retransmission queue length 0, number of retransmission 3
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 1, maximum is 1
+    Last retransmission scan time is 1 msec, maximum is 1 msec
+R6#
++++ R6 with via 'cli': executing command 'show ip ospf interface GigabitEthernet0/2' +++
+show ip ospf interface GigabitEthernet0/2
+GigabitEthernet0/2 is up, line protocol is up 
+  Internet Address 26.26.26.1/30, Area 0, Attached via Network Statement
+  Process ID 1, Router ID 6.6.6.6, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Transmit Delay is 1 sec, State BDR, Priority 1
+  Designated Router (ID) 7.7.7.7, Interface address 26.26.26.2
+  Backup Designated router (ID) 6.6.6.6, Interface address 26.26.26.1
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:08
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/2/2, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 2, maximum is 3
+  Last flood scan time is 1 msec, maximum is 2 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 7.7.7.7  (Designated Router)
+  Suppress hello for 0 neighbor(s)
+R6#
++++ R6 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 6.6.6.6
+ network 23.23.23.0 0.0.0.255 area 0
+ network 26.26.26.0 0.0.0.255 area 0
+R6#
++++ R6 with via 'cli': executing command 'show ip ospf interface GigabitEthernet0/1' +++
+show ip ospf interface GigabitEthernet0/1
+GigabitEthernet0/1 is up, line protocol is up 
+  Internet Address 23.23.23.2/24, Area 0, Attached via Network Statement
+  Process ID 1, Router ID 6.6.6.6, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 6.6.6.6, Interface address 23.23.23.2
+  Backup Designated router (ID) 3.3.3.3, Interface address 23.23.23.1
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:03
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/1/1, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 0, maximum is 4
+  Last flood scan time is 0 msec, maximum is 1 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 3.3.3.3  (Backup Designated Router)
+  Suppress hello for 0 neighbor(s)
+R6#
++++ R6 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 6.6.6.6
+ network 23.23.23.0 0.0.0.255 area 0
+ network 26.26.26.0 0.0.0.255 area 0
+R6#
++++ R6 with via 'cli': executing command 'show ip ospf sham-links' +++
+show ip ospf sham-links
+R6#
+Could not learn <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfShamLinks'>
+Show Command: show ip ospf sham-links
+Parser Output is empty
++====================================================================================================================================================+
+| Commands for learning feature 'Ospf'                                                                                                               |
++====================================================================================================================================================+
+| - Parsed commands                                                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspf'>                                                                                      |
+|   cmd: <class 'genie.libs.parser.iosxe.show_protocols.ShowIpProtocols'>, arguments: {'vrf':''}                                                     |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfMplsLdpInterface'>, arguments: {'interface':''}                                         |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfMplsTrafficEngLink'>                                                                    |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfDatabaseRouter'>                                                                        |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfDatabaseNetwork'>                                                                       |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfDatabaseExternal'>                                                                      |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfDatabaseSummary'>                                                                       |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfDatabaseOpaqueArea'>                                                                    |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfInterface'>, arguments: {'interface':''}                                                |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfNeighborDetail'>, arguments: {'neighbor':''}                                            |
+|====================================================================================================================================================|
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfVirtualLinks'>                                                                          |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfShamLinks'>                                                                             |
+|====================================================================================================================================================|

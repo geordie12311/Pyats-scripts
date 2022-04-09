@@ -1,0 +1,101 @@
+---
+R1:
+    hostname: "10.10.10.101"
+    groups:
+        - IOS_group
+    data:  
+        location: "Central"
+        layer: "Core"
+        Contact: "CentralAdmin@gh-lab.com"
+        ASN: "65001"    
+
+R2:
+    hostname: "10.10.10.102"
+    groups:
+        - IOS_group
+    data:  
+        location: "Central"
+        layer: "Distribution"
+        Contact: "CentralAdmin@gh-lab.com"
+        ASN: "65001"          
+
+R3:
+    hostname: "10.10.10.103"
+    groups:
+        - IOS_group
+    data:  
+        location: "North"
+        layer: "Core"
+        Contact: "Northdmin@gh-lab.com"
+        ASN: "65002"           
+
+R4:
+    hostname: "10.10.10.104"
+    groups:
+        - IOS_group
+    data:  
+        location: "North"
+        layer: "Distribution"
+        Contact: "Northdmin@gh-lab.com"
+        ASN: "65002"          
+
+R5:
+    hostname: "10.10.10.105"
+    groups:
+        - IOS_group
+    data:  
+        location: "South"
+        layer: "Core"
+        Contact: "SouthAdmin@gh-lab.com"
+        ASN: "65003"
+
+R6:
+    hostname: "10.10.10.106"
+    groups:
+        - IOS_group
+    data:  
+        location: "South"
+        layer: "Core"
+        Contact: "SouthAdmin@gh-lab.com"
+        ASN: "65003"    
+
+R7:
+    hostname: "10.10.10.107"
+    groups:
+        - IOS_group
+    data:  
+        location: "East"
+        layer: "Core"
+        Contact: "EastAdmin@gh-lab.com"
+        ASN: "65004"      
+
+R8:
+    hostname: "10.10.10.108"
+    groups:
+        - IOS_group
+    data:  
+        location: "East"
+        layer: "Distribution"
+        Contact: "EastAdmin@gh-lab.com"
+        ASN: "65004"               
+
+CSR1:
+    hostname: "10.10.10.112"
+    groups:
+        - IOS_group
+    data:  
+        location: "West"
+        layer: "Core"
+        Contact: "WestAdmin@gh-lab.com"
+        ASN: "65005"     
+
+CSR2:
+    hostname: "10.10.10.113"
+    groups:
+        - IOS_group
+    data:  
+        location: "West"
+        layer: "Distribution"
+        Contact: "WestAdmin@gh-lab.com"
+        ASN: "65005"     
+    

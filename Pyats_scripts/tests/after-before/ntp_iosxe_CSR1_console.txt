@@ -1,0 +1,22 @@
++++ CSR1 with via 'cli': executing command 'show ntp associations' +++
+show ntp associations
+CSR1#
++++ CSR1 with via 'cli': executing command 'show ntp status' +++
+show ntp status
+%NTP is not enabled.
+CSR1#
++++ CSR1 with via 'cli': executing command 'show ntp config' +++
+show ntp config
+ Ntp process is not runing
+CSR1#
+Could not learn <class 'genie.libs.parser.iosxe.show_ntp.ShowNtpConfig'>
+Parser Output is empty
++====================================================================================================================================================+
+| Commands for learning feature 'Ntp'                                                                                                                |
++====================================================================================================================================================+
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_ntp.ShowNtpAssociations'>                                                                              |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ntp.ShowNtpStatus'>                                                                                    |
+|   cmd: <class 'genie.libs.parser.iosxe.show_ntp.ShowNtpConfig'>                                                                                    |
+|====================================================================================================================================================|

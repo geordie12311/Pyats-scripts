@@ -1,0 +1,32 @@
++++ R1 with via 'cli': executing command 'show mac address-table aging-time' +++
+show mac address-table aging-time
+show mac address-table aging-time
+        ^
+% Invalid input detected at '^' marker.
+
+R1#
++++ R1 with via 'cli': executing command 'show mac address-table learning' +++
+show mac address-table learning
+show mac address-table learning
+        ^
+% Invalid input detected at '^' marker.
+
+R1#
++++ R1 with via 'cli': executing command 'show mac address-table' +++
+show mac address-table
+show mac address-table
+        ^
+% Invalid input detected at '^' marker.
+
+R1#
+Could not learn <class 'genie.libs.parser.iosxe.show_fdb.ShowMacAddressTable'>
+Invalid command has been executed
++====================================================================================================================================================+
+| Commands for learning feature 'Fdb'                                                                                                                |
++====================================================================================================================================================+
+| - Commands not accepted on the device                                                                                                              |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_fdb.ShowMacAddressTableAgingTime'>                                                                     |
+|   cmd: <class 'genie.libs.parser.iosxe.show_fdb.ShowMacAddressTableLearning'>                                                                      |
+|   cmd: <class 'genie.libs.parser.iosxe.show_fdb.ShowMacAddressTable'>                                                                              |
+|====================================================================================================================================================|

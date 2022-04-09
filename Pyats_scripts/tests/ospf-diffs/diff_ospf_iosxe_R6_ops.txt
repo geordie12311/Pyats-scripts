@@ -1,0 +1,28 @@
+--- ospf-before/ospf_iosxe_R6_ops.txt
++++ ospf-after/ospf_iosxe_R6_ops.txt
+ info:
+  vrf:
+   default:
+    address_family:
+     ipv4:
+      instance:
+       1:
+        areas:
+         0.0.0.0:
+          interfaces:
+           GigabitEthernet0/2:
+-           enable: True
++           enable: False
+-           lls: True
+-           neighbors:
+-            7.7.7.7:
+-             address: 26.26.26.2
+-             bdr_ip_addr: 26.26.26.1
+-             dead_timer: 00:00:36
+-             dr_ip_addr: 26.26.26.2
+-             neighbor_router_id: 7.7.7.7
+-             state: full
+-             statistics:
+-              nbr_event_count: 6
+-              nbr_retrans_qlen: 0
+-           passive: False

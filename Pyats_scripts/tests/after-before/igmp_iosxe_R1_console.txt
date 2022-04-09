@@ -1,0 +1,16 @@
++++ R1 with via 'cli': executing command 'show vrf detail' +++
+show vrf detail
+R1#
++++ R1 with via 'cli': executing command 'show ip igmp interface' +++
+show ip igmp interface
+R1#
++++ R1 with via 'cli': executing command 'show ip igmp groups detail' +++
+show ip igmp groups detail
+
+Flags: L - Local, U - User, SG - Static Group, VG - Virtual Group,
+       SS - Static Source, VS - Virtual Source,
+       Ac - Group accounted towards access control limit
+R1#
+Could not learn <class 'genie.libs.parser.iosxe.show_igmp.ShowIpIgmpGroupsDetail'>
+Show Command: show ip igmp vrf default groups detail
+Parser Output is empty

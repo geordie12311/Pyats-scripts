@@ -1,0 +1,111 @@
++++ R1 with via 'cli': executing command 'show version' +++
+show version
+Cisco IOS Software, IOSv Software (VIOS-ADVENTERPRISEK9-M), Version 15.7(3)M3, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2018 by Cisco Systems, Inc.
+Compiled Wed 01-Aug-18 16:45 by prod_rel_team
+
+
+ROM: Bootstrap program is IOSv
+
+R1 uptime is 2 hours, 22 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv (revision 1.0) with  with 2032889K/62464K bytes of memory.
+Processor board ID 9X0MYJHM9SOTZ6WJXVFCU
+4 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+2097152K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+0K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+
+
+Configuration register is 0x0
+
+R1#
++++ R1 with via 'cli': executing command 'dir' +++
+dir
+Directory of flash0:/
+
+    1  drw-           0  Jan 30 2013 00:00:00 +00:00  boot
+  264  drw-           0  Oct 14 2013 00:00:00 +00:00  config
+  267  -rw-   148955508   Aug 1 2018 00:00:00 +00:00  vios-adventerprisek9-m
+  268  -rw-      524288  Jan 21 2022 05:21:34 +00:00  nvram
+  269  -rw-          35  Jan 21 2022 05:21:42 +00:00  pnp-tech-time
+  270  -rw-       46636  Jan 21 2022 05:21:54 +00:00  pnp-tech-discovery-summary
+  271  -rw-          79  Mar 11 2022 16:45:44 +00:00  e1000_bia.txt
+  272  -rw-        3943  Jan 23 2022 12:55:32 +00:00  baseconfig1
+  273  -rw-        3943  Jan 23 2022 13:12:38 +00:00  goldimage1
+  274  -rw-           0   Feb 2 2022 18:52:02 +00:00  merge_config.txt
+  275  -rw-        3195   Mar 5 2022 15:10:48 +00:00  candidate_config.txt
+  276  -rw-        4920   Mar 5 2022 11:32:10 +00:00  archive-Mar--5-11-32-09.658-0
+  277  -rw-        4992   Mar 5 2022 11:42:14 +00:00  archive-Mar--5-11-42-15.230-1
+  278  -rw-        4992   Mar 5 2022 11:44:34 +00:00  archive-Mar--5-11-44-34.690-2
+  279  -rw-        3142   Mar 5 2022 12:11:36 +00:00  rollback_config.txt
+  280  -rw-        4992   Mar 5 2022 11:54:18 +00:00  archive-Mar--5-11-54-14.425-3
+  281  -rw-        4992   Mar 5 2022 11:57:36 +00:00  archive-Mar--5-11-57-32.806-4
+  282  -rw-        4992   Mar 5 2022 11:59:50 +00:00  archive-Mar--5-11-59-48.502-5
+  283  -rw-        4992   Mar 5 2022 12:01:46 +00:00  archive-Mar--5-12-01-44.605-0
+  284  -rw-        4992   Mar 5 2022 12:09:22 +00:00  archive-Mar--5-12-09-20.871-0
+  285  -rw-        3142   Mar 5 2022 12:11:40 +00:00  archive-Mar--5-12-11-38.908-1
+  286  -rw-        3142   Mar 5 2022 12:16:28 +00:00  archive-Mar--5-12-16-28.248-2
+  287  -rw-        3142   Mar 5 2022 12:20:14 +00:00  archive-Mar--5-12-20-14.517-3
+  288  -rw-        3142   Mar 5 2022 14:09:08 +00:00  archive-Mar--5-14-09-08.379-4
+  289  -rw-        3195   Mar 5 2022 15:07:06 +00:00  archive-Mar--5-15-07-07.358-5
+  290  -rw-        3078   Mar 5 2022 16:51:00 +00:00  archive-Mar--5-16-51-00.218-6
+  291  -rw-        4893   Mar 6 2022 11:24:18 +00:00  archive-Mar--6-11-24-18.237-0
+  292  -rw-        4984   Mar 6 2022 12:13:40 +00:00  archive-Mar--6-12-13-41.797-1
+  293  -rw-        4980   Mar 6 2022 12:19:30 +00:00  archive-Mar--6-12-19-31.374-2
+  294  -rw-        4908  Mar 11 2022 16:45:44 +00:00  archive-Mar-11-16-45-44.060-0
+
+2142715904 bytes total (1988431872 bytes free)
+R1#
++++ R1 with via 'cli': executing command 'show redundancy' +++
+show redundancy
+Redundant System Information :
+------------------------------
+       Available system uptime = 0 minutes
+Switchovers system experienced = 0
+              Standby failures = 0
+        Last switchover reason = unsupported
+
+                 Hardware Mode = Simplex
+              Maintenance Mode = Disabled
+                Communications = Down      Reason: Failure
+
+Current Processor Information :
+-------------------------------
+               Active Location = slot 0
+        Current Software state = ACTIVE
+       Uptime in current state = 2 hours, 21 minutes
+                 Image Version = Cisco IOS Software, IOSv Software (VIOS-ADVENTERPRISEK9-M), Version 15.7(3)M3, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2018 by Cisco Systems, Inc.
+Compiled Wed 01-Aug-18 16:45 by prod_rel_team
+        Configuration register = 0x0
+
+Peer (slot: 0) information is not available because it is in 'DISABLED' state
+
+R1#

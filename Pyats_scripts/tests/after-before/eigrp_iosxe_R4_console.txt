@@ -1,0 +1,16 @@
++++ R4 with via 'cli': executing command 'show ip eigrp neighbors detail' +++
+show ip eigrp neighbors detail
+R4#
++++ R4 with via 'cli': executing command 'show ipv6 eigrp neighbors detail' +++
+show ipv6 eigrp neighbors detail
+R4#
+Could not learn <class 'genie.libs.parser.iosxe.show_eigrp.ShowIpv6EigrpNeighborsDetail'>
+Parser Output is empty
++====================================================================================================================================================+
+| Commands for learning feature 'Eigrp'                                                                                                              |
++====================================================================================================================================================+
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_eigrp.ShowIpEigrpNeighborsDetail'>                                                                     |
+|   cmd: <class 'genie.libs.parser.iosxe.show_eigrp.ShowIpv6EigrpNeighborsDetail'>                                                                   |
+|====================================================================================================================================================|

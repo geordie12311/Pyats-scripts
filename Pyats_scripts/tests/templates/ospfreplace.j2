@@ -1,0 +1,6 @@
+router ospf {{ host.facts.opsf.process_id }}
+router-id {{ host.facts.opsf.rid }}
+{% set networks = host.facts.ospf.networks %}
+{% for n in networks %}
+network {{ n.net }} {{ n.mask }} area {{ n.area }}
+{% endfor %}

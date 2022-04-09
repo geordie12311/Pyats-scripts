@@ -1,0 +1,26 @@
++++ R5 with via 'cli': executing command 'show vrf detail' +++
+show vrf detail
+R5#
++++ R5 with via 'cli': executing command 'show ip protocols | sec rip' +++
+show ip protocols | sec rip
+R5#
++++ R5 with via 'cli': executing command 'show ip rip database' +++
+show ip rip database
+R5#
++++ R5 with via 'cli': executing command 'show ipv6 protocols | sec rip' +++
+show ipv6 protocols | sec rip
+R5#
+how ip rip database vrf default
+Parser Output is empty
+Could not learn <class 'genie.libs.parser.iosxe.show_protocols.ShowIpv6ProtocolsSectionRip'>
+Parser Output is empty
++====================================================================================================================================================+
+| Commands for learning feature 'Rip'                                                                                                                |
++====================================================================================================================================================+
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_vrf.ShowVrfDetail'>                                                                                    |
+|   cmd: <class 'genie.libs.parser.iosxe.show_protocols.ShowIpProtocolsSectionRip'>, arguments: {'vrf':''}                                           |
+|   cmd: <class 'genie.libs.parser.iosxe.show_rip.ShowIpRipDatabase'>, arguments: {'vrf':''}                                                         |
+|   cmd: <class 'genie.libs.parser.iosxe.show_protocols.ShowIpv6ProtocolsSectionRip'>, arguments: {'vrf':''}                                         |
+|====================================================================================================================================================|

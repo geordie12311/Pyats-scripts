@@ -1,0 +1,66 @@
++++ R2 with via 'cli': executing command 'show spanning-tree summary' +++
+show spanning-tree summary
+Root bridge for: none.
+PortFast BPDU Guard is disabled
+UplinkFast is disabled
+BackboneFast is disabled
+
+Name                 Blocking Listening Learning Forwarding STP Active
+-------------------- -------- --------- -------- ---------- ----------
+               Total 0        0         0        0          0         
+R2#
++++ R2 with via 'cli': executing command 'show errdisable recovery' +++
+show errdisable recovery
+show errdisable recovery
+      ^
+% Invalid input detected at '^' marker.
+
+R2#
++++ R2 with via 'cli': executing command 'show spanning-tree mst detail' +++
+show spanning-tree mst detail
+show spanning-tree mst detail
+                   ^
+% Invalid input detected at '^' marker.
+
+R2#
++++ R2 with via 'cli': executing command 'show spanning-tree mst configuration' +++
+show spanning-tree mst configuration
+show spanning-tree mst configuration
+                   ^
+% Invalid input detected at '^' marker.
+
+R2#
++++ R2 with via 'cli': executing command 'show spanning-tree detail' +++
+show spanning-tree detail
+show spanning-tree detail
+                   ^
+% Invalid input detected at '^' marker.
+
+R2#
++++ R2 with via 'cli': executing command 'show spanning-tree' +++
+show spanning-tree
+
+No spanning tree instances exist.
+
+R2#
+Could not learn <class 'genie.libs.parser.iosxe.show_spanning_tree.ShowSpanningTree'>
+Show Command: show spanning-tree
+Parser Output is empty
++====================================================================================================================================================+
+| Commands for learning feature 'Stp'                                                                                                                |
++====================================================================================================================================================+
+| - Parsed commands                                                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_spanning_tree.ShowSpanningTreeSummary'>                                                                |
+|====================================================================================================================================================|
+| - Commands not accepted on the device                                                                                                              |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_spanning_tree.ShowErrdisableRecovery'>                                                                 |
+|   cmd: <class 'genie.libs.parser.iosxe.show_spanning_tree.ShowSpanningTreeMstDetail'>                                                              |
+|   cmd: <class 'genie.libs.parser.iosxe.show_spanning_tree.ShowSpanningTreeMstConfiguration'>                                                       |
+|   cmd: <class 'genie.libs.parser.iosxe.show_spanning_tree.ShowSpanningTreeDetail'>                                                                 |
+|====================================================================================================================================================|
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_spanning_tree.ShowSpanningTree'>                                                                       |
+|====================================================================================================================================================|

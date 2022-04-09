@@ -1,0 +1,24 @@
+OSPF: 
+    process_id: "1"
+    rid: "12.12.12.12"
+    redistributing:
+        - "redistribute connected subnets"
+        - "redistribute eigrp 100 subnets"
+    networks:
+        - "27.27.27.0 0.0.0.255 area 0"
+        - "56.56.56.0 0.0.0.255 area 0"
+
+ACCESS_LISTS:
+    ACL1:
+        - "permit ip host 1.1.1.1 host 8.8.8.8"
+        - "permit icmp host any any"
+
+    ACL2:
+        - "permit tcp host 140.140.1.3 any eq 22"
+        - "permit icmp host 140.140.1.3 any"
+
+NTP:
+    update_calendar: True
+    servers:
+        - "12.12.12.12 prefer"
+        - "19.19.19.19"

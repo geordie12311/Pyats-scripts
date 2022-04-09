@@ -1,0 +1,155 @@
+{
+  "* Cisco in writing.                                                      *": {},
+  "* IOSv is strictly limited to use for evaluation, demonstration and IOS  *": {},
+  "* Technical Advisory Center. Any use or disclosure, in whole or in part, *": {},
+  "* education. IOSv is provided as-is and is not supported by Cisco's      *": {},
+  "* of the IOSv Software or Documentation to any third party for any       *": {},
+  "* purposes is expressly prohibited except as otherwise authorized by     *": {},
+  "**************************************************************************": {},
+  "**************************************************************************^C": {},
+  "Building configuration...": {},
+  "Current configuration : 5240 bytes": {},
+  "aaa authentication login default local": {},
+  "aaa authorization exec default local": {},
+  "aaa new-model": {},
+  "aaa session-id common": {},
+  "archive": {
+    "path flash:archive": {},
+    "write-memory": {}
+  },
+  "banner exec ^C": {},
+  "banner incoming ^C": {},
+  "banner login ^C": {},
+  "boot-end-marker": {},
+  "boot-start-marker": {},
+  "control-plane": {},
+  "end": {},
+  "file prompt quiet": {},
+  "hostname R4": {},
+  "interface GigabitEthernet0/0": {
+    "description OOB management interface": {},
+    "duplex auto": {},
+    "ip address 10.10.10.104 255.255.255.0": {},
+    "media-type rj45": {},
+    "speed auto": {}
+  },
+  "interface GigabitEthernet0/1": {
+    "duplex auto": {},
+    "ip address 21.21.21.10 255.255.255.252": {},
+    "media-type rj45": {},
+    "speed auto": {}
+  },
+  "interface GigabitEthernet0/2": {
+    "duplex auto": {},
+    "media-type rj45": {},
+    "no ip address": {},
+    "speed auto": {}
+  },
+  "interface GigabitEthernet0/3": {
+    "duplex auto": {},
+    "ip address 24.24.24.1 255.255.255.252": {},
+    "media-type rj45": {},
+    "speed auto": {}
+  },
+  "interface GigabitEthernet0/4": {
+    "duplex auto": {},
+    "ip address 19.19.19.2 255.255.255.0": {},
+    "media-type rj45": {},
+    "speed auto": {}
+  },
+  "interface GigabitEthernet0/5": {
+    "duplex auto": {},
+    "media-type rj45": {},
+    "no ip address": {},
+    "shutdown": {},
+    "speed auto": {}
+  },
+  "interface GigabitEthernet0/6": {
+    "duplex auto": {},
+    "media-type rj45": {},
+    "no ip address": {},
+    "shutdown": {},
+    "speed auto": {}
+  },
+  "interface GigabitEthernet0/7": {
+    "duplex auto": {},
+    "media-type rj45": {},
+    "no ip address": {},
+    "shutdown": {},
+    "speed auto": {}
+  },
+  "interface Loopback0": {
+    "ip address 4.4.4.4 255.255.255.255": {}
+  },
+  "interface Loopback99": {
+    "ip address 99.99.99.99 255.255.255.255": {}
+  },
+  "ip cef": {},
+  "ip domain name gh-lab.com": {},
+  "ip forward-protocol nd": {},
+  "ip scp server enable": {},
+  "ipv6 ioam timestamp": {},
+  "line aux 0": {},
+  "line con 0": {},
+  "line vty 0 4": {
+    "transport input ssh": {}
+  },
+  "mmi polling-interval 60": {},
+  "mmi snmp-timeout 180": {},
+  "multilink bundle-name authenticated": {},
+  "no ip http secure-server": {},
+  "no ip http server": {},
+  "no ipv6 cef": {},
+  "no mmi auto-configure": {},
+  "no mmi pvc": {},
+  "no scheduler allocate": {},
+  "no service password-encryption": {},
+  "ntp server 10.10.10.150": {},
+  "ntp server 4.4.4.4": {},
+  "ntp server 8.8.8.8": {},
+  "parser view restricted": {
+    "commands exec include all show": {},
+    "commands exec include all show ip": {},
+    "commands exec include logout": {},
+    "commands exec include terminal": {},
+    "commands exec include terminal length": {},
+    "commands exec include terminal width": {},
+    "secret 5 $1$c.90$vIrWmyubuF3407DJ3ne.0/": {}
+  },
+  "redundancy": {},
+  "router bgp 65001": {
+    "bgp log-neighbor-changes": {},
+    "bgp router-id 4.4.4.4": {},
+    "neighbor 10.10.10.101 remote-as 65001": {},
+    "neighbor 10.10.10.102 remote-as 65001": {},
+    "neighbor 10.10.10.103 remote-as 65001": {},
+    "neighbor 10.10.10.105 remote-as 65001": {},
+    "neighbor 10.10.10.106 remote-as 65001": {},
+    "neighbor 10.10.10.107 remote-as 65001": {},
+    "neighbor 10.10.10.108 remote-as 65001": {},
+    "neighbor 10.10.10.112 remote-as 65001": {},
+    "neighbor 10.10.10.113 remote-as 65001": {}
+  },
+  "router ospf 1": {
+    "redistribute connected subnets": {},
+    "redistribute eigrp 100 subnets": {},
+    "router-id 4.4.4.4": {}
+  },
+  "service timestamps debug datetime msec": {},
+  "service timestamps log datetime msec": {},
+  "snmp-server chassis-id": {},
+  "snmp-server community gh-lab RO": {},
+  "snmp-server community ghlab RW": {},
+  "snmp-server host 10.10.10.120 rw": {},
+  "snmp-server host 10.10.10.120 version 2c gh-lab": {},
+  "snmp-server host 10.10.10.120 version 2c ghlab": {},
+  "snmp-server host 10.10.10.150 rw": {},
+  "snmp-server host 140.140.1.2 ro": {},
+  "snmp-server host 140.140.1.2 rw": {},
+  "snmp-server host 140.140.140.2 version 2c gh-lab": {},
+  "snmp-server host 140.140.140.2 version 2c ghlab": {},
+  "username elaine privilege 15 secret 5 $1$K9qc$KEgh4tRcTht4IXZdZfC0G.": {},
+  "username geordie privilege 15 secret 5 $1$ZYxd$49iAFsJtzOguOhHhmXtK/.": {},
+  "username jradmin privilege 15 view restricted secret 5 $1$VuHk$hqwDBDrtMEM66zAdwc6LU/": {},
+  "version 15.7": {}
+}

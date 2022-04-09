@@ -1,0 +1,75 @@
++++ CSR1 with via 'cli': executing command 'show spanning-tree summary' +++
+show spanning-tree summary
+Switch is in rapid-pvst mode
+Root bridge for: none
+EtherChannel misconfig guard            is enabled
+Extended system ID                      is enabled
+Portfast Default                        is disabled
+PortFast BPDU Guard Default            is disabled
+Portfast BPDU Filter Default           is disabled
+Loopguard Default                      is disabled
+UplinkFast                              is disabled
+BackboneFast                            is disabled
+Configured Pathcost method used is short
+
+Name                   Blocking Listening Learning Forwarding STP Active
+---------------------- -------- --------- -------- ---------- ----------
+Total                        0         0        0          0          0
+CSR1#
++++ CSR1 with via 'cli': executing command 'show errdisable recovery' +++
+show errdisable recovery
+show errdisable recovery
+      ^
+% Invalid input detected at '^' marker.
+
+CSR1#
++++ CSR1 with via 'cli': executing command 'show spanning-tree mst detail' +++
+show spanning-tree mst detail
+% Switch is not in mst mode
+
+CSR1#
++++ CSR1 with via 'cli': executing command 'show spanning-tree mst configuration' +++
+show spanning-tree mst configuration
+% Switch is not in mst mode
+Name      []
+Revision  0     Instances configured 1
+
+Instance  Vlans mapped
+--------  ---------------------------------------------------------------------
+0         1-4094
+-------------------------------------------------------------------------------
+CSR1#
++++ CSR1 with via 'cli': executing command 'show spanning-tree detail' +++
+show spanning-tree detail
+
+No spanning tree instance exists.
+
+CSR1#
++++ CSR1 with via 'cli': executing command 'show spanning-tree' +++
+show spanning-tree
+
+No spanning tree instance exists.
+
+CSR1#
+arser Output is empty
+Could not learn <class 'genie.libs.parser.iosxe.show_spanning_tree.ShowSpanningTree'>
+Show Command: show spanning-tree
+Parser Output is empty
++====================================================================================================================================================+
+| Commands for learning feature 'Stp'                                                                                                                |
++====================================================================================================================================================+
+| - Parsed commands                                                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_spanning_tree.ShowSpanningTreeSummary'>                                                                |
+|   cmd: <class 'genie.libs.parser.iosxe.show_spanning_tree.ShowSpanningTreeMstConfiguration'>                                                       |
+|====================================================================================================================================================|
+| - Commands not accepted on the device                                                                                                              |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_spanning_tree.ShowErrdisableRecovery'>                                                                 |
+|====================================================================================================================================================|
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_spanning_tree.ShowSpanningTreeMstDetail'>                                                              |
+|   cmd: <class 'genie.libs.parser.iosxe.show_spanning_tree.ShowSpanningTreeDetail'>                                                                 |
+|   cmd: <class 'genie.libs.parser.iosxe.show_spanning_tree.ShowSpanningTree'>                                                                       |
+|====================================================================================================================================================|

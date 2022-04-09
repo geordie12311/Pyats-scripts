@@ -1,0 +1,206 @@
++++ CSR1 with via 'cli': executing command 'show version' +++
+show version
+Cisco IOS XE Software, Version 17.03.01a
+Cisco IOS Software [Amsterdam], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 17.3.1a, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Wed 12-Aug-20 00:16 by mcpre
+
+
+Cisco IOS-XE software, Copyright (c) 2005-2020 by cisco Systems, Inc.
+All rights reserved.  Certain components of Cisco IOS-XE software are
+licensed under the GNU General Public License ("GPL") Version 2.0.  The
+software code licensed under GPL Version 2.0 is free software that comes
+with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such
+GPL code under the terms of GPL Version 2.0.  For more details, see the
+documentation or "License Notice" file accompanying the IOS-XE software,
+or the applicable URL provided on the flyer accompanying the IOS-XE
+software.
+
+
+ROM: IOS-XE ROMMON
+
+CSR1 uptime is 2 hours, 20 minutes
+Uptime for this control processor is 2 hours, 22 minutes
+System returned to ROM by reload
+System image file is "bootflash:packages.conf"
+Last reload reason: reload
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+License Level: ax
+License Type: N/A(Smart License Enabled)
+Next reload license Level: ax
+
+The current throughput level is 1000 kbps 
+
+
+Smart Licensing Status: UNREGISTERED/No Licenses in Use
+
+cisco CSR1000V (VXE) processor (revision VXE) with 715705K/3075K bytes of memory.
+Processor board ID 90C8F2QZEZH
+Router operating mode: Autonomous
+4 Gigabit Ethernet interfaces
+32768K bytes of non-volatile configuration memory.
+3012060K bytes of physical memory.
+6188032K bytes of virtual hard disk at bootflash:.
+
+Configuration register is 0x2102
+
+CSR1#
++++ CSR1 with via 'cli': executing command 'dir' +++
+dir
+Directory of bootflash:/
+
+217729  drwx            36864  Mar 12 2022 12:10:24 +00:00  tracelogs
+249985  drwx             4096  Mar 12 2022 10:02:55 +00:00  .installer
+338689  drwx             4096  Mar 12 2022 10:01:41 +00:00  license_evlog
+19      -rw-              157  Mar 12 2022 10:01:40 +00:00  csrlxc-cfg.log
+17      -rw-               30  Mar 12 2022 10:01:32 +00:00  throughput_monitor_params
+18      -rw-                0  Mar 12 2022 10:01:09 +00:00  cvac.log
+14      -rw-             5726  Mar 12 2022 10:00:10 +00:00  mode_event_log
+35      -rw-             3703  Mar 11 2022 16:46:36 +00:00  archive-Mar-11-16-46-36.080-15
+34      -rw-             3702   Mar 6 2022 13:46:59 +00:00  archive-Mar--6-13-46-59.803-14
+33      -rw-             3663   Mar 6 2022 12:09:09 +00:00  archive-Mar--6-12-09-09.280-13
+32      -rw-             3663   Mar 6 2022 11:53:28 +00:00  archive-Mar--6-11-53-28.347-12
+23      -rw-             3665   Mar 6 2022 11:48:33 +00:00  archive-Mar--6-11-48-33.137-11
+41      -rw-             3642   Mar 6 2022 11:31:32 +00:00  archive-Mar--6-11-31-32.565-10
+40      -rw-             3198   Mar 6 2022 10:09:42 +00:00  archive-Mar--6-10-09-42.710-9
+21      -rw-                0   Mar 5 2022 15:12:15 +00:00  merge_config.txt
+22      -rw-             3110   Mar 5 2022 15:12:13 +00:00  candidate_config.txt
+39      -rw-             3099   Mar 5 2022 14:11:55 +00:00  archive-Mar--5-14-11-55.168-8
+38      -rw-             3110   Mar 5 2022 13:53:52 +00:00  archive-Mar--5-13-53-52.934-7
+37      -rw-             6980   Mar 5 2022 13:51:29 +00:00  archive-Mar--5-13-51-29.261-6
+26      -rw-             6980   Mar 5 2022 13:51:26 +00:00  rollback_config.txt
+29      -rw-             7322   Mar 5 2022 12:00:21 +00:00  archive-Mar--5-12-00-21.135-5
+25      -rw-             3533   Mar 5 2022 11:45:20 +00:00  archive-Mar--5-11-45-20.296-2
+24      -rw-             3533   Mar 5 2022 11:43:01 +00:00  archive-Mar--5-11-43-01.781-1
+20      drwx             4096  Jan 30 2022 11:05:46 +00:00  lost+found
+274177  drwx             4096  Jan 29 2022 10:16:38 +00:00  .dbpersist
+225793  drwx             4096  Jan 29 2022 10:13:19 +00:00  pnp-tech
+314497  drwx             4096  Jan 29 2022 10:12:47 +00:00  iox_host_data_share
+298369  drwx             4096  Jan 29 2022 10:12:46 +00:00  guest-share
+330625  drwx             4096  Jan 29 2022 10:12:37 +00:00  onep
+322561  drwx             4096  Jan 29 2022 10:12:24 +00:00  pnp-info
+129025  drwx             4096  Jan 29 2022 10:11:59 +00:00  .prst_sync
+137089  drwx             4096  Jan 29 2022 10:11:00 +00:00  virtual-instance
+16      -rwx             1314  Jan 29 2022 10:10:40 +00:00  trustidrootx3_ca.ca
+15      -rw-            20109  Jan 29 2022 10:10:40 +00:00  ios_core.p7b
+282241  drwx             4096  Jan 29 2022 10:10:37 +00:00  gs_script
+266113  drwx             4096  Jan 29 2022 10:10:35 +00:00  .rollback_timer
+354817  drwx             4096  Jan 29 2022 10:10:35 +00:00  core
+233857  drwx             4096  Jan 29 2022 10:10:31 +00:00  bootlog_history
+13      -rw-         48321761  Aug 12 2020 16:26:28 +00:00  csr1000v-rpboot.17.03.01a.SPA.pkg
+12      -rw-        470611036  Aug 12 2020 16:26:28 +00:00  csr1000v-mono-universalk9.17.03.01a.SPA.pkg
+11      -rw-             1105  Aug 12 2020 16:26:27 +00:00  packages.conf
+
+6286540800 bytes total (5429690368 bytes free)
+CSR1#
++++ CSR1 with via 'cli': executing command 'show redundancy' +++
+show redundancy
+Redundant System Information :
+------------------------------
+       Available system uptime = 2 hours, 20 minutes
+Switchovers system experienced = 0
+              Standby failures = 0
+        Last switchover reason = none
+
+                 Hardware Mode = Simplex
+    Configured Redundancy Mode = Non-redundant
+     Operating Redundancy Mode = Non-redundant
+              Maintenance Mode = Disabled
+                Communications = Down      Reason: Failure
+
+Current Processor Information :
+-------------------------------
+               Active Location = slot 6
+        Current Software state = ACTIVE
+       Uptime in current state = 2 hours, 20 minutes
+                 Image Version = Cisco IOS Software [Amsterdam], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 17.3.1a, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Wed 12-Aug-20 00:16 by mcpre
+        Configuration register = 0x2102
+
+Peer (slot: 7) information is not available because it is in 'DISABLED' state
+
+CSR1#
++++ CSR1 with via 'cli': executing command 'show inventory' +++
+show inventory
+NAME: "Chassis", DESCR: "Cisco CSR1000V Chassis"
+PID: CSR1000V          , VID: V00  , SN: 90C8F2QZEZH
+
+NAME: "module R0", DESCR: "Cisco CSR1000V Route Processor"
+PID: CSR1000V          , VID: V00  , SN: JAB1303001C
+
+NAME: "module F0", DESCR: "Cisco CSR1000V Embedded Services Processor"
+PID: CSR1000V          , VID:      , SN:            
+
+
+CSR1#
++++ CSR1 with via 'cli': executing command 'show issu rollback-timer' +++
+show issu rollback-timer
+--- Starting local lock acquisition on R0 ---
+Finished local lock acquisition on R0
+
+Rollback: inactive, no ISSU operation is in progress
+
+CSR1#
++++ CSR1 with via 'cli': executing command 'show platform' +++
+show platform
+Chassis type: CSR1000V
+
+Slot      Type                State                 Insert time (ago) 
+--------- ------------------- --------------------- ----------------- 
+R0        CSR1000V            ok, active            02:22:01      
+F0        CSR1000V            ok, active            02:22:01      
+
+CSR1#
++++ CSR1 with via 'cli': executing command 'show issu state detail' +++
+show issu state detail
+--- Starting local lock acquisition on R0 ---
+Finished local lock acquisition on R0
+
+Current ISSU Status: Disabled       
+Previous ISSU Operation: N/A        
+=======================================================
+System Check                        Status
+-------------------------------------------------------
+Platform ISSU Support               No
+Standby Online                      No
+Autoboot Enabled                    No
+SSO Mode                            No
+Install Boot                        Yes
+Valid Boot Media                    Yes
+=======================================================
+No ISSU operation is in progress
+
+CSR1#
++====================================================================================================================================================+
+| Commands for learning feature 'Platform'                                                                                                           |
++====================================================================================================================================================+
+| - Parsed commands                                                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_platform.ShowVersion'>                                                                                 |
+|   cmd: <class 'genie.libs.parser.iosxe.show_platform.Dir'>                                                                                         |
+|   cmd: <class 'genie.libs.parser.iosxe.show_platform.ShowRedundancy'>                                                                              |
+|   cmd: <class 'genie.libs.parser.iosxe.show_platform.ShowInventory'>                                                                               |
+|   cmd: <class 'genie.libs.parser.iosxe.show_issu.ShowIssuRollbackTimer'>                                                                           |
+|   cmd: <class 'genie.libs.parser.iosxe.show_platform.ShowPlatform'>                                                                                |
+|   cmd: <class 'genie.libs.parser.iosxe.show_issu.ShowIssuStateDetail'>                                                                             |
+|====================================================================================================================================================|

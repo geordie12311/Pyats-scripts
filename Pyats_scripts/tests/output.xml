@@ -1,0 +1,1027 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.0 on linux)" generated="20220313 14:56:43.285" rpa="false" schemaversion="2">
+<suite id="s1" name="Add User" source="/home/geordie/Nornir-automation/Pyats_scripts/tests/add_user.robot">
+<test id="s1-t1" name="Connect to device">
+<kw name="use testbed &quot;testbed.yaml&quot;" library="ats.robot.pyATSRobot" sourcename="use testbed &quot;${testbed}&quot;">
+<doc>Load testbed YAML file and instantiate testbed object</doc>
+<status status="PASS" starttime="20220313 14:56:44.081" endtime="20220313 14:56:44.185"/>
+</kw>
+<kw name="connect to all devices" library="ats.robot.pyATSRobot">
+<doc>Connect to all devices</doc>
+<msg timestamp="20220313 14:56:44.186" level="INFO">Connecting to device 'Device CSR1, type iosxe'</msg>
+<msg timestamp="20220313 14:56:44.186" level="INFO">kwargs: {}</msg>
+<msg timestamp="20220313 14:56:47.764" level="INFO">Connecting to device 'Device CSR2, type iosxe'</msg>
+<msg timestamp="20220313 14:56:47.764" level="INFO">kwargs: {}</msg>
+<msg timestamp="20220313 14:56:50.355" level="INFO">Connecting to device 'Device R1, type iosxe'</msg>
+<msg timestamp="20220313 14:56:50.355" level="INFO">kwargs: {}</msg>
+<msg timestamp="20220313 14:56:55.771" level="INFO">Connecting to device 'Device R2, type iosxe'</msg>
+<msg timestamp="20220313 14:56:55.772" level="INFO">kwargs: {}</msg>
+<msg timestamp="20220313 14:56:58.412" level="INFO">Connecting to device 'Device R3, type iosxe'</msg>
+<msg timestamp="20220313 14:56:58.412" level="INFO">kwargs: {}</msg>
+<msg timestamp="20220313 14:57:03.648" level="INFO">Connecting to device 'Device R4, type iosxe'</msg>
+<msg timestamp="20220313 14:57:03.648" level="INFO">kwargs: {}</msg>
+<msg timestamp="20220313 14:57:06.650" level="INFO">Connecting to device 'Device R5, type iosxe'</msg>
+<msg timestamp="20220313 14:57:06.651" level="INFO">kwargs: {}</msg>
+<msg timestamp="20220313 14:57:12.923" level="INFO">Connecting to device 'Device R6, type iosxe'</msg>
+<msg timestamp="20220313 14:57:12.923" level="INFO">kwargs: {}</msg>
+<msg timestamp="20220313 14:57:16.505" level="INFO">Connecting to device 'Device R7, type iosxe'</msg>
+<msg timestamp="20220313 14:57:16.505" level="INFO">kwargs: {}</msg>
+<msg timestamp="20220313 14:57:20.761" level="INFO">Connecting to device 'Device R8, type iosxe'</msg>
+<msg timestamp="20220313 14:57:20.762" level="INFO">kwargs: {}</msg>
+<msg timestamp="20220313 14:57:23.061" level="INFO">2022-03-13 14:56:44,188: %UNICON-INFO: +++ CSR1 logfile /tmp/CSR1-cli-20220313T145644187.log +++
+
+2022-03-13 14:56:44,188: %UNICON-INFO: +++ Unicon plugin iosxe +++
+Password: 
+
+2022-03-13 14:56:44,479: %UNICON-INFO: +++ connection to spawn: ssh -l geordie 10.10.10.112, id: 139996013066608 +++
+
+2022-03-13 14:56:44,479: %UNICON-INFO: connection to CSR1
+
+
+
+
+CSR1#
+
+2022-03-13 14:56:45,508: %UNICON-INFO: +++ initializing handle +++
+
+2022-03-13 14:56:45,782: %UNICON-INFO: +++ CSR1 with via 'cli': executing command 'term length 0' +++
+term length 0
+CSR1#
+
+2022-03-13 14:56:46,481: %UNICON-INFO: +++ CSR1 with via 'cli': executing command 'term width 0' +++
+term width 0
+CSR1#
+
+2022-03-13 14:56:46,739: %UNICON-INFO: +++ CSR1 with via 'cli': executing command 'show version' +++
+show version
+Cisco IOS XE Software, Version 17.03.01a
+Cisco IOS Software [Amsterdam], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 17.3.1a, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Wed 12-Aug-20 00:16 by mcpre
+
+
+Cisco IOS-XE software, Copyright (c) 2005-2020 by cisco Systems, Inc.
+All rights reserved.  Certain components of Cisco IOS-XE software are
+licensed under the GNU General Public License ("GPL") Version 2.0.  The
+software code licensed under GPL Version 2.0 is free software that comes
+with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such
+GPL code under the terms of GPL Version 2.0.  For more details, see the
+documentation or "License Notice" file accompanying the IOS-XE software,
+or the applicable URL provided on the flyer accompanying the IOS-XE
+software.
+
+
+ROM: IOS-XE ROMMON
+
+CSR1 uptime is 3 hours, 6 minutes
+Uptime for this control processor is 3 hours, 8 minutes
+System returned to ROM by reload
+System image file is "bootflash:packages.conf"
+Last reload reason: reload
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+License Level: ax
+License Type: N/A(Smart License Enabled)
+Next reload license Level: ax
+
+The current throughput level is 1000 kbps 
+
+
+Smart Licensing Status: UNREGISTERED/No Licenses in Use
+
+cisco CSR1000V (VXE) processor (revision VXE) with 715705K/3075K bytes of memory.
+Processor board ID 90C8F2QZEZH
+Router operating mode: Autonomous
+4 Gigabit Ethernet interfaces
+32768K bytes of non-volatile configuration memory.
+3012060K bytes of physical memory.
+6188032K bytes of virtual hard disk at bootflash:.
+
+Configuration register is 0x2102
+
+CSR1#
+
+2022-03-13 14:56:46,894: %UNICON-INFO: +++ CSR1 with via 'cli': configure +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+CSR1(config)#no logging console
+CSR1(config)#line console 0
+CSR1(config-line)#exec-timeout 0
+CSR1(config-line)#end
+CSR1#
+
+2022-03-13 14:56:47,767: %UNICON-INFO: +++ CSR2 logfile /tmp/CSR2-cli-20220313T145647766.log +++
+
+2022-03-13 14:56:47,767: %UNICON-INFO: +++ Unicon plugin iosxe +++
+
+
+2022-03-13 14:56:48,027: %UNICON-INFO: +++ connection to spawn: ssh -l geordie 10.10.10.113, id: 139996013341344 +++
+
+2022-03-13 14:56:48,028: %UNICON-INFO: connection to CSR2
+Password: 
+
+
+
+CSR2#
+
+2022-03-13 14:56:48,520: %UNICON-INFO: +++ initializing handle +++
+
+2022-03-13 14:56:48,615: %UNICON-INFO: +++ CSR2 with via 'cli': executing command 'term length 0' +++
+term length 0
+CSR2#
+
+2022-03-13 14:56:48,997: %UNICON-INFO: +++ CSR2 with via 'cli': executing command 'term width 0' +++
+term width 0
+CSR2#
+
+2022-03-13 14:56:49,588: %UNICON-INFO: +++ CSR2 with via 'cli': executing command 'show version' +++
+show version
+Cisco IOS XE Software, Version 17.03.01a
+Cisco IOS Software [Amsterdam], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 17.3.1a, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Wed 12-Aug-20 00:16 by mcpre
+
+
+Cisco IOS-XE software, Copyright (c) 2005-2020 by cisco Systems, Inc.
+All rights reserved.  Certain components of Cisco IOS-XE software are
+licensed under the GNU General Public License ("GPL") Version 2.0.  The
+software code licensed under GPL Version 2.0 is free software that comes
+with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such
+GPL code under the terms of GPL Version 2.0.  For more details, see the
+documentation or "License Notice" file accompanying the IOS-XE software,
+or the applicable URL provided on the flyer accompanying the IOS-XE
+software.
+
+
+ROM: IOS-XE ROMMON
+
+CSR2 uptime is 3 hours, 6 minutes
+Uptime for this control processor is 3 hours, 8 minutes
+System returned to ROM by reload
+System image file is "bootflash:packages.conf"
+Last reload reason: reload
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+License Level: ax
+License Type: N/A(Smart License Enabled)
+Next reload license Level: ax
+
+The current throughput level is 1000 kbps 
+
+
+Smart Licensing Status: UNREGISTERED/No Licenses in Use
+
+cisco CSR1000V (VXE) processor (revision VXE) with 715705K/3075K bytes of memory.
+Processor board ID 9LSD8X5YLM3
+Router operating mode: Autonomous
+4 Gigabit Ethernet interfaces
+32768K bytes of non-volatile configuration memory.
+3012060K bytes of physical memory.
+6188032K bytes of virtual hard disk at bootflash:.
+
+Configuration register is 0x2102
+
+CSR2#
+
+2022-03-13 14:56:49,744: %UNICON-INFO: +++ CSR2 with via 'cli': configure +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+CSR2(config)#no logging console
+CSR2(config)#line console 0
+CSR2(config-line)#exec-timeout 0
+CSR2(config-line)#end
+CSR2#
+
+2022-03-13 14:56:50,359: %UNICON-INFO: +++ R1 logfile /tmp/R1-cli-20220313T145650358.log +++
+
+2022-03-13 14:56:50,359: %UNICON-INFO: +++ Unicon plugin iosxe +++
+
+
+2022-03-13 14:56:50,721: %UNICON-INFO: +++ connection to spawn: ssh -l geordie 10.10.10.101, id: 139996015991472 +++
+
+2022-03-13 14:56:50,722: %UNICON-INFO: connection to R1
+
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************Password: 
+
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+R1#
+
+2022-03-13 14:56:50,839: %UNICON-INFO: +++ initializing handle +++
+
+2022-03-13 14:56:51,940: %UNICON-INFO: +++ R1 with via 'cli': executing command 'term length 0' +++
+term length 0
+R1#
+
+2022-03-13 14:56:53,493: %UNICON-INFO: +++ R1 with via 'cli': executing command 'term width 0' +++
+term width 0
+R1#
+
+2022-03-13 14:56:54,230: %UNICON-INFO: +++ R1 with via 'cli': executing command 'show version' +++
+show version
+Cisco IOS Software, IOSv Software (VIOS-ADVENTERPRISEK9-M), Version 15.7(3)M3, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2018 by Cisco Systems, Inc.
+Compiled Wed 01-Aug-18 16:45 by prod_rel_team
+
+
+ROM: Bootstrap program is IOSv
+
+R1 uptime is 3 hours, 7 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv (revision 1.0) with  with 2032889K/62464K bytes of memory.
+Processor board ID 9X0MYJHM9SOTZ6WJXVFCU
+4 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+2097152K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+0K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+
+
+Configuration register is 0x0
+
+R1#
+
+2022-03-13 14:56:54,485: %UNICON-INFO: +++ R1 with via 'cli': configure +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#no logging console
+R1(config)#line console 0
+R1(config-line)#exec-timeout 0
+R1(config-line)#end
+R1#
+
+2022-03-13 14:56:55,774: %UNICON-INFO: +++ R2 logfile /tmp/R2-cli-20220313T145655773.log +++
+
+2022-03-13 14:56:55,774: %UNICON-INFO: +++ Unicon plugin iosxe +++
+
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+
+2022-03-13 14:56:56,128: %UNICON-INFO: +++ connection to spawn: ssh -l geordie 10.10.10.102, id: 139996015840608 +++
+
+2022-03-13 14:56:56,128: %UNICON-INFO: connection to R2
+Password: 
+
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+R2#
+
+2022-03-13 14:56:56,229: %UNICON-INFO: +++ initializing handle +++
+
+2022-03-13 14:56:56,322: %UNICON-INFO: +++ R2 with via 'cli': executing command 'term length 0' +++
+term length 0
+R2#
+
+2022-03-13 14:56:56,742: %UNICON-INFO: +++ R2 with via 'cli': executing command 'term width 0' +++
+term width 0
+R2#
+
+2022-03-13 14:56:57,171: %UNICON-INFO: +++ R2 with via 'cli': executing command 'show version' +++
+show version
+Cisco IOS Software, IOSv Software (VIOS-ADVENTERPRISEK9-M), Version 15.7(3)M3, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2018 by Cisco Systems, Inc.
+Compiled Wed 01-Aug-18 16:45 by prod_rel_team
+
+
+ROM: Bootstrap program is IOSv
+
+R2 uptime is 3 hours, 7 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv (revision 1.0) with  with 2032889K/62464K bytes of memory.
+Processor board ID 93C1IQ7NRVD9BSCEHPUVO
+4 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+2097152K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+0K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+
+
+Configuration register is 0x0
+
+R2#
+
+2022-03-13 14:56:57,374: %UNICON-INFO: +++ R2 with via 'cli': configure +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2(config)#no logging console
+R2(config)#line console 0
+R2(config-line)#exec-timeout 0
+R2(config-line)#end
+R2#
+
+2022-03-13 14:56:58,414: %UNICON-INFO: +++ R3 logfile /tmp/R3-cli-20220313T145658413.log +++
+
+2022-03-13 14:56:58,414: %UNICON-INFO: +++ Unicon plugin iosxe +++
+
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+
+2022-03-13 14:56:58,582: %UNICON-INFO: +++ connection to spawn: ssh -l geordie 10.10.10.103, id: 139996016097648 +++
+
+2022-03-13 14:56:58,582: %UNICON-INFO: connection to R3
+Password: 
+
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+R3#
+
+2022-03-13 14:56:58,813: %UNICON-INFO: +++ initializing handle +++
+
+2022-03-13 14:56:58,912: %UNICON-INFO: +++ R3 with via 'cli': executing command 'term length 0' +++
+term length 0
+R3#
+
+2022-03-13 14:56:59,195: %UNICON-INFO: +++ R3 with via 'cli': executing command 'term width 0' +++
+term width 0
+R3#
+
+2022-03-13 14:57:00,461: %UNICON-INFO: +++ R3 with via 'cli': executing command 'show version' +++
+show version
+Cisco IOS Software, IOSv Software (VIOS-ADVENTERPRISEK9-M), Version 15.7(3)M3, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2018 by Cisco Systems, Inc.
+Compiled Wed 01-Aug-18 16:45 by prod_rel_team
+
+
+ROM: Bootstrap program is IOSv
+
+R3 uptime is 3 hours, 7 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv (revision 1.0) with  with 984313K/62464K bytes of memory.
+Processor board ID 9WP8B0UNQWM5H18IJ3JSU
+4 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+2097152K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+0K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+
+
+Configuration register is 0x0
+
+R3#
+
+2022-03-13 14:57:01,315: %UNICON-INFO: +++ R3 with via 'cli': configure +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R3(config)#no logging console
+R3(config)#line console 0
+R3(config-line)#exec-timeout 0
+R3(config-line)#end
+R3#
+
+2022-03-13 14:57:03,651: %UNICON-INFO: +++ R4 logfile /tmp/R4-cli-20220313T145703650.log +++
+
+2022-03-13 14:57:03,651: %UNICON-INFO: +++ Unicon plugin iosxe +++
+
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+
+2022-03-13 14:57:03,881: %UNICON-INFO: +++ connection to spawn: ssh -l geordie 10.10.10.104, id: 139996016331312 +++
+
+2022-03-13 14:57:03,882: %UNICON-INFO: connection to R4
+Password: 
+
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+R4#
+
+2022-03-13 14:57:04,253: %UNICON-INFO: +++ initializing handle +++
+
+2022-03-13 14:57:04,360: %UNICON-INFO: +++ R4 with via 'cli': executing command 'term length 0' +++
+term length 0
+R4#
+
+2022-03-13 14:57:04,659: %UNICON-INFO: +++ R4 with via 'cli': executing command 'term width 0' +++
+term width 0
+R4#
+
+2022-03-13 14:57:05,142: %UNICON-INFO: +++ R4 with via 'cli': executing command 'show version' +++
+show version
+Cisco IOS Software, IOSv Software (VIOS-ADVENTERPRISEK9-M), Version 15.7(3)M3, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2018 by Cisco Systems, Inc.
+Compiled Wed 01-Aug-18 16:45 by prod_rel_team
+
+
+ROM: Bootstrap program is IOSv
+
+R4 uptime is 3 hours, 7 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv (revision 1.0) with  with 1983737K/111616K bytes of memory.
+Processor board ID 99MWM6673HODPTMEJ13C4
+8 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+2097152K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+0K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+
+
+Configuration register is 0x0
+
+R4#
+
+2022-03-13 14:57:05,489: %UNICON-INFO: +++ R4 with via 'cli': configure +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R4(config)#no logging console
+R4(config)#line console 0
+R4(config-line)#exec-timeout 0
+R4(config-line)#end
+R4#
+
+2022-03-13 14:57:06,653: %UNICON-INFO: +++ R5 logfile /tmp/R5-cli-20220313T145706652.log +++
+
+2022-03-13 14:57:06,653: %UNICON-INFO: +++ Unicon plugin iosxe +++
+
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+
+2022-03-13 14:57:07,002: %UNICON-INFO: +++ connection to spawn: ssh -l geordie 10.10.10.105, id: 139996016433792 +++
+
+2022-03-13 14:57:07,003: %UNICON-INFO: connection to R5
+Password: 
+
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+R5#
+
+2022-03-13 14:57:08,033: %UNICON-INFO: +++ initializing handle +++
+
+2022-03-13 14:57:08,809: %UNICON-INFO: +++ R5 with via 'cli': executing command 'term length 0' +++
+term length 0
+R5#
+
+2022-03-13 14:57:10,232: %UNICON-INFO: +++ R5 with via 'cli': executing command 'term width 0' +++
+term width 0
+R5#
+
+2022-03-13 14:57:11,473: %UNICON-INFO: +++ R5 with via 'cli': executing command 'show version' +++
+show version
+Cisco IOS Software, IOSv Software (VIOS-ADVENTERPRISEK9-M), Version 15.7(3)M3, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2018 by Cisco Systems, Inc.
+Compiled Wed 01-Aug-18 16:45 by prod_rel_team
+
+
+ROM: Bootstrap program is IOSv
+
+R5 uptime is 3 hours, 7 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv (revision 1.0) with  with 2032889K/62464K bytes of memory.
+Processor board ID 9A2HTSJMQP3LHMO9647FF
+4 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+2097152K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+0K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+
+
+Configuration register is 0x0
+
+R5#
+
+2022-03-13 14:57:11,711: %UNICON-INFO: +++ R5 with via 'cli': configure +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R5(config)#no logging console
+R5(config)#line console 0
+R5(config-line)#exec-timeout 0
+R5(config-line)#end
+R5#
+
+2022-03-13 14:57:12,925: %UNICON-INFO: +++ R6 logfile /tmp/R6-cli-20220313T145712925.log +++
+
+2022-03-13 14:57:12,926: %UNICON-INFO: +++ Unicon plugin iosxe +++
+
+
+2022-03-13 14:57:13,099: %UNICON-INFO: +++ connection to spawn: ssh -l geordie 10.10.10.106, id: 139996016675520 +++
+
+2022-03-13 14:57:13,099: %UNICON-INFO: connection to R6
+
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************Password: 
+
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+R6#
+
+2022-03-13 14:57:13,274: %UNICON-INFO: +++ initializing handle +++
+
+2022-03-13 14:57:13,512: %UNICON-INFO: +++ R6 with via 'cli': executing command 'term length 0' +++
+term length 0
+R6#
+
+2022-03-13 14:57:13,931: %UNICON-INFO: +++ R6 with via 'cli': executing command 'term width 0' +++
+term width 0
+R6#
+
+2022-03-13 14:57:14,297: %UNICON-INFO: +++ R6 with via 'cli': executing command 'show version' +++
+show version
+Cisco IOS Software, IOSv Software (VIOS-ADVENTERPRISEK9-M), Version 15.7(3)M3, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2018 by Cisco Systems, Inc.
+Compiled Wed 01-Aug-18 16:45 by prod_rel_team
+
+
+ROM: Bootstrap program is IOSv
+
+R6 uptime is 3 hours, 8 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv (revision 1.0) with  with 2032889K/62464K bytes of memory.
+Processor board ID 95RR45BWML8K7PP58MQV0
+4 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+2097152K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+0K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+
+
+Configuration register is 0x0
+
+R6#
+
+2022-03-13 14:57:14,515: %UNICON-INFO: +++ R6 with via 'cli': configure +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R6(config)#no logging console
+R6(config)#line console 0
+R6(config-line)#exec-timeout 0
+R6(config-line)#end
+R6#
+
+2022-03-13 14:57:16,507: %UNICON-INFO: +++ R7 logfile /tmp/R7-cli-20220313T145716507.log +++
+
+2022-03-13 14:57:16,508: %UNICON-INFO: +++ Unicon plugin iosxe +++
+
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+
+2022-03-13 14:57:16,857: %UNICON-INFO: +++ connection to spawn: ssh -l geordie 10.10.10.107, id: 139996016818880 +++
+
+2022-03-13 14:57:16,858: %UNICON-INFO: connection to R7
+Password: 
+
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+R7#
+
+2022-03-13 14:57:17,714: %UNICON-INFO: +++ initializing handle +++
+
+2022-03-13 14:57:18,405: %UNICON-INFO: +++ R7 with via 'cli': executing command 'term length 0' +++
+term length 0
+R7#
+
+2022-03-13 14:57:19,304: %UNICON-INFO: +++ R7 with via 'cli': executing command 'term width 0' +++
+term width 0
+R7#
+
+2022-03-13 14:57:19,587: %UNICON-INFO: +++ R7 with via 'cli': executing command 'show version' +++
+show version
+Cisco IOS Software, IOSv Software (VIOS-ADVENTERPRISEK9-M), Version 15.7(3)M3, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2018 by Cisco Systems, Inc.
+Compiled Wed 01-Aug-18 16:45 by prod_rel_team
+
+
+ROM: Bootstrap program is IOSv
+
+R7 uptime is 3 hours, 7 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv (revision 1.0) with  with 2032889K/62464K bytes of memory.
+Processor board ID 9BB2F8EWX20YH2EZDQ06U
+4 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+2097152K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+0K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+
+
+Configuration register is 0x0
+
+R7#
+
+2022-03-13 14:57:19,788: %UNICON-INFO: +++ R7 with via 'cli': configure +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R7(config)#no logging console
+R7(config)#line console 0
+R7(config-line)#exec-timeout 0
+R7(config-line)#end
+R7#
+
+2022-03-13 14:57:20,765: %UNICON-INFO: +++ R8 logfile /tmp/R8-cli-20220313T145720764.log +++
+
+2022-03-13 14:57:20,765: %UNICON-INFO: +++ Unicon plugin iosxe +++
+
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+
+2022-03-13 14:57:20,938: %UNICON-INFO: +++ connection to spawn: ssh -l geordie 10.10.10.108, id: 139996016434896 +++
+
+2022-03-13 14:57:20,938: %UNICON-INFO: connection to R8
+Password: 
+
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+R8#
+
+2022-03-13 14:57:21,145: %UNICON-INFO: +++ initializing handle +++
+
+2022-03-13 14:57:21,305: %UNICON-INFO: +++ R8 with via 'cli': executing command 'term length 0' +++
+term length 0
+R8#
+
+2022-03-13 14:57:21,603: %UNICON-INFO: +++ R8 with via 'cli': executing command 'term width 0' +++
+term width 0
+R8#
+
+2022-03-13 14:57:21,994: %UNICON-INFO: +++ R8 with via 'cli': executing command 'show version' +++
+show version
+Cisco IOS Software, IOSv Software (VIOS-ADVENTERPRISEK9-M), Version 15.7(3)M3, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2018 by Cisco Systems, Inc.
+Compiled Wed 01-Aug-18 16:45 by prod_rel_team
+
+
+ROM: Bootstrap program is IOSv
+
+R8 uptime is 3 hours, 8 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv (revision 1.0) with  with 2032889K/62464K bytes of memory.
+Processor board ID 9BRLWXO2J3UZ4SH5H01RJ
+4 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+2097152K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+0K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+
+
+Configuration register is 0x0
+
+R8#
+
+2022-03-13 14:57:22,197: %UNICON-INFO: +++ R8 with via 'cli': configure +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R8(config)#no logging console
+R8(config)#line console 0
+R8(config-line)#exec-timeout 0
+R8(config-line)#end
+R8#</msg>
+<status status="PASS" starttime="20220313 14:56:44.186" endtime="20220313 14:57:23.062"/>
+</kw>
+<status status="PASS" starttime="20220313 14:56:44.080" endtime="20220313 14:57:23.062"/>
+</test>
+<test id="s1-t2" name="Execute Useradd Commands">
+<kw name="configure &quot;username test priv 15 password test1&quot; on device &quot;R1&quot;" library="unicon.robot.UniconRobot" sourcename="configure &quot;${config:[^&quot;]+}&quot; on device &quot;${device:[^&quot;]+}&quot;">
+<doc>Configure a device with the configuration provided.</doc>
+<msg timestamp="20220313 14:57:23.064" level="INFO">Configuring username test priv 15 password test1 on device R1 alias None</msg>
+<msg timestamp="20220313 14:57:23.877" level="INFO">2022-03-13 14:57:23,064: %UNICON-INFO: +++ R1 with via 'cli': configure +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#username test priv 15 password test1
+R1(config)#end
+R1#</msg>
+<status status="PASS" starttime="20220313 14:57:23.063" endtime="20220313 14:57:23.877"/>
+</kw>
+<status status="PASS" starttime="20220313 14:57:23.063" endtime="20220313 14:57:23.878"/>
+</test>
+<test id="s1-t3" name="Disconnect from device">
+<kw name="disconnect from all devices" library="ats.robot.pyATSRobot">
+<doc>Disconnect from all devices with default alias.</doc>
+<status status="PASS" starttime="20220313 14:57:23.880" endtime="20220313 14:59:14.090"/>
+</kw>
+<status status="PASS" starttime="20220313 14:57:23.879" endtime="20220313 14:59:14.091"/>
+</test>
+<status status="PASS" starttime="20220313 14:56:43.286" endtime="20220313 14:59:14.092"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Add User">Add User</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

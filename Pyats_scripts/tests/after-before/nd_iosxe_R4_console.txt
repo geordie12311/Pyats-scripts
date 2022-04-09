@@ -1,0 +1,17 @@
++++ R4 with via 'cli': executing command 'show ipv6 neighbors' +++
+show ipv6 neighbors
+R4#
++++ R4 with via 'cli': executing command 'show ipv6 interface' +++
+show ipv6 interface
+R4#
+is empty
+Could not learn <class 'genie.libs.parser.iosxe.show_interface.ShowIpv6Interface'>
+Parser Output is empty
++====================================================================================================================================================+
+| Commands for learning feature 'Nd'                                                                                                                 |
++====================================================================================================================================================+
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_ipv6.ShowIpv6Neighbors'>, arguments: {'interface':'','vrf':''}                                         |
+|   cmd: <class 'genie.libs.parser.iosxe.show_interface.ShowIpv6Interface'>, arguments: {'interface':''}                                             |
+|====================================================================================================================================================|

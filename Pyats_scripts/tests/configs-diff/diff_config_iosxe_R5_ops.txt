@@ -1,0 +1,5 @@
+--- golden-config/config_iosxe_R5_ops.txt
++++ current-config/config_iosxe_R5_ops.txt
++Current configuration : 4805 bytes:
++ntp server 77.88.11.22:
+-Current configuration : 4782 bytes:

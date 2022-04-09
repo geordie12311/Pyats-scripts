@@ -1,0 +1,2367 @@
++++ R3 with via 'cli': executing command 'show bgp all summary' +++
+show bgp all summary
+For address family: IPv4 Unicast
+BGP router identifier 3.3.3.3, local AS number 65001
+BGP table version is 34, main routing table version 34
+27 network entries using 3888 bytes of memory
+45 path entries using 3780 bytes of memory
+1/1 BGP path/bestpath attribute entries using 160 bytes of memory
+0 BGP route-map cache entries using 0 bytes of memory
+0 BGP filter-list cache entries using 0 bytes of memory
+BGP using 7828 total bytes of memory
+BGP activity 27/0 prefixes, 46/1 paths, scan interval 60 secs
+
+Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+10.10.10.101    4        65001     153     154       34    0    0 02:17:06        5
+10.10.10.102    4        65001     154     154       34    0    0 02:16:35        5
+10.10.10.104    4        65001     153     153       34    0    0 02:16:29        6
+10.10.10.105    4        65001     155     153       34    0    0 02:17:05        4
+10.10.10.106    4        65001     154     154       34    0    0 02:17:10        3
+10.10.10.107    4        65001     153     154       34    0    0 02:17:08        5
+10.10.10.108    4        65001     155     152       34    0    0 02:17:10        6
+10.10.10.110    4        65001     155     153       34    0    0 02:17:08        0
+10.10.10.112    4        65001     152     152       34    0    0 02:14:39        6
+10.10.10.113    4        65001     153     153       34    0    0 02:14:40        5
+10.10.10.114    4         6519       0       0        1    0    0 never    Active
+10.10.10.115    4         6519       0       0        1    0    0 never    Active
+R3#
++++ R3 with via 'cli': executing command 'show ip bgp template peer-session' +++
+show ip bgp template peer-session
+No templates configured
+
+R3#
++++ R3 with via 'cli': executing command 'show ip bgp template peer-policy' +++
+show ip bgp template peer-policy
+No templates configured
+
+R3#
++++ R3 with via 'cli': executing command 'show vrf detail | inc \(VRF' +++
+show vrf detail | inc \(VRF
+R3#
++++ R3 with via 'cli': executing command 'show bgp all cluster-ids' +++
+show bgp all cluster-ids
+Global cluster-id: 3.3.3.3 (configured: 0.0.0.0)
+BGP client-to-client reflection:         Configured    Used
+  all (inter-cluster and intra-cluster): ENABLED
+  intra-cluster:                         ENABLED       ENABLED
+
+List of cluster-ids:
+Cluster-id     #-neighbors C2C-rfl-CFG C2C-rfl-USE
+R3#
++++ R3 with via 'cli': executing command 'show ip bgp all dampening parameters' +++
+show ip bgp all dampening parameters
+For address family: IPv4 Unicast
+
+% dampening not enabled for base
+
+For address family: IPv4 Multicast
+
+% dampening not enabled for base
+
+For address family: L2VPN E-VPN
+
+% dampening not enabled for base
+
+For address family: MVPNv4 Unicast
+
+% dampening not enabled for base
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors' +++
+show bgp all neighbors
+For address family: IPv4 Unicast
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+  BGP version 4, remote router ID 1.1.1.1
+  BGP state = Established, up for 02:17:09
+  Last read 00:00:51, last write 00:00:21, hold time is 180, keepalive interval is 60 seconds
+  Neighbor sessions:
+    1 active, is not multisession capable (disabled)
+  Neighbor capabilities:
+    Route refresh: advertised and received(new)
+    Four-octets ASN Capability: advertised and received
+    Address family IPv4 Unicast: advertised and received
+    Enhanced Refresh Capability: advertised and received
+    Multisession Capability: 
+    Stateful switchover support enabled: NO for session 1
+  Message statistics:
+    InQ depth is 0
+    OutQ depth is 0
+    
+                         Sent       Rcvd
+    Opens:                  1          1
+    Notifications:          0          0
+    Updates:                1          2
+    Keepalives:           152        150
+    Route Refresh:          0          0
+    Total:                154        153
+  Do log neighbor state changes (via global configuration)
+  Default minimum time between advertisement runs is 0 seconds
+
+  Address tracking is enabled, the RIB does have a route to 10.10.10.101
+  Route to peer address reachability Up: 1; Down: 0
+    Last notification 02:17:27
+  Connections established 1; dropped 0
+  Last reset never
+  Interface associated: (none) (peering address in same link)
+  Transport(tcp) path-mtu-discovery is enabled
+  Graceful-Restart is disabled
+  SSO is disabled
+Connection state is ESTAB, I/O status: 1, unread input bytes: 0            
+Connection is ECN Disabled, Mininum incoming TTL 0, Outgoing TTL 255
+Local host: 10.10.10.103, Local port: 21928
+Foreign host: 10.10.10.101, Foreign port: 179
+Connection tableid (VRF): 0
+Maximum output segment queue size: 50
+
+Enqueued packets for retransmit: 0, input: 0  mis-ordered: 0 (0 bytes)
+
+Event Timers (current time is 0x7E7544):
+Timer          Starts    Wakeups            Next
+Retrans           156          1             0x0
+TimeWait            0          0             0x0
+AckHold           152        148             0x0
+SendWnd             0          0             0x0
+KeepAlive           0          0             0x0
+GiveUp              0          0             0x0
+PmtuAger         7305       7304        0x7E7732
+DeadWait            0          0             0x0
+Linger              0          0             0x0
+ProcessQ            0          0             0x0
+
+iss: 3138756246  snduna: 3138759215  sndnxt: 3138759215
+irs: 2046020907  rcvnxt: 2046023910
+
+sndwnd:  16346  scale:      0  maxrcvwnd:  16384
+rcvwnd:  16308  scale:      0  delrcvwnd:     76
+
+SRTT: 1000 ms, RTTO: 1003 ms, RTV: 3 ms, KRTT: 0 ms
+minRTT: 6 ms, maxRTT: 1000 ms, ACK hold: 200 ms
+uptime: 8232148 ms, Sent idletime: 21149 ms, Receive idletime: 20944 ms 
+Status Flags: active open
+Option Flags: nagle, path mtu capable
+IP Precedence value : 6
+
+Datagrams (max data segment is 1460 bytes):
+Rcvd: 306 (out of order: 0), with data: 152, total data bytes: 3002
+Sent: 307 (retransmit: 1, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 154, total data bytes: 2968
+
+ Packets received in fast path: 0, fast processed: 0, slow path: 0
+ fast lock acquisition failures: 0, slow path: 0
+TCP Semaphore      0x0F3AC5FC  FREE 
+
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+  BGP version 4, remote router ID 2.2.2.2
+  BGP state = Established, up for 02:16:39
+  Last read 00:00:28, last write 00:00:04, hold time is 180, keepalive interval is 60 seconds
+  Neighbor sessions:
+    1 active, is not multisession capable (disabled)
+  Neighbor capabilities:
+    Route refresh: advertised and received(new)
+    Four-octets ASN Capability: advertised and received
+    Address family IPv4 Unicast: advertised and received
+    Enhanced Refresh Capability: advertised and received
+    Multisession Capability: 
+    Stateful switchover support enabled: NO for session 1
+  Message statistics:
+    InQ depth is 0
+    OutQ depth is 0
+    
+                         Sent       Rcvd
+    Opens:                  1          1
+    Notifications:          0          0
+    Updates:                1          2
+    Keepalives:           152        151
+    Route Refresh:          0          0
+    Total:                154        154
+  Do log neighbor state changes (via global configuration)
+  Default minimum time between advertisement runs is 0 seconds
+
+  Address tracking is enabled, the RIB does have a route to 10.10.10.102
+  Route to peer address reachability Up: 1; Down: 0
+    Last notification 02:17:27
+  Connections established 1; dropped 0
+  Last reset never
+  Interface associated: (none) (peering address in same link)
+  Transport(tcp) path-mtu-discovery is enabled
+  Graceful-Restart is disabled
+  SSO is disabled
+Connection state is ESTAB, I/O status: 1, unread input bytes: 0            
+Connection is ECN Disabled, Mininum incoming TTL 0, Outgoing TTL 255
+Local host: 10.10.10.103, Local port: 179
+Foreign host: 10.10.10.102, Foreign port: 20556
+Connection tableid (VRF): 0
+Maximum output segment queue size: 50
+
+Enqueued packets for retransmit: 0, input: 0  mis-ordered: 0 (0 bytes)
+
+Event Timers (current time is 0x7E754D):
+Timer          Starts    Wakeups            Next
+Retrans           153          0             0x0
+TimeWait            0          0             0x0
+AckHold           153        150             0x0
+SendWnd             0          0             0x0
+KeepAlive           0          0             0x0
+GiveUp              0          0             0x0
+PmtuAger            0          0             0x0
+DeadWait            0          0             0x0
+Linger              0          0             0x0
+ProcessQ            0          0             0x0
+
+iss:  301191653  snduna:  301194622  sndnxt:  301194622
+irs: 1243610425  rcvnxt: 1243613448
+
+sndwnd:  16346  scale:      0  maxrcvwnd:  16384
+rcvwnd:  16289  scale:      0  delrcvwnd:     95
+
+SRTT: 1000 ms, RTTO: 1003 ms, RTV: 3 ms, KRTT: 0 ms
+minRTT: 4 ms, maxRTT: 1000 ms, ACK hold: 200 ms
+uptime: 8199688 ms, Sent idletime: 4772 ms, Receive idletime: 4567 ms 
+Status Flags: passive open, gen tcbs
+Option Flags: nagle, path mtu capable
+IP Precedence value : 6
+
+Datagrams (max data segment is 1460 bytes):
+Rcvd: 307 (out of order: 0), with data: 153, total data bytes: 3022
+Sent: 308 (retransmit: 0, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 154, total data bytes: 2968
+
+ Packets received in fast path: 0, fast processed: 0, slow path: 0
+ fast lock acquisition failures: 0, slow path: 0
+TCP Semaphore      0x11B5E92C  FREE 
+
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+  BGP version 4, remote router ID 4.4.4.4
+  BGP state = Established, up for 02:16:33
+  Last read 00:00:26, last write 00:00:01, hold time is 180, keepalive interval is 60 seconds
+  Neighbor sessions:
+    1 active, is not multisession capable (disabled)
+  Neighbor capabilities:
+    Route refresh: advertised and received(new)
+    Four-octets ASN Capability: advertised and received
+    Address family IPv4 Unicast: advertised and received
+    Enhanced Refresh Capability: advertised and received
+    Multisession Capability: 
+    Stateful switchover support enabled: NO for session 1
+  Message statistics:
+    InQ depth is 0
+    OutQ depth is 0
+    
+                         Sent       Rcvd
+    Opens:                  1          1
+    Notifications:          0          0
+    Updates:                1          2
+    Keepalives:           152        150
+    Route Refresh:          0          0
+    Total:                154        153
+  Do log neighbor state changes (via global configuration)
+  Default minimum time between advertisement runs is 0 seconds
+
+  Address tracking is enabled, the RIB does have a route to 10.10.10.104
+  Route to peer address reachability Up: 1; Down: 0
+    Last notification 02:17:27
+  Connections established 1; dropped 0
+  Last reset never
+  Interface associated: (none) (peering address in same link)
+  Transport(tcp) path-mtu-discovery is enabled
+  Graceful-Restart is disabled
+  SSO is disabled
+Connection state is ESTAB, I/O status: 1, unread input bytes: 0            
+Connection is ECN Disabled, Mininum incoming TTL 0, Outgoing TTL 255
+Local host: 10.10.10.103, Local port: 36186
+Foreign host: 10.10.10.104, Foreign port: 179
+Connection tableid (VRF): 0
+Maximum output segment queue size: 50
+
+Enqueued packets for retransmit: 0, input: 0  mis-ordered: 0 (0 bytes)
+
+Event Timers (current time is 0x7E7591):
+Timer          Starts    Wakeups            Next
+Retrans           155          1             0x0
+TimeWait            0          0             0x0
+AckHold           152        148             0x0
+SendWnd             0          0             0x0
+KeepAlive           0          0             0x0
+GiveUp              0          0             0x0
+PmtuAger         7262       7261        0x7E7734
+DeadWait            0          0             0x0
+Linger              0          0             0x0
+ProcessQ            0          0             0x0
+
+iss:  729909971  snduna:  729912940  sndnxt:  729912940
+irs: 3302157956  rcvnxt: 3302160966
+
+sndwnd:  16346  scale:      0  maxrcvwnd:  16384
+rcvwnd:  16308  scale:      0  delrcvwnd:     76
+
+SRTT: 1000 ms, RTTO: 1003 ms, RTV: 3 ms, KRTT: 0 ms
+minRTT: 5 ms, maxRTT: 1073 ms, ACK hold: 200 ms
+uptime: 8197764 ms, Sent idletime: 1756 ms, Receive idletime: 1548 ms 
+Status Flags: active open
+Option Flags: nagle, path mtu capable
+IP Precedence value : 6
+
+Datagrams (max data segment is 1460 bytes):
+Rcvd: 307 (out of order: 0), with data: 152, total data bytes: 3009
+Sent: 308 (retransmit: 1, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 154, total data bytes: 2968
+
+ Packets received in fast path: 0, fast processed: 0, slow path: 0
+ fast lock acquisition failures: 0, slow path: 0
+TCP Semaphore      0x11B5E99C  FREE 
+
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+  BGP version 4, remote router ID 5.5.5.5
+  BGP state = Established, up for 02:17:09
+  Last read 00:00:03, last write 00:00:30, hold time is 180, keepalive interval is 60 seconds
+  Neighbor sessions:
+    1 active, is not multisession capable (disabled)
+  Neighbor capabilities:
+    Route refresh: advertised and received(new)
+    Four-octets ASN Capability: advertised and received
+    Address family IPv4 Unicast: advertised and received
+    Enhanced Refresh Capability: advertised and received
+    Multisession Capability: 
+    Stateful switchover support enabled: NO for session 1
+  Message statistics:
+    InQ depth is 0
+    OutQ depth is 0
+    
+                         Sent       Rcvd
+    Opens:                  1          1
+    Notifications:          0          0
+    Updates:                1          2
+    Keepalives:           151        153
+    Route Refresh:          0          0
+    Total:                153        156
+  Do log neighbor state changes (via global configuration)
+  Default minimum time between advertisement runs is 0 seconds
+
+  Address tracking is enabled, the RIB does have a route to 10.10.10.105
+  Route to peer address reachability Up: 1; Down: 0
+    Last notification 02:17:27
+  Connections established 1; dropped 0
+  Last reset never
+  Interface associated: (none) (peering address in same link)
+  Transport(tcp) path-mtu-discovery is enabled
+  Graceful-Restart is disabled
+  SSO is disabled
+Connection state is ESTAB, I/O status: 1, unread input bytes: 0            
+Connection is ECN Disabled, Mininum incoming TTL 0, Outgoing TTL 255
+Local host: 10.10.10.103, Local port: 24451
+Foreign host: 10.10.10.105, Foreign port: 179
+Connection tableid (VRF): 0
+Maximum output segment queue size: 50
+
+Enqueued packets for retransmit: 0, input: 0  mis-ordered: 0 (0 bytes)
+
+Event Timers (current time is 0x7E759A):
+Timer          Starts    Wakeups            Next
+Retrans           155          1             0x0
+TimeWait            0          0             0x0
+AckHold           155        151             0x0
+SendWnd             0          0             0x0
+KeepAlive           0          0             0x0
+GiveUp              0          0             0x0
+PmtuAger         7291       7290        0x7E78B1
+DeadWait            0          0             0x0
+Linger              0          0             0x0
+ProcessQ            0          0             0x0
+
+iss:  543456209  snduna:  543459159  sndnxt:  543459159
+irs:   64105859  rcvnxt:   64108917
+
+sndwnd:  16365  scale:      0  maxrcvwnd:  16384
+rcvwnd:  16251  scale:      0  delrcvwnd:    133
+
+SRTT: 1000 ms, RTTO: 1003 ms, RTV: 3 ms, KRTT: 0 ms
+minRTT: 6 ms, maxRTT: 1000 ms, ACK hold: 200 ms
+uptime: 8232223 ms, Sent idletime: 3108 ms, Receive idletime: 3310 ms 
+Status Flags: active open
+Option Flags: nagle, path mtu capable
+IP Precedence value : 6
+
+Datagrams (max data segment is 1460 bytes):
+Rcvd: 309 (out of order: 0), with data: 155, total data bytes: 3057
+Sent: 309 (retransmit: 1, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 153, total data bytes: 2949
+
+ Packets received in fast path: 0, fast processed: 0, slow path: 0
+ fast lock acquisition failures: 0, slow path: 0
+TCP Semaphore      0x0F3AC51C  FREE 
+
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+  BGP version 4, remote router ID 6.6.6.6
+  BGP state = Established, up for 02:17:13
+  Last read 00:00:28, last write 00:00:06, hold time is 180, keepalive interval is 60 seconds
+  Neighbor sessions:
+    1 active, is not multisession capable (disabled)
+  Neighbor capabilities:
+    Route refresh: advertised and received(new)
+    Four-octets ASN Capability: advertised and received
+    Address family IPv4 Unicast: advertised and received
+    Enhanced Refresh Capability: advertised and received
+    Multisession Capability: 
+    Stateful switchover support enabled: NO for session 1
+  Message statistics:
+    InQ depth is 0
+    OutQ depth is 0
+    
+                         Sent       Rcvd
+    Opens:                  1          1
+    Notifications:          0          0
+    Updates:                1          3
+    Keepalives:           152        150
+    Route Refresh:          0          0
+    Total:                154        154
+  Do log neighbor state changes (via global configuration)
+  Default minimum time between advertisement runs is 0 seconds
+
+  Address tracking is enabled, the RIB does have a route to 10.10.10.106
+  Route to peer address reachability Up: 1; Down: 0
+    Last notification 02:17:27
+  Connections established 1; dropped 0
+  Last reset never
+  Interface associated: (none) (peering address in same link)
+  Transport(tcp) path-mtu-discovery is enabled
+  Graceful-Restart is disabled
+  SSO is disabled
+Connection state is ESTAB, I/O status: 1, unread input bytes: 0            
+Connection is ECN Disabled, Mininum incoming TTL 0, Outgoing TTL 255
+Local host: 10.10.10.103, Local port: 64418
+Foreign host: 10.10.10.106, Foreign port: 179
+Connection tableid (VRF): 0
+Maximum output segment queue size: 50
+
+Enqueued packets for retransmit: 0, input: 0  mis-ordered: 0 (0 bytes)
+
+Event Timers (current time is 0x7E75A6):
+Timer          Starts    Wakeups            Next
+Retrans           155          0             0x0
+TimeWait            0          0             0x0
+AckHold           153        147             0x0
+SendWnd             0          0             0x0
+KeepAlive           0          0             0x0
+GiveUp              0          0             0x0
+PmtuAger         7324       7323        0x7E7707
+DeadWait            0          0             0x0
+Linger              0          0             0x0
+ProcessQ            0          0             0x0
+
+iss: 1635055017  snduna: 1635057986  sndnxt: 1635057986
+irs: 3053050346  rcvnxt: 3053053374
+
+sndwnd:  16346  scale:      0  maxrcvwnd:  16384
+rcvwnd:  16280  scale:      0  delrcvwnd:    104
+
+SRTT: 1000 ms, RTTO: 1003 ms, RTV: 3 ms, KRTT: 0 ms
+minRTT: 7 ms, maxRTT: 1000 ms, ACK hold: 200 ms
+uptime: 8234395 ms, Sent idletime: 6909 ms, Receive idletime: 6705 ms 
+Status Flags: active open
+Option Flags: nagle, path mtu capable
+IP Precedence value : 6
+
+Datagrams (max data segment is 1460 bytes):
+Rcvd: 306 (out of order: 0), with data: 153, total data bytes: 3027
+Sent: 306 (retransmit: 0, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 154, total data bytes: 2968
+
+ Packets received in fast path: 0, fast processed: 0, slow path: 0
+ fast lock acquisition failures: 0, slow path: 0
+TCP Semaphore      0x0F3AC66C  FREE 
+
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+  BGP version 4, remote router ID 7.7.7.7
+  BGP state = Established, up for 02:17:11
+  Last read 00:00:02, last write 00:00:34, hold time is 180, keepalive interval is 60 seconds
+  Neighbor sessions:
+    1 active, is not multisession capable (disabled)
+  Neighbor capabilities:
+    Route refresh: advertised and received(new)
+    Four-octets ASN Capability: advertised and received
+    Address family IPv4 Unicast: advertised and received
+    Enhanced Refresh Capability: advertised and received
+    Multisession Capability: 
+    Stateful switchover support enabled: NO for session 1
+  Message statistics:
+    InQ depth is 0
+    OutQ depth is 0
+    
+                         Sent       Rcvd
+    Opens:                  1          1
+    Notifications:          0          0
+    Updates:                1          2
+    Keepalives:           152        151
+    Route Refresh:          0          0
+    Total:                154        154
+  Do log neighbor state changes (via global configuration)
+  Default minimum time between advertisement runs is 0 seconds
+
+  Address tracking is enabled, the RIB does have a route to 10.10.10.107
+  Route to peer address reachability Up: 1; Down: 0
+    Last notification 02:17:27
+  Connections established 1; dropped 0
+  Last reset never
+  Interface associated: (none) (peering address in same link)
+  Transport(tcp) path-mtu-discovery is enabled
+  Graceful-Restart is disabled
+  SSO is disabled
+Connection state is ESTAB, I/O status: 1, unread input bytes: 0            
+Connection is ECN Disabled, Mininum incoming TTL 0, Outgoing TTL 255
+Local host: 10.10.10.103, Local port: 63685
+Foreign host: 10.10.10.107, Foreign port: 179
+Connection tableid (VRF): 0
+Maximum output segment queue size: 50
+
+Enqueued packets for retransmit: 0, input: 0  mis-ordered: 0 (0 bytes)
+
+Event Timers (current time is 0x7E75F9):
+Timer          Starts    Wakeups            Next
+Retrans           155          0             0x0
+TimeWait            0          0             0x0
+AckHold           153        149             0x0
+SendWnd             0          0             0x0
+KeepAlive           0          0             0x0
+GiveUp              0          0             0x0
+PmtuAger         7322       7321        0x7E76AD
+DeadWait            0          0             0x0
+Linger              0          0             0x0
+ProcessQ            0          0             0x0
+
+iss: 3785950214  snduna: 3785953183  sndnxt: 3785953183
+irs: 2771191453  rcvnxt: 2771194476
+
+sndwnd:  16346  scale:      0  maxrcvwnd:  16384
+rcvwnd:  16289  scale:      0  delrcvwnd:     95
+
+SRTT: 1000 ms, RTTO: 1003 ms, RTV: 3 ms, KRTT: 0 ms
+minRTT: 5 ms, maxRTT: 1000 ms, ACK hold: 200 ms
+uptime: 8232314 ms, Sent idletime: 2277 ms, Receive idletime: 2478 ms 
+Status Flags: active open
+Option Flags: nagle, path mtu capable
+IP Precedence value : 6
+
+Datagrams (max data segment is 1460 bytes):
+Rcvd: 308 (out of order: 0), with data: 153, total data bytes: 3022
+Sent: 308 (retransmit: 0, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 154, total data bytes: 2968
+
+ Packets received in fast path: 0, fast processed: 0, slow path: 0
+ fast lock acquisition failures: 0, slow path: 0
+TCP Semaphore      0x0F3AC4AC  FREE 
+
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+  BGP version 4, remote router ID 8.8.8.8
+  BGP state = Established, up for 02:17:13
+  Last read 00:00:04, last write 00:00:53, hold time is 180, keepalive interval is 60 seconds
+  Neighbor sessions:
+    1 active, is not multisession capable (disabled)
+  Neighbor capabilities:
+    Route refresh: advertised and received(new)
+    Four-octets ASN Capability: advertised and received
+    Address family IPv4 Unicast: advertised and received
+    Enhanced Refresh Capability: advertised and received
+    Multisession Capability: 
+    Stateful switchover support enabled: NO for session 1
+  Message statistics:
+    InQ depth is 0
+    OutQ depth is 0
+    
+                         Sent       Rcvd
+    Opens:                  1          1
+    Notifications:          0          0
+    Updates:                1          2
+    Keepalives:           150        152
+    Route Refresh:          0          0
+    Total:                152        155
+  Do log neighbor state changes (via global configuration)
+  Default minimum time between advertisement runs is 0 seconds
+
+  Address tracking is enabled, the RIB does have a route to 10.10.10.108
+  Route to peer address reachability Up: 1; Down: 0
+    Last notification 02:17:27
+  Connections established 1; dropped 0
+  Last reset never
+  Interface associated: (none) (peering address in same link)
+  Transport(tcp) path-mtu-discovery is enabled
+  Graceful-Restart is disabled
+  SSO is disabled
+Connection state is ESTAB, I/O status: 1, unread input bytes: 0            
+Connection is ECN Disabled, Mininum incoming TTL 0, Outgoing TTL 255
+Local host: 10.10.10.103, Local port: 64213
+Foreign host: 10.10.10.108, Foreign port: 179
+Connection tableid (VRF): 0
+Maximum output segment queue size: 50
+
+Enqueued packets for retransmit: 0, input: 0  mis-ordered: 0 (0 bytes)
+
+Event Timers (current time is 0x7E7606):
+Timer          Starts    Wakeups            Next
+Retrans           153          0             0x0
+TimeWait            0          0             0x0
+AckHold           154        150             0x0
+SendWnd             0          0             0x0
+KeepAlive           0          0             0x0
+GiveUp              0          0             0x0
+PmtuAger         7331       7330        0x7E76A2
+DeadWait            0          0             0x0
+Linger              0          0             0x0
+ProcessQ            0          0             0x0
+
+iss: 1476259025  snduna: 1476261956  sndnxt: 1476261956
+irs: 3209879929  rcvnxt: 3209882976
+
+sndwnd:  16384  scale:      0  maxrcvwnd:  16384
+rcvwnd:  16270  scale:      0  delrcvwnd:    114
+
+SRTT: 1000 ms, RTTO: 1003 ms, RTV: 3 ms, KRTT: 0 ms
+minRTT: 5 ms, maxRTT: 1000 ms, ACK hold: 200 ms
+uptime: 8234500 ms, Sent idletime: 4268 ms, Receive idletime: 4468 ms 
+Status Flags: active open
+Option Flags: nagle, path mtu capable
+IP Precedence value : 6
+
+Datagrams (max data segment is 1460 bytes):
+Rcvd: 307 (out of order: 0), with data: 154, total data bytes: 3046
+Sent: 307 (retransmit: 0, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 152, total data bytes: 2930
+
+ Packets received in fast path: 0, fast processed: 0, slow path: 0
+ fast lock acquisition failures: 0, slow path: 0
+TCP Semaphore      0x0F3AC74C  FREE 
+
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+  BGP version 4, remote router ID 15.15.15.15
+  BGP state = Established, up for 02:17:12
+  Last read 00:00:30, last write 00:00:47, hold time is 180, keepalive interval is 60 seconds
+  Neighbor sessions:
+    1 active, is not multisession capable (disabled)
+  Neighbor capabilities:
+    Route refresh: advertised and received(new)
+    Four-octets ASN Capability: advertised and received
+    Address family IPv4 Unicast: advertised and received
+    Enhanced Refresh Capability: advertised and received
+    Multisession Capability: 
+    Stateful switchover support enabled: NO for session 1
+  Message statistics:
+    InQ depth is 0
+    OutQ depth is 0
+    
+                         Sent       Rcvd
+    Opens:                  1          1
+    Notifications:          0          0
+    Updates:                1          1
+    Keepalives:           151        153
+    Route Refresh:          0          0
+    Total:                153        155
+  Do log neighbor state changes (via global configuration)
+  Default minimum time between advertisement runs is 0 seconds
+
+  Address tracking is enabled, the RIB does have a route to 10.10.10.110
+  Route to peer address reachability Up: 1; Down: 0
+    Last notification 02:17:27
+  Connections established 1; dropped 0
+  Last reset never
+  Interface associated: (none) (peering address in same link)
+  Transport(tcp) path-mtu-discovery is enabled
+  Graceful-Restart is disabled
+  SSO is disabled
+Connection state is ESTAB, I/O status: 1, unread input bytes: 0            
+Connection is ECN Disabled, Mininum incoming TTL 0, Outgoing TTL 255
+Local host: 10.10.10.103, Local port: 21131
+Foreign host: 10.10.10.110, Foreign port: 179
+Connection tableid (VRF): 0
+Maximum output segment queue size: 50
+
+Enqueued packets for retransmit: 0, input: 0  mis-ordered: 0 (0 bytes)
+
+Event Timers (current time is 0x7E7646):
+Timer          Starts    Wakeups            Next
+Retrans           154          0             0x0
+TimeWait            0          0             0x0
+AckHold           154        148             0x0
+SendWnd             0          0             0x0
+KeepAlive           0          0             0x0
+GiveUp              0          0             0x0
+PmtuAger         7333       7332        0x7E76A1
+DeadWait            0          0             0x0
+Linger              0          0             0x0
+ProcessQ            0          0             0x0
+
+iss: 1119041112  snduna: 1119044062  sndnxt: 1119044062
+irs: 1831874177  rcvnxt: 1831877165
+
+sndwnd:  16365  scale:      0  maxrcvwnd:  16384
+rcvwnd:  16327  scale:      0  delrcvwnd:     57
+
+SRTT: 1000 ms, RTTO: 1003 ms, RTV: 3 ms, KRTT: 0 ms
+minRTT: 2 ms, maxRTT: 1000 ms, ACK hold: 200 ms
+uptime: 8232387 ms, Sent idletime: 30373 ms, Receive idletime: 30574 ms 
+Status Flags: active open
+Option Flags: nagle, path mtu capable
+IP Precedence value : 6
+
+Datagrams (max data segment is 1460 bytes):
+Rcvd: 308 (out of order: 0), with data: 155, total data bytes: 2987
+Sent: 307 (retransmit: 0, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 153, total data bytes: 2949
+
+ Packets received in fast path: 0, fast processed: 0, slow path: 0
+ fast lock acquisition failures: 0, slow path: 0
+TCP Semaphore      0x11B5EA0C  FREE 
+
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+  BGP version 4, remote router ID 12.12.12.12
+  BGP state = Established, up for 02:14:43
+  Last read 00:00:29, last write 00:00:55, hold time is 180, keepalive interval is 60 seconds
+  Neighbor sessions:
+    1 active, is not multisession capable (disabled)
+  Neighbor capabilities:
+    Route refresh: advertised and received(new)
+    Four-octets ASN Capability: advertised and received
+    Address family IPv4 Unicast: advertised and received
+    Enhanced Refresh Capability: advertised and received
+    Multisession Capability: 
+    Stateful switchover support enabled: NO for session 1
+  Message statistics:
+    InQ depth is 0
+    OutQ depth is 0
+    
+                         Sent       Rcvd
+    Opens:                  1          1
+    Notifications:          0          0
+    Updates:                1          2
+    Keepalives:           148        149
+    Route Refresh:          0          0
+    Total:                152        152
+  Do log neighbor state changes (via global configuration)
+  Default minimum time between advertisement runs is 0 seconds
+
+  Address tracking is enabled, the RIB does have a route to 10.10.10.112
+  Route to peer address reachability Up: 1; Down: 0
+    Last notification 02:17:27
+  Connections established 1; dropped 0
+  Last reset never
+  Interface associated: (none) (peering address in same link)
+  Transport(tcp) path-mtu-discovery is enabled
+  Graceful-Restart is disabled
+  SSO is disabled
+Connection state is ESTAB, I/O status: 1, unread input bytes: 0            
+Connection is ECN Disabled, Mininum incoming TTL 0, Outgoing TTL 255
+Local host: 10.10.10.103, Local port: 65307
+Foreign host: 10.10.10.112, Foreign port: 179
+Connection tableid (VRF): 0
+Maximum output segment queue size: 50
+
+Enqueued packets for retransmit: 0, input: 0  mis-ordered: 0 (0 bytes)
+
+Event Timers (current time is 0x7E764F):
+Timer          Starts    Wakeups            Next
+Retrans           151          0             0x0
+TimeWait            0          0             0x0
+AckHold           151        146             0x0
+SendWnd             0          0             0x0
+KeepAlive           0          0             0x0
+GiveUp              0          0             0x0
+PmtuAger         7195       7194        0x7E769E
+DeadWait            0          0             0x0
+Linger              0          0             0x0
+ProcessQ            0          0             0x0
+
+iss:  335667930  snduna:  335670869  sndnxt:  335670869
+irs:  566790486  rcvnxt:  566793475
+
+sndwnd:  16384  scale:      0  maxrcvwnd:  16384
+rcvwnd:  16327  scale:      0  delrcvwnd:     57
+
+SRTT: 1000 ms, RTTO: 1003 ms, RTV: 3 ms, KRTT: 0 ms
+minRTT: 2 ms, maxRTT: 1000 ms, ACK hold: 200 ms
+uptime: 8093549 ms, Sent idletime: 29447 ms, Receive idletime: 29648 ms 
+Status Flags: active open
+Option Flags: nagle, path mtu capable
+IP Precedence value : 6
+
+Datagrams (max data segment is 1460 bytes):
+Rcvd: 302 (out of order: 0), with data: 151, total data bytes: 2988
+Sent: 302 (retransmit: 0, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 151, total data bytes: 2938
+
+ Packets received in fast path: 0, fast processed: 0, slow path: 0
+ fast lock acquisition failures: 0, slow path: 0
+TCP Semaphore      0x11B5E84C  FREE 
+
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+  BGP version 4, remote router ID 13.13.13.13
+  BGP state = Established, up for 02:14:44
+  Last read 00:00:02, last write 00:00:08, hold time is 180, keepalive interval is 60 seconds
+  Neighbor sessions:
+    1 active, is not multisession capable (disabled)
+  Neighbor capabilities:
+    Route refresh: advertised and received(new)
+    Four-octets ASN Capability: advertised and received
+    Address family IPv4 Unicast: advertised and received
+    Enhanced Refresh Capability: advertised and received
+    Multisession Capability: 
+    Stateful switchover support enabled: NO for session 1
+  Message statistics:
+    InQ depth is 0
+    OutQ depth is 0
+    
+                         Sent       Rcvd
+    Opens:                  1          1
+    Notifications:          0          0
+    Updates:                1          2
+    Keepalives:           149        151
+    Route Refresh:          0          0
+    Total:                153        154
+  Do log neighbor state changes (via global configuration)
+  Default minimum time between advertisement runs is 0 seconds
+
+  Address tracking is enabled, the RIB does have a route to 10.10.10.113
+  Route to peer address reachability Up: 1; Down: 0
+    Last notification 02:17:27
+  Connections established 1; dropped 0
+  Last reset never
+  Interface associated: (none) (peering address in same link)
+  Transport(tcp) path-mtu-discovery is enabled
+  Graceful-Restart is disabled
+  SSO is disabled
+Connection state is ESTAB, I/O status: 1, unread input bytes: 0            
+Connection is ECN Disabled, Mininum incoming TTL 0, Outgoing TTL 255
+Local host: 10.10.10.103, Local port: 60102
+Foreign host: 10.10.10.113, Foreign port: 179
+Connection tableid (VRF): 0
+Maximum output segment queue size: 50
+
+Enqueued packets for retransmit: 0, input: 0  mis-ordered: 0 (0 bytes)
+
+Event Timers (current time is 0x7E7656):
+Timer          Starts    Wakeups            Next
+Retrans           152          0             0x0
+TimeWait            0          0             0x0
+AckHold           153        149             0x0
+SendWnd             0          0             0x0
+KeepAlive           0          0             0x0
+GiveUp              0          0             0x0
+PmtuAger         7191       7190        0x7E78B0
+DeadWait            0          0             0x0
+Linger              0          0             0x0
+ProcessQ            0          0             0x0
+
+iss: 3321280534  snduna: 3321283492  sndnxt: 3321283492
+irs: 3352751606  rcvnxt: 3352754628
+
+sndwnd:  16365  scale:      0  maxrcvwnd:  16384
+rcvwnd:  16289  scale:      0  delrcvwnd:     95
+
+SRTT: 1000 ms, RTTO: 1003 ms, RTV: 3 ms, KRTT: 0 ms
+minRTT: 3 ms, maxRTT: 1000 ms, ACK hold: 200 ms
+uptime: 8084376 ms, Sent idletime: 1998 ms, Receive idletime: 2208 ms 
+Status Flags: active open
+Option Flags: nagle, path mtu capable
+IP Precedence value : 6
+
+Datagrams (max data segment is 1460 bytes):
+Rcvd: 304 (out of order: 0), with data: 153, total data bytes: 3021
+Sent: 306 (retransmit: 0, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 152, total data bytes: 2957
+
+ Packets received in fast path: 0, fast processed: 0, slow path: 0
+ fast lock acquisition failures: 0, slow path: 0
+TCP Semaphore      0x11B5E7DC  FREE 
+
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  BGP version 4, remote router ID 0.0.0.0
+  BGP state = Idle
+  Neighbor sessions:
+    0 active, is not multisession capable (disabled)
+    Stateful switchover support enabled: NO
+  Do log neighbor state changes (via global configuration)
+  Default minimum time between advertisement runs is 30 seconds
+
+  Address tracking is enabled, the RIB does have a route to 10.10.10.114
+  Route to peer address reachability Up: 1; Down: 0
+    Last notification 02:17:27
+  Connections established 0; dropped 0
+  Last reset never
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+  Interface associated: (none) (peering address NOT in same link)
+  Transport(tcp) path-mtu-discovery is enabled
+  Graceful-Restart is disabled
+  SSO is disabled
+  No active TCP connection
+
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  BGP version 4, remote router ID 0.0.0.0
+  BGP state = Active
+  Neighbor sessions:
+    0 active, is not multisession capable (disabled)
+    Stateful switchover support enabled: NO for session 0
+  Message statistics:
+    InQ depth is 0
+    OutQ depth is 0
+    
+                         Sent       Rcvd
+    Opens:                  0          0
+    Notifications:          0          0
+    Updates:                0          0
+    Keepalives:             0          0
+    Route Refresh:          0          0
+    Total:                  0          0
+  Do log neighbor state changes (via global configuration)
+  Default minimum time between advertisement runs is 30 seconds
+
+  Address tracking is enabled, the RIB does have a route to 10.10.10.115
+  Route to peer address reachability Up: 1; Down: 0
+    Last notification 02:17:27
+  Connections established 0; dropped 0
+  Last reset never
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+  Interface associated: (none) (peering address in same link)
+  Transport(tcp) path-mtu-discovery is enabled
+  Graceful-Restart is disabled
+  SSO is disabled
+  No active TCP connection
+
+
+For address family: IPv4 Multicast
+
+For address family: L2VPN E-VPN
+
+For address family: MVPNv4 Unicast
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.101 policy' +++
+show bgp all neighbors 10.10.10.101 policy
+ Neighbor: 10.10.10.101, Address-Family: IPv4 Unicast
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.102 policy' +++
+show bgp all neighbors 10.10.10.102 policy
+ Neighbor: 10.10.10.102, Address-Family: IPv4 Unicast
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.104 policy' +++
+show bgp all neighbors 10.10.10.104 policy
+ Neighbor: 10.10.10.104, Address-Family: IPv4 Unicast
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.105 policy' +++
+show bgp all neighbors 10.10.10.105 policy
+ Neighbor: 10.10.10.105, Address-Family: IPv4 Unicast
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.106 policy' +++
+show bgp all neighbors 10.10.10.106 policy
+ Neighbor: 10.10.10.106, Address-Family: IPv4 Unicast
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.107 policy' +++
+show bgp all neighbors 10.10.10.107 policy
+ Neighbor: 10.10.10.107, Address-Family: IPv4 Unicast
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.108 policy' +++
+show bgp all neighbors 10.10.10.108 policy
+ Neighbor: 10.10.10.108, Address-Family: IPv4 Unicast
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.110 policy' +++
+show bgp all neighbors 10.10.10.110 policy
+ Neighbor: 10.10.10.110, Address-Family: IPv4 Unicast
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.112 policy' +++
+show bgp all neighbors 10.10.10.112 policy
+ Neighbor: 10.10.10.112, Address-Family: IPv4 Unicast
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.113 policy' +++
+show bgp all neighbors 10.10.10.113 policy
+ Neighbor: 10.10.10.113, Address-Family: IPv4 Unicast
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.114 policy' +++
+show bgp all neighbors 10.10.10.114 policy
+ Neighbor: 10.10.10.114, Address-Family: IPv4 Unicast
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.115 policy' +++
+show bgp all neighbors 10.10.10.115 policy
+ Neighbor: 10.10.10.115, Address-Family: IPv4 Unicast
+R3#
++++ R3 with via 'cli': executing command 'show bgp all' +++
+show bgp all
+For address family: IPv4 Unicast
+
+BGP table version is 34, local router ID is 3.3.3.3
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal, 
+              r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter, 
+              x best-external, a additional-path, c RIB-compressed, 
+              t secondary path, 
+Origin codes: i - IGP, e - EGP, ? - incomplete
+RPKI validation codes: V valid, I invalid, N Not found
+
+     Network          Next Hop            Metric LocPrf Weight Path
+ *>i  1.1.1.1/32       10.10.10.101             0    100      0 ?
+ *>i  2.2.2.2/32       10.10.10.102             0    100      0 ?
+ *>i  4.4.4.4/32       10.10.10.104             0    100      0 ?
+ *>i  5.5.5.5/32       10.10.10.105             0    100      0 ?
+ *>i  6.6.6.6/32       10.10.10.106             0    100      0 ?
+ *>i  7.7.7.7/32       10.10.10.107             0    100      0 ?
+ *>i  9.9.9.9/32       10.10.10.108             0    100      0 ?
+ r i  10.10.10.0/24    10.10.10.112             0    100      0 ?
+ r i                   10.10.10.113             0    100      0 ?
+ r i                   10.10.10.104             0    100      0 ?
+ r i                   10.10.10.102             0    100      0 ?
+ r i                   10.10.10.105             0    100      0 ?
+ r>i                   10.10.10.101             0    100      0 ?
+ r i                   10.10.10.106             0    100      0 ?
+ r i                   10.10.10.107             0    100      0 ?
+ r i                   10.10.10.108             0    100      0 ?
+ *>i  12.12.12.12/32   10.10.10.112             0    100      0 ?
+ *>i  13.13.13.13/32   10.10.10.113             0    100      0 ?
+ *>i  15.15.15.0/24    10.10.10.102             0    100      0 ?
+ r i  19.19.19.0/24    10.10.10.104             0    100      0 ?
+ r>i                   10.10.10.101             0    100      0 ?
+ r>i  20.20.20.0/24    10.10.10.101             0    100      0 ?
+ r i  21.21.21.8/30    10.10.10.104             0    100      0 ?
+ r>i                   10.10.10.102             0    100      0 ?
+ r>i  22.22.22.0/24    10.10.10.102             0    100      0 ?
+ r>i  23.23.23.0/24    10.10.10.106             0    100      0 ?
+ r>i  24.24.24.0/30    10.10.10.104             0    100      0 ?
+ r i                   10.10.10.105             0    100      0 ?
+ r>i  25.25.25.0/30    10.10.10.105             0    100      0 ?
+ r i                   10.10.10.108             0    100      0 ?
+ r>i  26.26.26.0/30    10.10.10.107             0    100      0 ?
+ r i  27.27.27.0/24    10.10.10.112             0    100      0 ?
+ r>i                   10.10.10.108             0    100      0 ?
+ r i  50.50.50.0/24    10.10.10.113             0    100      0 ?
+ r>i                   10.10.10.107             0    100      0 ?
+ *>i  51.51.51.0/24    10.10.10.113             0    100      0 ?
+ r i  55.55.55.0/24    10.10.10.113             0    100      0 ?
+ r>i                   10.10.10.108             0    100      0 ?
+ r i  56.56.56.0/24    10.10.10.112             0    100      0 ?
+ r>i                   10.10.10.107             0    100      0 ?
+ * i  99.99.99.99/32   10.10.10.112             0    100      0 ?
+ *>i                   10.10.10.104             0    100      0 ?
+ * i                   10.10.10.108             0    100      0 ?
+ *>i  120.10.10.0/24   10.10.10.112             0    100      0 ?
+ *>i  185.10.10.0/24   10.10.10.101             0    100      0 ?
+
+For address family: IPv4 Multicast
+
+
+For address family: L2VPN E-VPN
+
+
+For address family: MVPNv4 Unicast
+
+R3#
++++ R3 with via 'cli': executing command 'show bgp all detail' +++
+show bgp all detail
+For address family: IPv4 Unicast
+
+BGP routing table entry for 1.1.1.1/32, version 2
+  Paths: (1 available, best #1, table default)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.101 from 10.10.10.101 (1.1.1.1)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 2.2.2.2/32, version 20
+  Paths: (1 available, best #1, table default)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.102 from 10.10.10.102 (2.2.2.2)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 4.4.4.4/32, version 27
+  Paths: (1 available, best #1, table default)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.104 from 10.10.10.104 (4.4.4.4)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 5.5.5.5/32, version 3
+  Paths: (1 available, best #1, table default)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.105 from 10.10.10.105 (5.5.5.5)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 6.6.6.6/32, version 4
+  Paths: (1 available, best #1, table default)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.106 from 10.10.10.106 (6.6.6.6)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 7.7.7.7/32, version 5
+  Paths: (1 available, best #1, table default)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.107 from 10.10.10.107 (7.7.7.7)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 9.9.9.9/32, version 6
+  Paths: (1 available, best #1, table default)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.108 from 10.10.10.108 (8.8.8.8)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 10.10.10.0/24, version 7
+  Paths: (9 available, best #6, table default, RIB-failure(17))
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.112 from 10.10.10.112 (12.12.12.12)
+      Origin incomplete, metric 0, localpref 100, valid, internal
+      rx pathid: 0, tx pathid: 0
+  Refresh Epoch 1
+  Local
+    10.10.10.113 from 10.10.10.113 (13.13.13.13)
+      Origin incomplete, metric 0, localpref 100, valid, internal
+      rx pathid: 0, tx pathid: 0
+  Refresh Epoch 1
+  Local
+    10.10.10.104 from 10.10.10.104 (4.4.4.4)
+      Origin incomplete, metric 0, localpref 100, valid, internal
+      rx pathid: 0, tx pathid: 0
+  Refresh Epoch 1
+  Local
+    10.10.10.102 from 10.10.10.102 (2.2.2.2)
+      Origin incomplete, metric 0, localpref 100, valid, internal
+      rx pathid: 0, tx pathid: 0
+  Refresh Epoch 1
+  Local
+    10.10.10.105 from 10.10.10.105 (5.5.5.5)
+      Origin incomplete, metric 0, localpref 100, valid, internal
+      rx pathid: 0, tx pathid: 0
+  Refresh Epoch 1
+  Local
+    10.10.10.101 from 10.10.10.101 (1.1.1.1)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+  Refresh Epoch 1
+  Local
+    10.10.10.106 from 10.10.10.106 (6.6.6.6)
+      Origin incomplete, metric 0, localpref 100, valid, internal
+      rx pathid: 0, tx pathid: 0
+  Refresh Epoch 1
+  Local
+    10.10.10.107 from 10.10.10.107 (7.7.7.7)
+      Origin incomplete, metric 0, localpref 100, valid, internal
+      rx pathid: 0, tx pathid: 0
+  Refresh Epoch 1
+  Local
+    10.10.10.108 from 10.10.10.108 (8.8.8.8)
+      Origin incomplete, metric 0, localpref 100, valid, internal
+      rx pathid: 0, tx pathid: 0
+BGP routing table entry for 12.12.12.12/32, version 32
+  Paths: (1 available, best #1, table default)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.112 from 10.10.10.112 (12.12.12.12)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 13.13.13.13/32, version 30
+  Paths: (1 available, best #1, table default)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.113 from 10.10.10.113 (13.13.13.13)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 15.15.15.0/24, version 21
+  Paths: (1 available, best #1, table default)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.102 from 10.10.10.102 (2.2.2.2)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 19.19.19.0/24, version 8
+  Paths: (2 available, best #2, table default, RIB-failure(17) - next-hop mismatch)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.104 from 10.10.10.104 (4.4.4.4)
+      Origin incomplete, metric 0, localpref 100, valid, internal
+      rx pathid: 0, tx pathid: 0
+  Refresh Epoch 1
+  Local
+    10.10.10.101 from 10.10.10.101 (1.1.1.1)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 20.20.20.0/24, version 9
+  Paths: (1 available, best #1, table default, RIB-failure(17))
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.101 from 10.10.10.101 (1.1.1.1)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 21.21.21.8/30, version 22
+  Paths: (2 available, best #2, table default, RIB-failure(17) - next-hop mismatch)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.104 from 10.10.10.104 (4.4.4.4)
+      Origin incomplete, metric 0, localpref 100, valid, internal
+      rx pathid: 0, tx pathid: 0
+  Refresh Epoch 1
+  Local
+    10.10.10.102 from 10.10.10.102 (2.2.2.2)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 22.22.22.0/24, version 23
+  Paths: (1 available, best #1, table default, RIB-failure(17))
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.102 from 10.10.10.102 (2.2.2.2)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 23.23.23.0/24, version 10
+  Paths: (1 available, best #1, table default, RIB-failure(17))
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.106 from 10.10.10.106 (6.6.6.6)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 24.24.24.0/30, version 28
+  Paths: (2 available, best #1, table default, RIB-failure(17) - next-hop mismatch)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.104 from 10.10.10.104 (4.4.4.4)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+  Refresh Epoch 1
+  Local
+    10.10.10.105 from 10.10.10.105 (5.5.5.5)
+      Origin incomplete, metric 0, localpref 100, valid, internal
+      rx pathid: 0, tx pathid: 0
+BGP routing table entry for 25.25.25.0/30, version 26
+  Paths: (2 available, best #1, table default, RIB-failure(17) - next-hop mismatch)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.105 from 10.10.10.105 (5.5.5.5)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+  Refresh Epoch 1
+  Local
+    10.10.10.108 from 10.10.10.108 (8.8.8.8)
+      Origin incomplete, metric 0, localpref 100, valid, internal
+      rx pathid: 0, tx pathid: 0
+BGP routing table entry for 26.26.26.0/30, version 34
+  Paths: (1 available, best #1, table default, RIB-failure(17) - next-hop mismatch)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.107 from 10.10.10.107 (7.7.7.7)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 27.27.27.0/24, version 25
+  Paths: (2 available, best #2, table default, RIB-failure(17) - next-hop mismatch)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.112 from 10.10.10.112 (12.12.12.12)
+      Origin incomplete, metric 0, localpref 100, valid, internal
+      rx pathid: 0, tx pathid: 0
+  Refresh Epoch 1
+  Local
+    10.10.10.108 from 10.10.10.108 (8.8.8.8)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 50.50.50.0/24, version 15
+  Paths: (2 available, best #2, table default, RIB-failure(17) - next-hop mismatch)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.113 from 10.10.10.113 (13.13.13.13)
+      Origin incomplete, metric 0, localpref 100, valid, internal
+      rx pathid: 0, tx pathid: 0
+  Refresh Epoch 1
+  Local
+    10.10.10.107 from 10.10.10.107 (7.7.7.7)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 51.51.51.0/24, version 31
+  Paths: (1 available, best #1, table default)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.113 from 10.10.10.113 (13.13.13.13)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 55.55.55.0/24, version 24
+  Paths: (2 available, best #2, table default, RIB-failure(17) - next-hop mismatch)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.113 from 10.10.10.113 (13.13.13.13)
+      Origin incomplete, metric 0, localpref 100, valid, internal
+      rx pathid: 0, tx pathid: 0
+  Refresh Epoch 1
+  Local
+    10.10.10.108 from 10.10.10.108 (8.8.8.8)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 56.56.56.0/24, version 17
+  Paths: (2 available, best #2, table default, RIB-failure(17) - next-hop mismatch)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.112 from 10.10.10.112 (12.12.12.12)
+      Origin incomplete, metric 0, localpref 100, valid, internal
+      rx pathid: 0, tx pathid: 0
+  Refresh Epoch 1
+  Local
+    10.10.10.107 from 10.10.10.107 (7.7.7.7)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 99.99.99.99/32, version 29
+  Paths: (3 available, best #2, table default)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.112 from 10.10.10.112 (12.12.12.12)
+      Origin incomplete, metric 0, localpref 100, valid, internal
+      rx pathid: 0, tx pathid: 0
+  Refresh Epoch 1
+  Local
+    10.10.10.104 from 10.10.10.104 (4.4.4.4)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+  Refresh Epoch 1
+  Local
+    10.10.10.108 from 10.10.10.108 (8.8.8.8)
+      Origin incomplete, metric 0, localpref 100, valid, internal
+      rx pathid: 0, tx pathid: 0
+BGP routing table entry for 120.10.10.0/24, version 33
+  Paths: (1 available, best #1, table default)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.112 from 10.10.10.112 (12.12.12.12)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+BGP routing table entry for 185.10.10.0/24, version 19
+  Paths: (1 available, best #1, table default)
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    10.10.10.101 from 10.10.10.101 (1.1.1.1)
+      Origin incomplete, metric 0, localpref 100, valid, internal, best
+      rx pathid: 0, tx pathid: 0x0
+
+For address family: IPv4 Multicast
+
+
+For address family: L2VPN E-VPN
+
+
+For address family: MVPNv4 Unicast
+
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.101 advertised-routes' +++
+show bgp all neighbors 10.10.10.101 advertised-routes
+For address family: IPv4 Unicast
+
+Total number of prefixes 0 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.102 advertised-routes' +++
+show bgp all neighbors 10.10.10.102 advertised-routes
+For address family: IPv4 Unicast
+
+Total number of prefixes 0 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.104 advertised-routes' +++
+show bgp all neighbors 10.10.10.104 advertised-routes
+For address family: IPv4 Unicast
+
+Total number of prefixes 0 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.105 advertised-routes' +++
+show bgp all neighbors 10.10.10.105 advertised-routes
+For address family: IPv4 Unicast
+
+Total number of prefixes 0 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.106 advertised-routes' +++
+show bgp all neighbors 10.10.10.106 advertised-routes
+For address family: IPv4 Unicast
+
+Total number of prefixes 0 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.107 advertised-routes' +++
+show bgp all neighbors 10.10.10.107 advertised-routes
+For address family: IPv4 Unicast
+
+Total number of prefixes 0 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.108 advertised-routes' +++
+show bgp all neighbors 10.10.10.108 advertised-routes
+For address family: IPv4 Unicast
+
+Total number of prefixes 0 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.110 advertised-routes' +++
+show bgp all neighbors 10.10.10.110 advertised-routes
+For address family: IPv4 Unicast
+
+Total number of prefixes 0 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.112 advertised-routes' +++
+show bgp all neighbors 10.10.10.112 advertised-routes
+For address family: IPv4 Unicast
+
+Total number of prefixes 0 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.113 advertised-routes' +++
+show bgp all neighbors 10.10.10.113 advertised-routes
+For address family: IPv4 Unicast
+
+Total number of prefixes 0 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.114 advertised-routes' +++
+show bgp all neighbors 10.10.10.114 advertised-routes
+For address family: IPv4 Unicast
+
+Total number of prefixes 0 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.115 advertised-routes' +++
+show bgp all neighbors 10.10.10.115 advertised-routes
+For address family: IPv4 Unicast
+
+Total number of prefixes 0 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.101 routes' +++
+show bgp all neighbors 10.10.10.101 routes
+For address family: IPv4 Unicast
+BGP table version is 34, local router ID is 3.3.3.3
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal, 
+              r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter, 
+              x best-external, a additional-path, c RIB-compressed, 
+              t secondary path, 
+Origin codes: i - IGP, e - EGP, ? - incomplete
+RPKI validation codes: V valid, I invalid, N Not found
+
+     Network          Next Hop            Metric LocPrf Weight Path
+ *>i  1.1.1.1/32       10.10.10.101             0    100      0 ?
+ r>i  10.10.10.0/24    10.10.10.101             0    100      0 ?
+ r>i  19.19.19.0/24    10.10.10.101             0    100      0 ?
+ r>i  20.20.20.0/24    10.10.10.101             0    100      0 ?
+ *>i  185.10.10.0/24   10.10.10.101             0    100      0 ?
+
+Total number of prefixes 5 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.102 routes' +++
+show bgp all neighbors 10.10.10.102 routes
+For address family: IPv4 Unicast
+BGP table version is 34, local router ID is 3.3.3.3
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal, 
+              r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter, 
+              x best-external, a additional-path, c RIB-compressed, 
+              t secondary path, 
+Origin codes: i - IGP, e - EGP, ? - incomplete
+RPKI validation codes: V valid, I invalid, N Not found
+
+     Network          Next Hop            Metric LocPrf Weight Path
+ *>i  2.2.2.2/32       10.10.10.102             0    100      0 ?
+ r i  10.10.10.0/24    10.10.10.102             0    100      0 ?
+ *>i  15.15.15.0/24    10.10.10.102             0    100      0 ?
+ r>i  21.21.21.8/30    10.10.10.102             0    100      0 ?
+ r>i  22.22.22.0/24    10.10.10.102             0    100      0 ?
+
+Total number of prefixes 5 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.104 routes' +++
+show bgp all neighbors 10.10.10.104 routes
+For address family: IPv4 Unicast
+BGP table version is 34, local router ID is 3.3.3.3
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal, 
+              r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter, 
+              x best-external, a additional-path, c RIB-compressed, 
+              t secondary path, 
+Origin codes: i - IGP, e - EGP, ? - incomplete
+RPKI validation codes: V valid, I invalid, N Not found
+
+     Network          Next Hop            Metric LocPrf Weight Path
+ *>i  4.4.4.4/32       10.10.10.104             0    100      0 ?
+ r i  10.10.10.0/24    10.10.10.104             0    100      0 ?
+ r i  19.19.19.0/24    10.10.10.104             0    100      0 ?
+ r i  21.21.21.8/30    10.10.10.104             0    100      0 ?
+ r>i  24.24.24.0/30    10.10.10.104             0    100      0 ?
+ *>i  99.99.99.99/32   10.10.10.104             0    100      0 ?
+
+Total number of prefixes 6 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.105 routes' +++
+show bgp all neighbors 10.10.10.105 routes
+For address family: IPv4 Unicast
+BGP table version is 34, local router ID is 3.3.3.3
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal, 
+              r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter, 
+              x best-external, a additional-path, c RIB-compressed, 
+              t secondary path, 
+Origin codes: i - IGP, e - EGP, ? - incomplete
+RPKI validation codes: V valid, I invalid, N Not found
+
+     Network          Next Hop            Metric LocPrf Weight Path
+ *>i  5.5.5.5/32       10.10.10.105             0    100      0 ?
+ r i  10.10.10.0/24    10.10.10.105             0    100      0 ?
+ r i  24.24.24.0/30    10.10.10.105             0    100      0 ?
+ r>i  25.25.25.0/30    10.10.10.105             0    100      0 ?
+
+Total number of prefixes 4 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.106 routes' +++
+show bgp all neighbors 10.10.10.106 routes
+For address family: IPv4 Unicast
+BGP table version is 34, local router ID is 3.3.3.3
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal, 
+              r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter, 
+              x best-external, a additional-path, c RIB-compressed, 
+              t secondary path, 
+Origin codes: i - IGP, e - EGP, ? - incomplete
+RPKI validation codes: V valid, I invalid, N Not found
+
+     Network          Next Hop            Metric LocPrf Weight Path
+ *>i  6.6.6.6/32       10.10.10.106             0    100      0 ?
+ r i  10.10.10.0/24    10.10.10.106             0    100      0 ?
+ r>i  23.23.23.0/24    10.10.10.106             0    100      0 ?
+
+Total number of prefixes 3 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.107 routes' +++
+show bgp all neighbors 10.10.10.107 routes
+For address family: IPv4 Unicast
+BGP table version is 34, local router ID is 3.3.3.3
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal, 
+              r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter, 
+              x best-external, a additional-path, c RIB-compressed, 
+              t secondary path, 
+Origin codes: i - IGP, e - EGP, ? - incomplete
+RPKI validation codes: V valid, I invalid, N Not found
+
+     Network          Next Hop            Metric LocPrf Weight Path
+ *>i  7.7.7.7/32       10.10.10.107             0    100      0 ?
+ r i  10.10.10.0/24    10.10.10.107             0    100      0 ?
+ r>i  26.26.26.0/30    10.10.10.107             0    100      0 ?
+ r>i  50.50.50.0/24    10.10.10.107             0    100      0 ?
+ r>i  56.56.56.0/24    10.10.10.107             0    100      0 ?
+
+Total number of prefixes 5 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.108 routes' +++
+show bgp all neighbors 10.10.10.108 routes
+For address family: IPv4 Unicast
+BGP table version is 34, local router ID is 3.3.3.3
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal, 
+              r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter, 
+              x best-external, a additional-path, c RIB-compressed, 
+              t secondary path, 
+Origin codes: i - IGP, e - EGP, ? - incomplete
+RPKI validation codes: V valid, I invalid, N Not found
+
+     Network          Next Hop            Metric LocPrf Weight Path
+ *>i  9.9.9.9/32       10.10.10.108             0    100      0 ?
+ r i  10.10.10.0/24    10.10.10.108             0    100      0 ?
+ r i  25.25.25.0/30    10.10.10.108             0    100      0 ?
+ r>i  27.27.27.0/24    10.10.10.108             0    100      0 ?
+ r>i  55.55.55.0/24    10.10.10.108             0    100      0 ?
+ * i  99.99.99.99/32   10.10.10.108             0    100      0 ?
+
+Total number of prefixes 6 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.110 routes' +++
+show bgp all neighbors 10.10.10.110 routes
+For address family: IPv4 Unicast
+
+Total number of prefixes 0 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.112 routes' +++
+show bgp all neighbors 10.10.10.112 routes
+For address family: IPv4 Unicast
+BGP table version is 34, local router ID is 3.3.3.3
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal, 
+              r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter, 
+              x best-external, a additional-path, c RIB-compressed, 
+              t secondary path, 
+Origin codes: i - IGP, e - EGP, ? - incomplete
+RPKI validation codes: V valid, I invalid, N Not found
+
+     Network          Next Hop            Metric LocPrf Weight Path
+ r i  10.10.10.0/24    10.10.10.112             0    100      0 ?
+ *>i  12.12.12.12/32   10.10.10.112             0    100      0 ?
+ r i  27.27.27.0/24    10.10.10.112             0    100      0 ?
+ r i  56.56.56.0/24    10.10.10.112             0    100      0 ?
+ * i  99.99.99.99/32   10.10.10.112             0    100      0 ?
+ *>i  120.10.10.0/24   10.10.10.112             0    100      0 ?
+
+Total number of prefixes 6 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.113 routes' +++
+show bgp all neighbors 10.10.10.113 routes
+For address family: IPv4 Unicast
+BGP table version is 34, local router ID is 3.3.3.3
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal, 
+              r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter, 
+              x best-external, a additional-path, c RIB-compressed, 
+              t secondary path, 
+Origin codes: i - IGP, e - EGP, ? - incomplete
+RPKI validation codes: V valid, I invalid, N Not found
+
+     Network          Next Hop            Metric LocPrf Weight Path
+ r i  10.10.10.0/24    10.10.10.113             0    100      0 ?
+ *>i  13.13.13.13/32   10.10.10.113             0    100      0 ?
+ r i  50.50.50.0/24    10.10.10.113             0    100      0 ?
+ *>i  51.51.51.0/24    10.10.10.113             0    100      0 ?
+ r i  55.55.55.0/24    10.10.10.113             0    100      0 ?
+
+Total number of prefixes 5 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.114 routes' +++
+show bgp all neighbors 10.10.10.114 routes
+For address family: IPv4 Unicast
+
+Total number of prefixes 0 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.115 routes' +++
+show bgp all neighbors 10.10.10.115 routes
+For address family: IPv4 Unicast
+
+Total number of prefixes 0 
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.101 received-routes' +++
+show bgp all neighbors 10.10.10.101 received-routes
+For address family: IPv4 Unicast
+% Inbound soft reconfiguration not enabled on 10.10.10.101
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.102 received-routes' +++
+show bgp all neighbors 10.10.10.102 received-routes
+For address family: IPv4 Unicast
+% Inbound soft reconfiguration not enabled on 10.10.10.102
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.104 received-routes' +++
+show bgp all neighbors 10.10.10.104 received-routes
+For address family: IPv4 Unicast
+% Inbound soft reconfiguration not enabled on 10.10.10.104
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.105 received-routes' +++
+show bgp all neighbors 10.10.10.105 received-routes
+For address family: IPv4 Unicast
+% Inbound soft reconfiguration not enabled on 10.10.10.105
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.106 received-routes' +++
+show bgp all neighbors 10.10.10.106 received-routes
+For address family: IPv4 Unicast
+% Inbound soft reconfiguration not enabled on 10.10.10.106
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.107 received-routes' +++
+show bgp all neighbors 10.10.10.107 received-routes
+For address family: IPv4 Unicast
+% Inbound soft reconfiguration not enabled on 10.10.10.107
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.108 received-routes' +++
+show bgp all neighbors 10.10.10.108 received-routes
+For address family: IPv4 Unicast
+% Inbound soft reconfiguration not enabled on 10.10.10.108
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.110 received-routes' +++
+show bgp all neighbors 10.10.10.110 received-routes
+For address family: IPv4 Unicast
+% Inbound soft reconfiguration not enabled on 10.10.10.110
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.112 received-routes' +++
+show bgp all neighbors 10.10.10.112 received-routes
+For address family: IPv4 Unicast
+% Inbound soft reconfiguration not enabled on 10.10.10.112
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.113 received-routes' +++
+show bgp all neighbors 10.10.10.113 received-routes
+For address family: IPv4 Unicast
+% Inbound soft reconfiguration not enabled on 10.10.10.113
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.114 received-routes' +++
+show bgp all neighbors 10.10.10.114 received-routes
+For address family: IPv4 Unicast
+% Inbound soft reconfiguration not enabled on 10.10.10.114
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors 10.10.10.115 received-routes' +++
+show bgp all neighbors 10.10.10.115 received-routes
+For address family: IPv4 Unicast
+% Inbound soft reconfiguration not enabled on 10.10.10.115
+R3#
++++ R3 with via 'cli': executing command 'show bgp all neighbors | i BGP neighbor' +++
+show bgp all neighbors | i BGP neighbor
+BGP neighbor is 10.10.10.101,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.102,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.104,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.105,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.106,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.107,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.108,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.110,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.112,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.113,  remote AS 65001, internal link
+BGP neighbor is 10.10.10.114,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+BGP neighbor is 10.10.10.115,  remote AS 6519, external link
+  External BGP neighbor configured for connected checks (single-hop no-disable-connected-check)
+R3#
+Could not learn <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsReceivedRoutes'>
+Show Command: show bgp all neighbors 10.10.10.115 received-routes
+Parser Output is empty
++====================================================================================================================================================+
+| Commands for learning feature 'Bgp'                                                                                                                |
++====================================================================================================================================================+
+| - Parsed commands                                                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllSummary'>, arguments: {'address_family':'','vrf':''}                                     |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllClusterIds'>                                                                             |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighbors'>, arguments: {'address_family':'','neighbor':''}                              |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAll'>, arguments: {'address_family':''}                                                     |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllDetail'>, arguments: {'address_family':'','vrf':''}                                      |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.101'}            |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.102'}            |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.104'}            |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.105'}            |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.106'}            |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.107'}            |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.108'}            |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.110'}            |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.112'}            |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.113'}            |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.114'}            |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.115'}            |
+|====================================================================================================================================================|
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowIpBgpTemplatePeerSession'>                                                                     |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowIpBgpTemplatePeerPolicy'>                                                                      |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowIpBgpAllDampeningParameters'>                                                                  |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsPolicy'>, arguments: {'neighbor':'10.10.10.101'}                                |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsPolicy'>, arguments: {'neighbor':'10.10.10.102'}                                |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsPolicy'>, arguments: {'neighbor':'10.10.10.104'}                                |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsPolicy'>, arguments: {'neighbor':'10.10.10.105'}                                |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsPolicy'>, arguments: {'neighbor':'10.10.10.106'}                                |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsPolicy'>, arguments: {'neighbor':'10.10.10.107'}                                |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsPolicy'>, arguments: {'neighbor':'10.10.10.108'}                                |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsPolicy'>, arguments: {'neighbor':'10.10.10.110'}                                |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsPolicy'>, arguments: {'neighbor':'10.10.10.112'}                                |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsPolicy'>, arguments: {'neighbor':'10.10.10.113'}                                |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsPolicy'>, arguments: {'neighbor':'10.10.10.114'}                                |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsPolicy'>, arguments: {'neighbor':'10.10.10.115'}                                |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsAdvertisedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.101'}  |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsAdvertisedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.102'}  |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsAdvertisedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.104'}  |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsAdvertisedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.105'}  |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsAdvertisedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.106'}  |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsAdvertisedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.107'}  |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsAdvertisedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.108'}  |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsAdvertisedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.110'}  |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsAdvertisedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.112'}  |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsAdvertisedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.113'}  |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsAdvertisedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.114'}  |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsAdvertisedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.115'}  |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsReceivedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.101'}    |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsReceivedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.102'}    |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsReceivedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.104'}    |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsReceivedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.105'}    |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsReceivedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.106'}    |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsReceivedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.107'}    |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsReceivedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.108'}    |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsReceivedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.110'}    |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsReceivedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.112'}    |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsReceivedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.113'}    |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsReceivedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.114'}    |
+|   cmd: <class 'genie.libs.parser.iosxe.show_bgp.ShowBgpAllNeighborsReceivedRoutes'>, arguments: {'address_family':'','neighbor':'10.10.10.115'}    |
+|====================================================================================================================================================|

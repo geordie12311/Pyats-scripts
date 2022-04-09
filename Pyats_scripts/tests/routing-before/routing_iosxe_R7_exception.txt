@@ -1,0 +1,11 @@
+Issue while building the feature
+
+Traceback (most recent call last):
+  File "src/genie/cli/commands/learn.py", line 365, in genie.cli.commands.learn.LearnCommand._retrieve_ops
+  File "/home/geordie/.local/lib/python3.10/site-packages/genie/libs/ops/routing/iosxe/routing.py", line 94, in learn
+    self.add_leaf(**kwargs)
+  File "/home/geordie/.local/lib/python3.10/site-packages/genie/ops/base/base.py", line 94, in add_leaf
+    self.maker.add_leaf(device=dev, cmd=cmd, *args, **kwargs)
+  File "src/genie/ops/base/maker.py", line 173, in genie.ops.base.maker.Maker.add_leaf
+  File "src/genie/ops/base/maker.py", line 42, in _product_dict
+TypeError: 'SourceFileLoader' object is not iterable
