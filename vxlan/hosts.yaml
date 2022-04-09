@@ -1,0 +1,47 @@
+---
+
+Spine1:
+    hostname: 11.11.11.1
+    groups:
+        - cisco_group
+    data:
+        layer: Spine
+
+
+ 
+Spine2:
+    hostname:  11.11.11.2
+    groups:
+        - cisco_group
+    data:
+        layer: Spine
+
+Leaf1:
+
+    hostname: 11.11.11.3
+    groups:
+        - cisco_group
+    data:
+        layer: Leaf
+
+
+Leaf2:
+    hostname: 11.11.11.4
+    groups:
+        - cisco_group
+    data:
+        layer: Leaf
+
+Leaf3:
+    hostname: 11.11.11.5
+    groups:
+        - cisco_group
+    data:
+        layer: Leaf
+
+Leaf4:
+    hostname: 11.11.11.6
+    groups:
+        - cisco_group
+    data:
+        layer: Leaf

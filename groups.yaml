@@ -1,0 +1,18 @@
+---
+
+vEOS_group:
+    platform: "arista_eos"
+
+IOS_group:
+    platform: "ios"
+
+Leaf_group: {}
+
+Spine_group: {}
+
+us_group:
+    data:
+        ntp_server: "4.4.4.4"
+
+vEOS: {}
+

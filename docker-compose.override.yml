@@ -1,0 +1,5 @@
+version '3.4'
+service:
+netbox:
+ports:
+- 8000:8080

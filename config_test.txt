@@ -1,0 +1,3 @@
+username cisco priv 15 secret cisco1
+do wr
+
