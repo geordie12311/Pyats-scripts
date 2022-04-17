@@ -6,6 +6,9 @@ vEOS_group:
 IOS_group:
     platform: "ios"
 
+cisco_group:
+    platform: "ios"
+
 Leaf_group: {}
 
 Spine_group: {}

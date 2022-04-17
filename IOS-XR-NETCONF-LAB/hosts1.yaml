@@ -1,9 +1,21 @@
 ---
 
-R11:
-    hostname: "R11"
-    username: "geordie"
-    password: "teabag22"
-    port: 830
+Edge1:
+    hostname: "Edge1"
     groups:
-        - cisco_group
+        - IOS_group
+
+Edge2:
+    hostname: "Edge2"
+    groups:
+        - IOS_group
+
+Edge3:
+    hostname: "Edge3"
+    groups:
+        - IOS_group
+
+Edge4:
+    hostname: "Edge4"
+    groups:
+        - IOS_group

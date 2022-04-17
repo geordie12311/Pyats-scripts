@@ -1,0 +1,48 @@
+---
+vrfs:
+  - name: GREEN 
+    rd: "25:3"
+    targets:
+      - direction: export
+        target_tag: "25:3"
+      - direction: import
+        target_tag: "25:3"
+      
+
+  - name: RED 
+    rd: "25:2"
+    targets:
+      - direction: export
+        target_tag: "25:2"
+      - direction: import
+        target_tag: "25:2"
+
+
+  - name: BLUE 
+    rd: "33:77"
+    targets:
+      - direction: export
+        target_tag: "33:77"
+      - direction: import
+        target_tag: "25:2"
+
+
+  - name: MGMT
+  
+BGP:
+    ASN: "25"
+    neighbors:
+      - 5.5.5.5
+      - 6.6.6.6
+      - 8.8.8.8
+    vrfs:
+      - name: GREEN
+        redistribute_process: 3
+        ospf_rid: 172.3.3.3
+      - name: RED
+        redistribute_process: 2
+        ospf_rid: 172.3.2.2
+
+OSPF:
+    process: 1
+    ospf_rid: 172.33.33.33

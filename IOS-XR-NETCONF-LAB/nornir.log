@@ -5477,3 +5477,2325 @@ FileNotFoundError: [Errno 2] No such file or directory: 'host_vars/R11.yaml'
 
 2022-04-02 09:40:42,794 -  nornir.core -     INFO -        run() - Running task 'edit_nc_config_from_yaml' with args {} on 1 hosts
 2022-04-02 09:48:59,666 -  nornir.core -     INFO -        run() - Running task 'get_device_config' with args {} on 1 hosts
+2022-04-10 10:02:35,618 -  nornir.core -     INFO -        run() - Running task 'get_device_config' with args {} on 4 hosts
+2022-04-10 10:02:36,184 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 100, in channel_authenticate_netconf
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-10 10:02:36,184 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'get_device_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_get_config.py", line 8, in get_device_config
+    task.run(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:02:36,192 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 100, in channel_authenticate_netconf
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-10 10:02:36,192 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'get_device_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_get_config.py", line 8, in get_device_config
+    task.run(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:02:36,214 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 100, in channel_authenticate_netconf
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-10 10:02:36,215 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'get_device_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_get_config.py", line 8, in get_device_config
+    task.run(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:02:36,541 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-04-10 10:02:36,542 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'get_device_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_get_config.py", line 8, in get_device_config
+    task.run(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:03:04,609 -  nornir.core -     INFO -        run() - Running task 'get_device_config' with args {} on 4 hosts
+2022-04-10 10:03:05,132 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 100, in channel_authenticate_netconf
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-10 10:03:05,133 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'get_device_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_get_config.py", line 8, in get_device_config
+    task.run(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:03:05,139 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 100, in channel_authenticate_netconf
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-10 10:03:05,139 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'get_device_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_get_config.py", line 8, in get_device_config
+    task.run(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:03:05,181 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 100, in channel_authenticate_netconf
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-10 10:03:05,181 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'get_device_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_get_config.py", line 8, in get_device_config
+    task.run(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:03:05,652 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-04-10 10:03:05,652 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'get_device_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_get_config.py", line 8, in get_device_config
+    task.run(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:09:17,476 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 4 hosts
+2022-04-10 10:09:17,478 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netconf_get_config() got an unexpected keyword argument 'filters'
+
+2022-04-10 10:09:17,480 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netconf_get_config() got an unexpected keyword argument 'filters'
+
+2022-04-10 10:09:17,481 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netconf_get_config() got an unexpected keyword argument 'filters'
+
+2022-04-10 10:09:17,482 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filters="/native", filter_="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:09:17,483 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filters="/native", filter_="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:09:17,482 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netconf_get_config() got an unexpected keyword argument 'filters'
+
+2022-04-10 10:09:17,488 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filters="/native", filter_="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:09:17,489 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filters="/native", filter_="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:09:52,877 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 4 hosts
+2022-04-10 10:09:53,380 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 100, in channel_authenticate_netconf
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-10 10:09:53,381 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:09:53,410 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 100, in channel_authenticate_netconf
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-10 10:09:53,411 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:09:53,464 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 100, in channel_authenticate_netconf
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-10 10:09:53,464 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:09:53,642 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-04-10 10:09:53,643 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:10:26,212 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 4 hosts
+2022-04-10 10:10:26,724 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 100, in channel_authenticate_netconf
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-10 10:10:26,725 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:10:26,728 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 100, in channel_authenticate_netconf
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-10 10:10:26,728 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:10:26,732 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 100, in channel_authenticate_netconf
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-10 10:10:26,732 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:10:26,978 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-04-10 10:10:26,978 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:29:50,717 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 4 hosts
+2022-04-10 10:30:06,247 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:30:06,247 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:30:06,273 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:30:06,273 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:30:06,273 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:30:06,274 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:30:06,297 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:30:06,297 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:31:06,509 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 4 hosts
+2022-04-10 10:31:22,020 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:31:22,021 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:31:22,024 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:31:22,025 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:31:22,029 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:31:22,030 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:31:22,052 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:31:22,053 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:32:07,734 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 4 hosts
+2022-04-10 10:32:23,260 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:32:23,260 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:32:23,292 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:32:23,293 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:32:23,298 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:32:23,298 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:32:23,417 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:32:23,417 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:41:03,528 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 4 hosts
+2022-04-10 10:41:19,049 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:41:19,050 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native/vrf", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:41:19,056 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:41:19,057 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native/vrf", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:41:19,078 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:41:19,078 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native/vrf", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:41:19,160 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:41:19,160 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native/vrf", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:42:43,298 -  nornir.core -     INFO -        run() - Running task 'get_config' with args {} on 4 hosts
+2022-04-10 10:42:43,300 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native/vrf", filter_type="xpath")
+NameError: name 'netconf_get_config' is not defined
+
+2022-04-10 10:42:43,300 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native/vrf", filter_type="xpath")
+NameError: name 'netconf_get_config' is not defined
+
+2022-04-10 10:42:43,301 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native/vrf", filter_type="xpath")
+NameError: name 'netconf_get_config' is not defined
+
+2022-04-10 10:42:43,301 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 14, in get_config
+    task.run(task=netconf_get_config, source="running", filter_="/native/vrf", filter_type="xpath")
+NameError: name 'netconf_get_config' is not defined
+
+2022-04-10 10:49:42,601 -  nornir.core -     INFO -        run() - Running task 'get_yang' with args {} on 4 hosts
+2022-04-10 10:49:42,604 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netconf_get_config() got an unexpected keyword argument 'filters'
+
+2022-04-10 10:49:42,604 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netconf_get_config() got an unexpected keyword argument 'filters'
+
+2022-04-10 10:49:42,605 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netconf_get_config() got an unexpected keyword argument 'filters'
+
+2022-04-10 10:49:42,605 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netconf_get_config() got an unexpected keyword argument 'filters'
+
+2022-04-10 10:49:42,606 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'get_yang' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 13, in get_yang
+    task.run(task=netconf_get_config, source="running", filters="/native/vrf", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:49:42,606 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'get_yang' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 13, in get_yang
+    task.run(task=netconf_get_config, source="running", filters="/native/vrf", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:49:42,606 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'get_yang' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 13, in get_yang
+    task.run(task=netconf_get_config, source="running", filters="/native/vrf", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:49:42,607 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'get_yang' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 13, in get_yang
+    task.run(task=netconf_get_config, source="running", filters="/native/vrf", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:50:03,123 -  nornir.core -     INFO -        run() - Running task 'get_yang' with args {} on 4 hosts
+2022-04-10 10:50:18,661 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:50:18,662 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'get_yang' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 13, in get_yang
+    task.run(task=netconf_get_config, source="running", filter_="/native/vrf", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:50:18,694 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:50:18,695 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'get_yang' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 13, in get_yang
+    task.run(task=netconf_get_config, source="running", filter_="/native/vrf", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:50:18,709 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:50:18,709 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'get_yang' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 13, in get_yang
+    task.run(task=netconf_get_config, source="running", filter_="/native/vrf", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:50:18,749 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:50:18,749 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'get_yang' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 13, in get_yang
+    task.run(task=netconf_get_config, source="running", filter_="/native/vrf", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:52:43,609 -  nornir.core -     INFO -        run() - Running task 'get_yang' with args {} on 4 hosts
+2022-04-10 10:52:59,109 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:52:59,110 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'get_yang' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 13, in get_yang
+    task.run(task=netconf_get_config, source="running", filter_="/native/vrf", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:52:59,112 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:52:59,113 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'get_yang' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 13, in get_yang
+    task.run(task=netconf_get_config, source="running", filter_="/native/vrf", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:52:59,173 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:52:59,173 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'get_yang' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 13, in get_yang
+    task.run(task=netconf_get_config, source="running", filter_="/native/vrf", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 10:52:59,205 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 10:52:59,205 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'get_yang' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 13, in get_yang
+    task.run(task=netconf_get_config, source="running", filter_="/native/vrf", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 11:07:53,830 -  nornir.core -     INFO -        run() - Running task 'get_yang' with args {} on 4 hosts
+2022-04-10 11:08:09,328 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 11:08:09,328 - nornir.core.task -    ERROR -      start() - Host 'Edge1': task 'get_yang' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 13, in get_yang
+    task.run(task=netconf_get_config, source="running", filter_="/native/vrf", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 11:08:09,342 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 11:08:09,342 - nornir.core.task -    ERROR -      start() - Host 'Edge2': task 'get_yang' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 13, in get_yang
+    task.run(task=netconf_get_config, source="running", filter_="/native/vrf", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 11:08:09,345 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 11:08:09,345 - nornir.core.task -    ERROR -      start() - Host 'Edge3': task 'get_yang' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 13, in get_yang
+    task.run(task=netconf_get_config, source="running", filter_="/native/vrf", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2022-04-10 11:08:09,376 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf/get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 280, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/driver/sync_driver.py", line 117, in open
+    self.channel.channel_authenticate_netconf(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli_netconf/channel/sync_channel.py", line 105, in channel_authenticate_netconf
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-04-10 11:08:09,377 - nornir.core.task -    ERROR -      start() - Host 'Edge4': task 'get_yang' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "netconf_getconfig.py", line 13, in get_yang
+    task.run(task=netconf_get_config, source="running", filter_="/native/vrf", filter_type="xpath")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+

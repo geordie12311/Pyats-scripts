@@ -1,0 +1,1545 @@
+2022-04-16 16:12:26,435 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 6 hosts
+2022-04-16 16:12:26,437 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_command() missing 1 required positional argument: 'command'
+
+2022-04-16 16:12:26,438 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_command() missing 1 required positional argument: 'command'
+
+2022-04-16 16:12:26,438 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_command() missing 1 required positional argument: 'command'
+
+2022-04-16 16:12:26,438 - nornir.core.task -    ERROR -      start() - Host 'T2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_command() missing 1 required positional argument: 'command'
+
+2022-04-16 16:12:26,438 - nornir.core.task -    ERROR -      start() - Host 'T4': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_command() missing 1 required positional argument: 'command'
+
+2022-04-16 16:12:26,439 - nornir.core.task -    ERROR -      start() - Host 'T3': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_command() missing 1 required positional argument: 'command'
+
+2022-04-16 16:12:51,950 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 6 hosts
+2022-04-16 16:12:51,952 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_command() missing 1 required positional argument: 'command'
+
+2022-04-16 16:12:51,952 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_command() missing 1 required positional argument: 'command'
+
+2022-04-16 16:12:51,953 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_command() missing 1 required positional argument: 'command'
+
+2022-04-16 16:12:51,953 - nornir.core.task -    ERROR -      start() - Host 'T4': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_command() missing 1 required positional argument: 'command'
+
+2022-04-16 16:12:51,954 - nornir.core.task -    ERROR -      start() - Host 'T2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_command() missing 1 required positional argument: 'command'
+
+2022-04-16 16:12:51,954 - nornir.core.task -    ERROR -      start() - Host 'T3': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_command() missing 1 required positional argument: 'command'
+
+2022-04-16 16:13:40,245 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {} on 6 hosts
+2022-04-16 16:13:40,247 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_command() missing 1 required positional argument: 'command'
+
+2022-04-16 16:13:40,250 - nornir.core.task -    ERROR -      start() - Host 'T3': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_command() missing 1 required positional argument: 'command'
+
+2022-04-16 16:13:40,251 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_command() missing 1 required positional argument: 'command'
+
+2022-04-16 16:13:40,251 - nornir.core.task -    ERROR -      start() - Host 'T4': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_command() missing 1 required positional argument: 'command'
+
+2022-04-16 16:13:40,251 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_command() missing 1 required positional argument: 'command'
+
+2022-04-16 16:13:40,252 - nornir.core.task -    ERROR -      start() - Host 'T2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_command() missing 1 required positional argument: 'command'
+
+2022-04-16 16:14:14,173 -  nornir.core -     INFO -        run() - Running task 'send_random' with args {} on 6 hosts
+2022-04-16 16:24:51,182 -  nornir.core -     INFO -        run() - Running task 'send_random' with args {} on 6 hosts
+2022-04-17 15:39:59,496 -  nornir.core -     INFO -        run() - Running task 'configs' with args {} on 6 hosts
+2022-04-17 15:40:00,029 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 287, in channel_authenticate_ssh
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-17 15:40:00,029 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 8, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:40:01,192 - nornir.core.task -    ERROR -      start() - Host 'T4': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 8, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:40:01,286 - nornir.core.task -    ERROR -      start() - Host 'T2': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 8, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:40:01,368 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 8, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:40:01,371 - nornir.core.task -    ERROR -      start() - Host 'T3': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 8, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:40:15,183 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 287, in channel_authenticate_ssh
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 176, in _multiprocessing_timeout
+    self._handle_timeout()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 152, in _handle_timeout
+    raise ScrapliTimeout(self.message)
+scrapli.exceptions.ScrapliTimeout: timed out reading from transport
+
+2022-04-17 15:40:15,183 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 8, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:41:18,840 -  nornir.core -     INFO -        run() - Running task 'configs' with args {} on 6 hosts
+2022-04-17 15:41:19,459 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 287, in channel_authenticate_ssh
+    buf = self.read()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-17 15:41:19,459 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 8, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:41:20,110 - nornir.core.task -    ERROR -      start() - Host 'T4': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 8, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:41:20,256 - nornir.core.task -    ERROR -      start() - Host 'T2': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 8, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:41:20,573 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 8, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:41:20,594 - nornir.core.task -    ERROR -      start() - Host 'T3': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 8, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:41:34,571 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 287, in channel_authenticate_ssh
+    buf = self.read()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 176, in _multiprocessing_timeout
+    self._handle_timeout()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 152, in _handle_timeout
+    raise ScrapliTimeout(self.message)
+scrapli.exceptions.ScrapliTimeout: timed out reading from transport
+
+2022-04-17 15:41:34,571 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 8, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:44:08,769 -  nornir.core -     INFO -        run() - Running task 'configs' with args {} on 6 hosts
+2022-04-17 15:44:09,447 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 287, in channel_authenticate_ssh
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-17 15:44:09,447 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:44:10,009 - nornir.core.task -    ERROR -      start() - Host 'T4': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:44:10,273 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:44:10,378 - nornir.core.task -    ERROR -      start() - Host 'T3': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:44:10,612 - nornir.core.task -    ERROR -      start() - Host 'T2': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:44:24,599 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 287, in channel_authenticate_ssh
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 176, in _multiprocessing_timeout
+    self._handle_timeout()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 152, in _handle_timeout
+    raise ScrapliTimeout(self.message)
+scrapli.exceptions.ScrapliTimeout: timed out reading from transport
+
+2022-04-17 15:44:24,600 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:45:07,828 -  nornir.core -     INFO -        run() - Running task 'configs' with args {} on 6 hosts
+2022-04-17 15:45:08,549 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 287, in channel_authenticate_ssh
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-17 15:45:08,550 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:45:09,312 - nornir.core.task -    ERROR -      start() - Host 'T2': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:45:09,471 - nornir.core.task -    ERROR -      start() - Host 'T4': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:45:09,523 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:45:09,525 - nornir.core.task -    ERROR -      start() - Host 'T3': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:45:23,526 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 287, in channel_authenticate_ssh
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 176, in _multiprocessing_timeout
+    self._handle_timeout()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 152, in _handle_timeout
+    raise ScrapliTimeout(self.message)
+scrapli.exceptions.ScrapliTimeout: timed out reading from transport
+
+2022-04-17 15:45:23,527 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:45:43,545 -  nornir.core -     INFO -        run() - Running task 'configs' with args {} on 6 hosts
+2022-04-17 15:45:44,086 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 287, in channel_authenticate_ssh
+    buf = self.read()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-17 15:45:44,086 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:45:44,746 - nornir.core.task -    ERROR -      start() - Host 'T3': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:45:45,049 - nornir.core.task -    ERROR -      start() - Host 'T2': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:45:45,107 - nornir.core.task -    ERROR -      start() - Host 'T4': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:45:45,255 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:45:59,122 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 287, in channel_authenticate_ssh
+    buf = self.read()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 176, in _multiprocessing_timeout
+    self._handle_timeout()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 152, in _handle_timeout
+    raise ScrapliTimeout(self.message)
+scrapli.exceptions.ScrapliTimeout: timed out reading from transport
+
+2022-04-17 15:45:59,123 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:47:07,812 -  nornir.core -     INFO -        run() - Running task 'configs' with args {} on 6 hosts
+2022-04-17 15:47:08,367 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 287, in channel_authenticate_ssh
+    buf = self.read()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-17 15:47:08,368 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:47:23,206 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 287, in channel_authenticate_ssh
+    buf = self.read()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 176, in _multiprocessing_timeout
+    self._handle_timeout()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 152, in _handle_timeout
+    raise ScrapliTimeout(self.message)
+scrapli.exceptions.ScrapliTimeout: timed out reading from transport
+
+2022-04-17 15:47:23,206 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:47:57,479 -  nornir.core -     INFO -        run() - Running task 'configs' with args {} on 6 hosts
+2022-04-17 15:47:58,101 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 287, in channel_authenticate_ssh
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-17 15:47:58,102 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:48:13,336 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 287, in channel_authenticate_ssh
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 176, in _multiprocessing_timeout
+    self._handle_timeout()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 152, in _handle_timeout
+    raise ScrapliTimeout(self.message)
+scrapli.exceptions.ScrapliTimeout: timed out reading from transport
+
+2022-04-17 15:48:13,336 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:50:14,786 -  nornir.core -     INFO -        run() - Running task 'configs' with args {} on 6 hosts
+2022-04-17 15:50:15,285 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 287, in channel_authenticate_ssh
+    buf = self.read()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-17 15:50:15,285 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 15:50:30,396 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 287, in channel_authenticate_ssh
+    buf = self.read()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 176, in _multiprocessing_timeout
+    self._handle_timeout()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 152, in _handle_timeout
+    raise ScrapliTimeout(self.message)
+scrapli.exceptions.ScrapliTimeout: timed out reading from transport
+
+2022-04-17 15:50:30,396 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 16:01:20,024 -  nornir.core -     INFO -        run() - Running task 'configs' with args {} on 6 hosts
+2022-04-17 16:01:20,562 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 287, in channel_authenticate_ssh
+    buf = self.read()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-17 16:01:20,563 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 16:03:13,796 -  nornir.core -     INFO -        run() - Running task 'configs' with args {} on 6 hosts
+2022-04-17 16:03:14,483 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 287, in channel_authenticate_ssh
+    buf = self.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/.local/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-17 16:03:14,483 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 16:06:37,548 -  nornir.core -     INFO -        run() - Running task 'configs' with args {} on 6 hosts
+2022-04-17 16:06:40,077 -  nornir.core -     INFO -        run() - Running task 'configs' with args {} on 6 hosts
+2022-04-17 16:07:42,832 -  nornir.core -     INFO -        run() - Running task 'configs' with args {} on 6 hosts
+2022-04-17 16:07:44,275 - nornir.core.task -    ERROR -      start() - Host 'T3': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 16:07:44,408 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 16:07:44,991 - nornir.core.task -    ERROR -      start() - Host 'T4': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 16:07:44,998 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 16:07:45,000 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 16:07:45,049 - nornir.core.task -    ERROR -      start() - Host 'T2': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 16:08:36,569 -  nornir.core -     INFO -        run() - Running task 'configs' with args {} on 6 hosts
+2022-04-17 16:08:37,971 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 16:08:38,501 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 16:08:38,556 - nornir.core.task -    ERROR -      start() - Host 'T2': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 16:08:38,558 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 16:08:38,637 - nornir.core.task -    ERROR -      start() - Host 'T3': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-04-17 16:08:38,713 - nornir.core.task -    ERROR -      start() - Host 'T4': task 'configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "test2.py", line 9, in configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/Nornir-automation/CICD/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h4>IP routes on all Devices:</h4>
+{% for data in my_list %}
+<div class="alert alert-success" role="alert">
+    <pre>
+{{ data }}
+</pre>
+</div>
+{% endfor %}
+{% endblock content %}

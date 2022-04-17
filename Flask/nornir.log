@@ -1,0 +1,259 @@
+2022-04-15 15:39:40,202 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-15 15:40:46,590 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-15 15:42:01,524 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-15 15:50:43,331 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 3 hosts
+2022-04-15 15:51:00,029 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:03:26,467 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 3 hosts
+2022-04-16 10:03:33,955 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:03:47,419 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:05:04,268 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show IP OSPF Neighbors'} on 3 hosts
+2022-04-16 10:05:45,409 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show IP OSPF Neighbors'} on 3 hosts
+2022-04-16 10:06:02,410 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show IP interface brief'} on 3 hosts
+2022-04-16 10:06:28,024 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show IP interface brief'} on 3 hosts
+2022-04-16 10:07:39,315 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:08:20,263 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:09:05,322 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:09:31,630 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:10:07,148 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:11:09,525 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:15:46,255 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:15:49,952 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:16:34,876 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:16:48,109 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 3 hosts
+2022-04-16 10:17:30,956 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 3 hosts
+2022-04-16 10:17:32,957 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:17:34,089 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 3 hosts
+2022-04-16 10:17:38,843 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:17:42,994 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 3 hosts
+2022-04-16 10:17:48,240 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 3 hosts
+2022-04-16 10:18:40,163 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 3 hosts
+2022-04-16 10:19:30,798 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 3 hosts
+2022-04-16 10:20:29,730 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:20:31,881 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 3 hosts
+2022-04-16 10:21:51,779 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:21:52,963 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 3 hosts
+2022-04-16 10:34:24,151 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:34:27,538 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 3 hosts
+2022-04-16 10:37:18,115 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 3 hosts
+2022-04-16 10:39:40,575 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 3 hosts
+2022-04-16 10:43:26,441 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:44:00,316 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:44:36,889 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:45:23,184 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:47:22,497 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 10:47:58,079 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 11:12:53,728 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip routes'} on 3 hosts
+2022-04-16 11:14:28,900 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip routes'} on 3 hosts
+2022-04-16 11:14:38,641 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip routes'} on 3 hosts
+2022-04-16 11:15:32,993 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:15:34,327 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:15:56,560 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 11:19:00,218 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 11:27:41,058 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:28:52,827 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:29:25,455 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:29:52,052 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:31:09,561 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:36:07,454 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:40:17,173 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:41:04,505 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:41:33,523 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:42:16,889 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:42:36,595 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:42:58,059 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:43:18,744 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:44:04,153 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:44:50,434 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:45:17,698 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:45:32,780 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:46:15,101 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:46:33,377 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:47:07,920 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:47:29,785 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:50:35,486 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:50:58,129 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:55:01,365 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:56:31,977 -  nornir.core -     INFO -        run() - Running task 'send_commands' with args {'command': 'show ip routeshow version'} on 3 hosts
+2022-04-16 11:56:31,982 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_commands() got an unexpected keyword argument 'command'
+
+2022-04-16 11:56:31,982 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_commands() got an unexpected keyword argument 'command'
+
+2022-04-16 11:56:31,983 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_commands() got an unexpected keyword argument 'command'
+
+2022-04-16 11:56:51,118 -  nornir.core -     INFO -        run() - Running task 'send_commands' with args {'command': 'show ip routeshow version'} on 3 hosts
+2022-04-16 11:56:51,119 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_commands() got an unexpected keyword argument 'command'
+
+2022-04-16 11:56:51,119 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_commands() got an unexpected keyword argument 'command'
+
+2022-04-16 11:56:51,120 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_commands() got an unexpected keyword argument 'command'
+
+2022-04-16 11:57:32,537 -  nornir.core -     INFO -        run() - Running task 'send_commands' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:57:32,538 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_commands() got an unexpected keyword argument 'command'
+
+2022-04-16 11:57:32,538 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_commands() got an unexpected keyword argument 'command'
+
+2022-04-16 11:57:32,538 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_commands() got an unexpected keyword argument 'command'
+
+2022-04-16 11:57:49,057 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:58:23,227 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 11:58:45,216 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 12:05:59,657 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 12:06:32,663 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 12:06:37,566 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 12:06:54,050 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 12:07:16,873 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 12:12:49,491 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip interface brief'} on 3 hosts
+2022-04-16 12:17:15,754 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 12:17:17,162 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:17:55,076 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 12:17:55,282 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:25:36,758 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 12:25:38,320 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:26:11,128 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 12:26:11,402 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:26:56,507 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 12:26:56,759 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:28:01,701 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 12:28:30,104 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip interface brief'} on 3 hosts
+2022-04-16 12:28:32,563 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 12:29:51,012 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 12:30:13,305 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 12:30:17,054 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 12:30:43,580 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 3 hosts
+2022-04-16 12:31:21,288 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:32:05,487 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:32:08,899 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:33:11,657 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:33:11,667 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 488, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 158, in read
+    buf = self.session.read(65535)
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/scrapli/transport/plugins/system/ptyprocess.py", line 493, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 37, in send_command
+    scrapli_response = scrapli_conn.send_command(
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 240, in send_command
+    response: Response = super().send_command(
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/scrapli/driver/generic/sync_driver.py", line 171, in send_command
+    response: Response = self._send_command(
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/scrapli/decorators.py", line 413, in decorate
+    result = wrapped_func(*args, **kwargs)
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/scrapli/driver/generic/sync_driver.py", line 138, in _send_command
+    raw_response, processed_response = self.channel.send_input(
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 483, in send_input
+    buf += self._read_until_prompt()
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 137, in _read_until_prompt
+    read_buf.write(self.read())
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/scrapli/decorators.py", line 99, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/scrapli/decorators.py", line 177, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/geordie/Nornir-automation/Flask/lib/python3.8/site-packages/scrapli/transport/plugins/system/transport.py", line 165, in read
+    raise ScrapliConnectionError(msg) from exc
+scrapli.exceptions.ScrapliConnectionError: encountered EOF reading from transport; typically means the device closed the connection
+
+2022-04-16 12:33:17,919 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:33:21,089 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:33:33,135 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:33:35,045 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:34:24,962 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:34:44,570 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:34:46,590 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:34:57,048 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:34:58,416 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:35:00,695 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 3 hosts
+2022-04-16 12:35:07,892 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:35:10,548 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:35:33,642 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:36:52,613 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 3 hosts
+2022-04-16 12:42:21,786 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 1 hosts
+2022-04-16 12:42:39,317 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 1 hosts
+2022-04-16 12:43:18,521 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 1 hosts
+2022-04-16 12:44:16,885 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 1 hosts
+2022-04-16 12:44:27,573 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip route'} on 1 hosts
+2022-04-16 12:45:39,629 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip interface brief'} on 1 hosts
+2022-04-16 12:51:08,817 -  nornir.core -  WARNING -        run() - Task 'send_command' has not been run – 0 hosts selected
+2022-04-16 12:51:19,981 -  nornir.core -  WARNING -        run() - Task 'send_command' has not been run – 0 hosts selected
+2022-04-16 12:51:26,981 -  nornir.core -  WARNING -        run() - Task 'send_command' has not been run – 0 hosts selected
+2022-04-16 12:52:03,373 -  nornir.core -  WARNING -        run() - Task 'send_command' has not been run – 0 hosts selected
+2022-04-16 12:52:12,582 -  nornir.core -  WARNING -        run() - Task 'send_command' has not been run – 0 hosts selected
+2022-04-16 12:52:21,860 -  nornir.core -  WARNING -        run() - Task 'send_command' has not been run – 0 hosts selected
+2022-04-16 12:54:51,065 -  nornir.core -  WARNING -        run() - Task 'send_command' has not been run – 0 hosts selected
+2022-04-16 12:54:53,642 -  nornir.core -  WARNING -        run() - Task 'send_command' has not been run – 0 hosts selected
+2022-04-16 13:00:46,775 -  nornir.core -  WARNING -        run() - Task 'send_command' has not been run – 0 hosts selected
+2022-04-16 13:01:18,488 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ip interface brief'} on 1 hosts
+2022-04-16 13:02:27,207 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 1 hosts
+2022-04-16 13:03:06,241 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 1 hosts
+2022-04-16 13:03:12,550 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 3 hosts
+2022-04-16 13:03:17,631 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 1 hosts
+2022-04-16 13:04:15,114 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 1 hosts
+2022-04-16 13:04:20,303 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 1 hosts
+2022-04-16 13:04:34,593 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show run'} on 1 hosts

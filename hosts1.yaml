@@ -1,0 +1,25 @@
+---
+
+Edge1:
+    hostname: "Edge1"
+    groups:
+        - cisco_group
+    port: 830
+
+Edge2:
+    hostname: "Edge2"
+    groups:
+        - cisco_group
+    port: 830
+
+Edge3:
+    hostname: "Edge3"
+    groups:
+        - cisco_group
+    port: 830
+
+Edge4:
+    hostname: "Edge4"
+    groups:
+        - cisco_group
+    port: 830

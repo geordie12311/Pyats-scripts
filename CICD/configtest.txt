@@ -1,0 +1,4 @@
+router bgp 65001
+network 25.25.25.0
+network 26.26.26.0
+
